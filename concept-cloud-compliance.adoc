@@ -80,7 +80,7 @@ Data transfer costs depend on your setup. If the Cloud Data Sense instance and d
 
 == The Cloud Data Sense instance
 
-When you deploy Data Sense in the cloud, Cloud Manager deploys the instance in the same subnet as the Connector. link:concept-connectors.html[Learn more about Connectors.^]
+When you deploy Data Sense in the cloud, Cloud Manager deploys the instance in the same subnet as the Connector. https://docs.netapp.com/us-en/cloud-manager-get-started/concept-connectors.html[Learn more about Connectors.^]
 
 NOTE: If the Connector is installed on-prem, it deploys the Cloud Data Sense instance in same VPC or VNet as the first Cloud Volumes ONTAP system in the request. You can install Data Sense on-prem as well.
 
@@ -209,4 +209,4 @@ The role each user has been assigned provides different capabilities within Clou
 
 * Users with the *Compliance Viewer* role can only view compliance information and generate reports for systems that they have permission to access. These users cannot enable/disable scanning of volumes, buckets, or database schemas. These users can't copy, move, or delete files either.
 
-link:reference-user-roles.html[Learn more about Cloud Manager roles^] and how to link:task-managing-cloud-central-accounts.html#adding-users[add users with specific roles^].
+https://docs.netapp.com/us-en/cloud-manager-accounts/reference-user-roles.html[Learn more about Cloud Manager roles^] and how to https://docs.netapp.com/us-en/cloud-manager-accounts/task-managing-cloud-central-accounts.html#adding-users[add users with specific roles^].
