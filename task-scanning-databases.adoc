@@ -1,0 +1,118 @@
+---
+sidebar: sidebar
+permalink: task-scanning-databases.html
+keywords: cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL, Data Sense
+summary: Complete a few steps to start scanning your database schemas with Cloud Data Sense.
+---
+
+= Scanning database schemas
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Complete a few steps to start scanning your database schemas with Cloud Data Sense.
+
+== Quick start
+
+Get started quickly by following these steps, or scroll down to the remaining sections for full details.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Review database prerequisites
+
+[role="quick-margin-para"]
+Ensure that your database is supported and that you have the information necessary to connect to the database.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Cloud Data Sense instance
+
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense^] if there isn't already an instance deployed.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Add the database server
+
+[role="quick-margin-para"]
+Add the database server that you want to access.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Select the schemas
+
+[role="quick-margin-para"]
+Select the schemas that you want to scan.
+
+== Reviewing prerequisites
+
+Review the following prerequisites to make sure that you have a supported configuration before you enable Cloud Data Sense.
+
+=== Supported databases
+
+Cloud Data Sense can scan schemas from the following databases:
+
+* Amazon Relational Database Service (Amazon RDS)
+* MongoDB
+* MySQL
+* Oracle
+* PostgreSQL
+* SAP HANA
+* SQL Server (MSSQL)
+
+CAUTION: The statistics gathering feature *must be enabled* in the database.
+
+=== Database requirements
+
+Any database with connectivity to the Cloud Data Sense instance can be scanned, regardless of where it is hosted. You just need the following information to connect to the database:
+
+* IP Address or host name
+* Port
+* Service name (only for accessing Oracle databases)
+* Credentials that allow read access to the schemas
++
+When choosing a user name and password, it’s important to choose one that has full read permissions to all the schemas and tables you want to scan. We recommend that you create a dedicated user for the Cloud Data Sense system with all the required permissions.
+
+*Note:* For MongoDB, a read-only Admin role is required.
+
+== Deploying the Cloud Data Sense instance
+
+Deploy Cloud Data Sense if there isn't already an instance deployed.
+
+If you are scanning database schemas that are accessible over the internet, you can link:task-deploy-cloud-compliance.html[deploy Cloud Data Sense in the cloud^] or link:task-deploy-compliance-onprem.html[deploy Data Sense in an on-premises location that has internet access^].
+
+If you are scanning database schemas that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy Cloud Data Sense in the same on-premises location that has no internet access^]. This also requires that the Cloud Manager Connector is deployed in that same on-premises location.
+
+Upgrades to Data Sense software is automated as long as the instance has internet connectivity.
+
+== Adding the database server
+
+Add the database server where the schemas reside.
+
+. From the Working Environments Configuration page, click *Add Data Source* > *Add Database Server*.
++
+image:screenshot_compliance_add_db_server_button.png[A screenshot of the Scan Configuration page where you can click the Add DB Server button.]
+
+. Enter the required information to identify the database server.
+.. Select the database type.
+.. Enter the port and the host name or IP address to connect to the database.
+.. For Oracle databases, enter the Service name.
+.. Enter the credentials so that Cloud Data Sense can access the server.
+.. Click *Add DB Server*.
++
+image:screenshot_compliance_add_db_server_dialog.png[A screenshot of the Add DB Server page so you can identify the database.]
+
+The database is added to the list of working environments.
+
+== Enabling and disabling compliance scans on database schemas
+
+You can stop or start full scanning of your schemas at any time.
+
+TIP: There is no option to select mapping-only scans for database schemas.
+
+. From the _Configuration_ page, click the *Configuration* button for the database you want to configure.
++
+image:screenshot_compliance_db_server_config.png[A screenshot of the Scan Configuration page where you can select the Configuration button.]
+
+. Select the schemas that you want to scan by moving the slider to the right.
++
+image:screenshot_compliance_select_schemas.png[A screenshot of the Scan Configuration page where you can choose the schemas to be scanned.]
+
+.Result
+
+Cloud Data Sense starts scanning the database schemas that you enabled. If there are any errors, they’ll appear in the Status column, alongside the required action to fix the error.
