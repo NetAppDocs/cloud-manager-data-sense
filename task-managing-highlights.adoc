@@ -35,7 +35,7 @@ This is useful if you want to make a copy of certain data and move it to a diffe
 This is useful for situations where you're migrating data and you want to exclude certain files from the original volume. This action uses the link:https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html[NetApp FlexClone^] functionality to quickly duplicate the volume and then remove the files that you *didn't* select.
 * *Copy and synchronize files* from a single source repository (ONTAP volume, S3 bucket, NFS share, etc.) to a directory in a specific destination (target) location.
 +
-This is useful for situations where you're migrating data from one source system to another. After the initial copy, the service syncs any changed data based on the schedule that you set. This action uses the link:concept-cloud-sync.html[NetApp Cloud Sync^] functionality to copy and sync data from a source to a target.
+This is useful for situations where you're migrating data from one source system to another. After the initial copy, the service syncs any changed data based on the schedule that you set. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[NetApp Cloud Sync^] functionality to copy and sync data from a source to a target.
 
 === Copying source files to an NFS share
 
@@ -124,9 +124,9 @@ If you initially selected *Map all volumes* or *Map & Classify all volumes* when
 
 === Copying and synchronizing source files to a target system
 
-You can copy source files that Data Sense is scanning from any supported unstructured data source to a directory in a specific target destination location (link:reference-sync-requirements.html#supported-sync-relationships[target locations that are supported by Cloud Sync^]). After the initial copy, any data changed in the files are synchronized based on the schedule that you configure.
+You can copy source files that Data Sense is scanning from any supported unstructured data source to a directory in a specific target destination location (https://docs.netapp.com/us-en/cloud-manager-sync/reference-sync-requirements.html#supported-sync-relationships[target locations that are supported by Cloud Sync^]). After the initial copy, any data changed in the files are synchronized based on the schedule that you configure.
 
-This is useful for situations where you're migrating data from one source system to another. This action uses the link:concept-cloud-sync.html[NetApp Cloud Sync] functionality to copy and sync data from a source to a target.
+This is useful for situations where you're migrating data from one source system to another. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[NetApp Cloud Sync^] functionality to copy and sync data from a source to a target.
 
 TIP: You can't copy and sync files that reside in databases, OneDrive accounts, or SharePoint accounts.
 

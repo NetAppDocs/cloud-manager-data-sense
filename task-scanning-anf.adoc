@@ -22,7 +22,7 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Discover the Azure NetApp Files systems you want to scan
 
 [role="quick-margin-para"]
-Before you can scan Azure NetApp Files volumes, link:task-manage-anf.html[Cloud Manager must be set up to discover the configuration^].
+Before you can scan Azure NetApp Files volumes, https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-manage-anf.html[Cloud Manager must be set up to discover the configuration^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Cloud Data Sense instance
 
@@ -58,7 +58,7 @@ Select or deselect the volumes that you want to scan and Cloud Data Sense will s
 
 If the Azure NetApp Files system you want to scan is not already in Cloud Manager as a working environment, you can add it to the canvas at this time.
 
-link:task-manage-anf.html[See how to discover the Azure NetApp Files system in Cloud Manager^].
+https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-manage-anf.html[See how to discover the Azure NetApp Files system in Cloud Manager^].
 
 == Deploying the Cloud Data Sense instance
 

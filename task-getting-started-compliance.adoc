@@ -26,7 +26,7 @@ Before you can scan volumes, you must add the systems as working environments in
 
 [role="quick-margin-list"]
 * For Cloud Volumes ONTAP systems, these working environments should already be available in Cloud Manager
-* For on-premises ONTAP systems, link:task-discovering-ontap.html[Cloud Manager must discover the ONTAP clusters^]
+* For on-premises ONTAP systems, https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html[Cloud Manager must discover the ONTAP clusters^]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Cloud Data Sense instance
 
@@ -63,7 +63,7 @@ Select or deselect the volumes that you want to scan and Cloud Data Sense will s
 
 If the data sources you want to scan are not already in your Cloud Manager environment, you can add them to the canvas at this time.
 
-Your Cloud Volumes ONTAP systems should already be available in the Canvas in Cloud Manager. For on-premises ONTAP systems, you'll need to have link:task-discovering-ontap.html[Cloud Manager discover these clusters^].
+Your Cloud Volumes ONTAP systems should already be available in the Canvas in Cloud Manager. For on-premises ONTAP systems, you'll need to have https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html[Cloud Manager discover these clusters^].
 
 == Deploying the Cloud Data Sense instance
 
