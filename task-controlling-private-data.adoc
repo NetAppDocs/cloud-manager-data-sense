@@ -200,12 +200,12 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 | Working Environment name | Select specific working environments
 | Storage Repository | Select the storage repository, for example, a volume or a schema
 | File Path | Enter a partial or full path
-| Category | Select the link:reference_private_data_categories.html#types-of-categories[types of categories^]
+| Category | Select the link:reference-private-data-categories.html#types-of-categories[types of categories^]
 | Sensitivity Level | Select the sensitivity level
-| Personal Data | Select the link:reference_private_data_categories.html#types-of-personal-data[types of personal data^]
-| Sensitive Personal Data | Select the link:reference_private_data_categories.html#types-of-sensitive-personal-data[types of sensitive personal data^]
+| Personal Data | Select the link:reference-private-data-categories.html#types-of-personal-data[types of personal data^]
+| Sensitive Personal Data | Select the link:reference-private-data-categories.html#types-of-sensitive-personal-data[types of sensitive personal data^]
 | Data Subject | Enter a data subject’s full name or known identifier
-| File Type | Select the link:reference_private_data_categories.html#types-of-files[types of files^]
+| File Type | Select the link:reference-private-data-categories.html#types-of-files[types of files^]
 | File Size | Select the file size range
 | Created Time | Select a range when the file was created
 | Discovered Time | Select a range when Data Sense discovered the file
