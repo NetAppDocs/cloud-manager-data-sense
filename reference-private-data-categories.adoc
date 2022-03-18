@@ -1,0 +1,192 @@
+---
+sidebar: sidebar
+permalink: reference-private-data-categories.html
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, categories, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy,
+summary: There are many types of private data that Cloud Data Sense can identify in your volumes, Amazon S3 buckets, databases, OneDrive folders, and SharePoint accounts. See the categories below.
+---
+
+= Categories of private data
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are many types of private data that Cloud Data Sense can identify in your volumes, Amazon S3 buckets, databases, OneDrive folders, and SharePoint accounts. See the categories below.
+
+TIP: If you need Cloud Data Sense to identify other private data types, such as additional national ID numbers or healthcare identifiers, email ng-contact-data-sense@netapp.com with your request.
+
+== Types of personal data
+
+The personal data found in files can be general personal data or national identifiers. The third column identifies whether Cloud Data Sense uses link:task-controlling-private-data.html#personal-data[proximity validation^] to validate its findings for the identifier.
+
+The items in this category can be recognized in any language.
+
+Note that you can add to the list of personal data that is found in your files if you are scanning a database server. The _Data Fusion_ feature allows you to choose the additional identifiers that Cloud Data Sense will look for in its' scans by selecting columns in a database table. See link:task-managing-data-fusion.html[Adding personal data identifiers using Data Fusion^] for details.
+
+[cols="20,50,18",width=80%,options="header"]
+|===
+| Type
+| Identifier
+| Proximity validation?
+
+.4+| General | Email address | No
+| Credit card number | No
+| IBAN number (International Bank Account Number) | No
+| IP address | No
+
+.37+| National Identifiers | Austrian SSN | Yes
+| Belgian ID (Numero National) | Yes
+| Brazilian ID (CPF) | Yes
+| British Passport | Yes
+| Bulgarian ID (UCN) | Yes
+| California Driver's License | Yes
+| Croatian ID (OIB) | Yes
+| Cyprus Tax Identification Number (TIC) | Yes
+| Czech/Slovak ID | Yes
+| Danish ID (CPR) | Yes
+| Dutch ID (BSN) | Yes
+| Estonian ID | Yes
+| Finnish ID (HETU) | Yes
+| French Driver's License | Yes
+| French ID | Yes
+| French Social Security Number | Yes
+| French Tax Identification Number (SPI) | Yes
+| German Tax Identification Number (Steuerliche Identifikationsnummer) | Yes
+| Greek ID | Yes
+| Hungarian Tax Identification Number | Yes
+| Irish ID (PPS) | Yes
+| Israeli ID | Yes
+| Italian Tax Identification Number | Yes
+| Latvian ID | Yes
+| Lithuanian ID | Yes
+| Luxembourg ID | Yes
+| Maltese ID | Yes
+| National Health Service (NHS) Number | Yes
+| Polish ID (PESEL) | Yes
+| Portuguese Tax Identification Number (NIF) | Yes
+| Romanian ID (CNP) | Yes
+| Slovenian ID (EMSO) | Yes
+| South African ID | Yes
+| Spanish Tax Identification Number | Yes
+| Swedish ID | Yes
+| U.K. ID (NINO) | Yes
+| USA Social Security Number (SSN) | Yes
+|===
+
+== Types of sensitive personal data
+
+The sensitive personal data that Cloud Data Sense can find in files includes the following list. The items in this category can be recognized only in English at this time.
+
+// Civil Law Reference:: Data concerning a natural person’s civil law suits, offences, and procedures.
+Criminal Procedures Reference::	Data concerning a natural person’s criminal convictions and offenses.
+Ethnicity Reference::	Data concerning a natural person’s racial or ethnic origin.
+Health Reference:: Data concerning a natural person’s health.
+ICD-9-CM Medical Codes:: Codes used in the medical and health industry.
+ICD-10-CM Medical Codes:: Codes used in the medical and health industry.
+Philosophical Beliefs Reference::	Data concerning a natural person’s philosophical beliefs.
+Political Opinions Reference:: Data concerning a natural person’s political opinions.
+Religious Beliefs Reference::	Data concerning a natural person’s religious beliefs.
+Sex Life or Orientation Reference::	Data concerning a natural person’s sex life or sexual orientation.
+
+== Types of categories
+
+Cloud Data Sense categorizes your data as follows. Most of these categories can be recognized in English, German, and Spanish.
+
+[cols="25,25,15,15,15",width=90%,options="header"]
+|===
+| Category
+| Type
+| English
+| German
+| Spanish
+
+.4+| Finance | Balance Sheets | ✓ | ✓ | ✓
+| Purchase Orders | ✓ | ✓ | ✓
+| Invoices | ✓ | ✓ | ✓
+| Quarterly Reports | ✓ | ✓ | ✓
+
+.6+| HR | Background Checks | ✓ |  | ✓
+| Compensation Plans | ✓ | ✓ | ✓
+| Employee Contracts | ✓ |  | ✓
+| Employee Reviews | ✓ |  | ✓
+| Health | ✓ |  | ✓
+| Resumes | ✓ | ✓ | ✓
+
+.2+| Legal| NDAs | ✓ | ✓ | ✓
+| Vendor-Customer contracts | ✓ | ✓ | ✓
+
+.2+| Marketing| Campaigns | ✓ | ✓ | ✓
+| Conferences | ✓ | ✓ | ✓
+
+.1+| Operations| Audit Reports | ✓ | ✓ | ✓
+
+.1+| Sales | Sales Orders | ✓ | ✓ |
+
+.4+| Services | RFI | ✓ |  | ✓
+| RFP | ✓ |  | ✓
+| SOW | ✓ | ✓ | ✓
+| Training | ✓ | ✓ | ✓
+
+.1+| Support | Complaints and Tickets | ✓ | ✓ | ✓
+
+|===
+
+The following Metadata is also categorized, and are identified in the same supported languages:
+
+* Application Data
+* Archive Files
+* Audio
+* Business Application Data
+* CAD Files
+* Code
+* Corrupted
+* Database and index files
+* Design Files
+* Email Application Data
+* Encrypted
+* Executables
+* Financial Application Data
+* Health Application Data
+* Images
+* Logs
+* Miscellaneous Documents
+* Miscellaneous Presentations
+* Miscellaneous Spreadsheets
+* Miscellaneous "Unknown"
+* Structured Data
+* Videos
+* Zero-Byte Files
+
+== Types of files
+
+Cloud Data Sense scans all files for category and metadata insights and displays all file types in the file types section of the dashboard.
+
+But when Data Sense detects Personal Identifiable Information (PII), or when it performs a DSAR search, only the following file formats are supported:
+
+`+.CSV, .DCM, .DICOM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, and .XLSX.+`
+
+== Accuracy of information found
+
+NetApp can't guarantee 100% accuracy of the personal data and sensitive personal data that Cloud Data Sense identifies. You should always validate the information by reviewing the data.
+
+Based on our testing, the table below shows the accuracy of the information that Data Sense finds. We break it down by _precision_ and _recall_:
+
+Precision:: The probability that what Data Sense finds has been identified correctly. For example, a precision rate of 90% for personal data means that 9 out of 10 files identified as containing personal information, actually contain personal information. 1 out of 10 files would be a false positive.
+
+Recall:: The probability for Data Sense to find what it should. For example, a recall rate of 70% for personal data means that Data Sense can identify 7 out of 10 files that actually contain personal information in your organization. Data Sense would miss 30% of the data and it won’t appear in the dashboard.
+
+We are constantly improving the accuracy of our results. Those improvements will be automatically available in future Data Sense releases.
+
+[cols="25,20,20",width=80%,options="header"]
+|===
+| Type
+| Precision
+| Recall
+
+| Personal data - General | 90%-95% | 60%-80%
+| Personal data - Country identifiers | 30%-60% | 40%-60%
+| Sensitive personal data | 80%-95% | 20%-30%
+| Categories | 90%-97% | 60%-80%
+|===

@@ -1,0 +1,193 @@
+---
+sidebar: sidebar
+permalink: task-scanning-fsx.html
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, fsx, fsx for ontap, aws, data sense
+summary: Complete a few steps to get started scanning Amazon FSx for ONTAP volume with Cloud Data Sense.
+---
+
+= Get started with Cloud Data Sense for Amazon FSx for ONTAP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Complete a few steps to get started scanning Amazon FSx for ONTAP volume with Cloud Data Sense.
+
+== Before you begin
+
+* You need an active Connector in AWS to deploy and manage Data Sense.
+
+* The security group you selected when creating the working environment must allow traffic from the Cloud Data Sense instance. You can find the associated security group using the ENI connected to the FSx for ONTAP file system and edit it using the AWS Management Console.
++
+link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html[AWS security groups for Linux instances]
++
+link:https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/security-group-rules.html[AWS security groups for Windows instances]
++
+link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html[AWS elastic network interfaces (ENI)]
+
+== Quick start
+
+Get started quickly by following these steps or scroll down for full details.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Discover the FSx for ONTAP file systems you want to scan
+
+[role="quick-margin-para"]
+Before you can scan FSx for ONTAP volumes, https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/concept-fsx-aws.html[you must have an FSx working environment with volumes configured^].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Cloud Data Sense instance
+
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense in Cloud Manager^] if there isn't already an instance deployed.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Enable Cloud Data Sense and select the volumes to scan
+
+[role="quick-margin-para"]
+Click *Data Sense*, select the *Configuration* tab, and activate compliance scans for volumes in specific working environments.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Ensure access to volumes
+
+[role="quick-margin-para"]
+Now that Cloud Data Sense is enabled, ensure that it can access all volumes.
+
+[role="quick-margin-list"]
+* The Cloud Data Sense instance needs a network connection to each FSx for ONTAP subnet.
+* Make sure the following ports are open to the Data Sense instance:
+** For NFS – ports 111 and 2049.
+** For CIFS – ports 139 and 445.
+* NFS volume export policies must allow access from the Data Sense instance.
+* Data Sense needs Active Directory credentials to scan CIFS volumes.
+ +
+Click *Compliance* > *Configuration* > *Edit CIFS Credentials* and provide the credentials.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Manage the volumes you want to scan
+
+[role="quick-margin-para"]
+Select or deselect the volumes you want to scan and Cloud Data Sense will start or stop scanning them.
+
+== Discovering the FSx for ONTAP file system that you want to scan
+
+If the FSx for ONTAP file system you want to scan is not already in Cloud Manager as a working environment, you can add it to the canvas at this time.
+
+https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/task-creating-fsx-working-environment.html[See how to discover or create the FSx for ONTAP file system in Cloud Manager^].
+
+== Deploying the Cloud Data Sense instance
+
+link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense^] if there isn't already an instance deployed.
+
+You should deploy Data Sense in the same AWS network as the Connector for AWS and the FSx volumes you wish to scan.
+
+*Note:* Deploying Cloud Data Sense in an on-premises location is not currently supported when scanning FSx volumes.
+
+Upgrades to Data Sense software is automated as long as the instance has internet connectivity.
+
+== Enabling Cloud Data Sense in your working environments
+
+You can enable Cloud Data Sense for FSx for ONTAP volumes.
+
+. At the top of Cloud Manager, click *Data Sense* and then select the *Configuration* tab.
++
+image:screenshot_fsx_scanning_activate.png[A screenshot of the Configuration tab immediately after deploying the Cloud Data Sense instance.]
+
+. Select how you want to scan the volumes in each working environment. link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[Learn about mapping and classification scans]:
+
+* To map all volumes, click *Map all Volumes*.
+* To map and classify all volumes, click *Map & Classify all Volumes*.
+* To customize scanning for each volume, click *Or select scanning type for each volume*, and then choose the volumes you want to map and/or classify.
++
+See <<Enabling and disabling compliance scans on volumes,Enabling and disabling compliance scans on volumes>> for details.
+
+. In the confirmation dialog box, click *Approve* to have Data Sense start scanning your volumes.
+
+.Result
+
+Cloud Data Sense starts scanning the volumes you selected in the working environment. Results will be available in the Compliance dashboard as soon as Cloud Data Sense finishes the initial scans. The time that it takes depends on the amount of data--it could be a few minutes or hours.
+
+== Verifying that Cloud Data Sense has access to volumes
+
+Make sure Cloud Data Sense can access volumes by checking your networking, security groups, and export policies.
+
+You'll need to provide Data Sense with CIFS credentials so it can access CIFS volumes.
+
+.Steps
+
+. On the _Configuration_ page, click *View Details* to review the status and correct any errors.
++
+For example, the following image shows a volume Cloud Data Sense can't scan due to network connectivity issues between the Data Sense instance and the volume.
++
+image:screenshot_fsx_scanning_no_network_error.png["A screenshot of the View Details page in the scan configuration showing volume not being scanned because of network connectivity between Data Sense and the volume."]
+
+. Make sure there's a network connection between the Cloud Data Sense instance and each network that includes volumes for FSx for ONTAP.
++
+NOTE: For FSx for ONTAP, Cloud Data Sense can scan volumes only in the same region as Cloud Manager.
+
+. Ensure the following ports are open to the Data Sense instance.
+** For NFS – ports 111 and 2049.
+** For CIFS – ports 139 and 445.
+
+. Ensure NFS volume export policies include the IP address of the Data Sense instance so it can access the data on each volume.
+
+. If you use CIFS, provide Data Sense with Active Directory credentials so it can scan CIFS volumes.
+
+.. At the top of Cloud Manager, click *Data Sense*.
+
+.. Click the *Configuration* tab.
+
+.. For each working environment, click *Edit CIFS Credentials* and enter the user name and password that Data Sense needs to access CIFS volumes on the system.
++
+The credentials can be read-only, but providing admin credentials ensures that Data Sense can read any data that requires elevated permissions. The credentials are stored on the Cloud Data Sense instance.
++
+After you enter the credentials, you should see a message that all CIFS volumes were authenticated successfully.
+
+== Enabling and disabling compliance scans on volumes
+
+You can start or stop mapping-only scans, or mapping and classification scans, in a working environment at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa. We recommend that you scan all volumes.
+
+image:screenshot_volume_compliance_selection.png[A screenshot of the Configuration page where you can enable or disable scanning of individual volumes.]
+
+[cols="45,45",width=90%,options="header"]
+|===
+| To:
+| Do this:
+
+| Enable mapping-only scans on a volume | In the volume area, click *Map*
+| Enable full scanning on a volume | In the volume area, click *Map & Classify*
+| Disable scanning on a volume | In the volume area, click *Off*
+| |
+| Enable mapping-only scans on all volumes | In the heading area, click *Map*
+| Enable full scanning on all volumes | In the heading area, click *Map & Classify*
+| Disable scanning on all volumes | In the heading area, click *Off*
+
+|===
+
+NOTE: New volumes added to the working environment are automatically scanned only when you have set the *Map* or *Map & Classify* setting in the heading area. When set to *Custom* or *Off* in the heading area, you'll need to activate mapping and/or full scanning on each new volume you add in the working environment.
+
+== Scanning data protection volumes
+
+By default, data protection (DP) volumes are not scanned because they are not exposed externally and Cloud Data Sense cannot access them. These are the destination volumes for SnapMirror operations from an FSx for ONTAP file system.
+
+Initially, the volume list identifies these volumes as _Type_ *DP* with the _Status_ *Not Scanning* and the _Required Action_ *Enable Access to DP volumes*.
+
+image:screenshot_cloud_compliance_dp_volumes.png[A screenshot showing the Enable Access to DP Volumes button that you can select to scan data protection volumes.]
+
+.Steps
+
+If you want to scan these data protection volumes:
+
+. Click *Enable Access to DP volumes* at the top of the page.
+
+. Review the confirmation message and click *Enable Access to DP volumes* again.
+- Volumes that were initially created as NFS volumes in the source FSx for ONTAP file system are enabled.
+- Volumes that were initially created as CIFS volumes in the source FSx for ONTAP file system require that you enter CIFS credentials to scan those DP volumes. If you already entered Active Directory credentials so that Cloud Data Sense can scan CIFS volumes you can use those credentials, or you can specify a different set of Admin credentials.
++
+image:screenshot_compliance_dp_cifs_volumes.png[A screenshot of the two options for enabling CIFS data protection volumes.]
+
+. Activate each DP volume that you want to scan <<Enabling and disabling compliance scans on volumes,the same way you enabled other volumes>>.
+
+.Result
+Once enabled, Cloud Data Sense creates an NFS share from each DP volume that was activated for scanning. The share export policies only allow access from the Data Sense instance.
+
+*Note:* If you had no CIFS data protection volumes when you initially enabled access to DP volumes, and later add some, the button *Enable Access to CIFS DP* appears at the top of the Configuration page. Click this button and add CIFS credentials to enable access to these CIFS DP volumes.
+
+NOTE: Active Directory credentials are only registered in the storage VM of the first CIFS DP volume, so all DP volumes on that SVM will be scanned. Any volumes that reside on other SVMs will not have the Active Directory credentials registered, so those DP volumes won't be scanned.

@@ -1,0 +1,105 @@
+---
+sidebar: sidebar
+permalink: task-controlling-governance-data.html
+keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies
+summary: Gain control of the costs related to the data on your organizations' storage resources. Cloud Data Sense identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
+---
+
+= Viewing governance details about the data stored in your organization
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Gain control of the costs related to the data on your organizations' storage resources. Cloud Data Sense identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
+
+Additionally, if you are planning to migrate data from on-premises locations to the cloud, you can view the size of the data and whether any of the data contains sensitive information prior to moving it.
+
+== The Governance dashboard
+
+The Governance dashboard provides information so that you can increase the efficiency and control the costs related to the data stored on your storage resources.
+
+image:screenshot_compliance_governance_dashboard.png[A screenshot of the Cloud Data Sense Governance dashboard.]
+
+=== Saving Opportunities
+
+You may want to investigate the items in the _Saving Opportunities_ area to see if there is any data you should delete or tier to less expensive object storage. Click each item to view the filtered results in the Investigation page.
+
+* *Stale Data* - Data that was last modified over 3 years ago.
+* *Non-Business Data* - Data considered not to be business related, based on their Category or File Type. This includes:
+
+** Application Data
+** Audio
+** Executables
+** Images
+** Logs
+** Videos
+** Miscellaneous (general "other" category)
+
+* *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-controlling-private-data.html#viewing-all-duplicated-files[See what types of duplicate files are displayed].
+
+=== Policies with the largest number of results
+
+Click the name of a Policy in the _Policy_ area to display the results in the Investigation page. Click *View All* to view the list of all available Policies.
+
+Click link:task-managing-highlights.html#controlling-your-data-using-policies[here^] to learn more about Policies.
+
+=== Data Overview
+
+A quick overview of all the data that is being scanned. Click the button to download a full data mapping report that includes Usage Capacity, Age of Data, Size of Data, and File Types for all working environments and data sources. See link:task-generating-compliance-reports.html#data-mapping-report[Data Mapping Report] for complete details.
+
+=== Top data repositories listed by data sensitivity
+
+The _Top Data Repositories by Sensitivity Level_ area lists up to the top four data repositories (working environments and data sources) that contain the most sensitive items. The bar chart for each working environment is divided into:
+
+* Non-Personal data
+* Personal data
+* Sensitive Personal data
+
+You can hover over each section to see the total number of items in each category.
+
+Click each area to view the filtered results in the Investigation page so that you can investigate further.
+
+=== Data listed by types of Open Permissions
+
+The _Open Permissions_ area shows the percentage for each type of permissions that exist for all files that are being scanned. The chart shows the following types of permissions:
+
+* No Open Access
+* Open to Organization
+* Open to Public
+* Unknown Access
+
+You can hover over each section to see the total number of files in each category. Click each area to view the filtered results in the Investigation page so that you can investigate further.
+
+=== Age of Data and Size of Data graphs
+
+You may want to investigate the items in the _Age_ and _Size_ graphs to see if there is any data you should delete or tier to less expensive object storage.
+
+You can hover over a point in the charts to see details about the age or size of the data in that category. Click to view all the files filtered by that age or size range.
+
+* *Age of Data graph* - Categorizes data based on the time it was created, the last time it was accessed, or the last time it was modified.
+* *Size of Data graph* - Categorizes data based on size.
+
+=== Most identified data Classifications
+
+The _Classification_ area provides a list of the most identified link:task-controlling-private-data.html#viewing-files-by-categories[Categories^], link:task-controlling-private-data.html#viewing-files-by-file-types[File types^], and link:task-managing-highlights.html#categorizing-your-data-using-aip-labels[AIP Labels^] in your scanned data.
+
+==== Categories
+
+Categories can help you understand what’s happening with your data by showing you the types of information that you have. For example, a category like "resumes" or "employee contracts" can include sensitive data. When you investigate the results, you might find that employee contracts are stored in an insecure location. You can then correct that issue.
+
+See link:task-controlling-private-data.html#viewing-files-by-categories[Viewing files by categories^] for more information.
+
+==== File types
+
+Reviewing your file types can help you control your sensitive data because you might find that certain file types are not stored correctly.
+
+See link:task-controlling-private-data.html#viewing-files-by-file-types[Viewing file types^] for more information.
+
+==== AIP labels
+
+If you have subscribed to Azure Information Protection (AIP), you can classify and protect documents and files by applying labels to content. Reviewing the most used AIP labels that are assigned to files enables you to see which labels are most used in your files.
+
+See link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP Labels^] for more information.
