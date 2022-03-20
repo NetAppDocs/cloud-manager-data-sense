@@ -1,5 +1,6 @@
 settings:
   name: Cloud Data Sense
+  platform: cloud
   internal:
     pdf_enabled: true
   prod:
@@ -78,24 +79,77 @@ sidebar:
           url: /task-get-help.html
     - title: Legal notices
       url: /legal-notices.html
+product-family:
+  name: Cloud Manager
+  repo: cloud-manager-family
 homepage:
   tiles:
     - title: Get started
       links:
-        - title: title
-          url: page.html
-        - title: title
-          url: page.html
-        - title: title
-          url: page.html
-    - title: tile name
+        - title: Learn about Cloud Data Sense
+          url: concept-cloud-compliance.html
+        - title: What’s New
+          url: whats-new.html
+        - title: Deploy Data Sense in the cloud
+          url: task-deploy-cloud-compliance.html
+        - title: Deploy Data Sense on-premises with internet
+          url: task-deploy-compliance-onprem.html
+        - title: Deploy Data Sense on-premises without internet
+          url: task-deploy-compliance-dark-site.html
+        - title: Integrate Active Directory
+          url: task-add-active-directory-datasense.html
+        - title: Set up licensing
+          url: task-licensing-datasense.html
+    - title: Activate scanning on your data sources
       links:
-        - title: title
-          url: page.html
-        - title: title
-          url: page.html
-        - title: title
-          url: page.html
+        - title: Cloud Volumes ONTAP volumes
+          url: task-getting-started-compliance.html
+        - title: On-premises ONTAP volumes
+          url: task-getting-started-compliance.html
+        - title: Azure NetApp Files volumes
+          url: task-scanning-anf.html
+        - title: Amazon FSx for ONTAP volumes
+          url: task-scanning-fsx.html
+        - title: Amazon S3 buckets
+          url: task-scanning-s3.html
+        - title: Generic S3 buckets
+          url: task-scanning-object-storage.html
+        - title: Non-NetApp file shares
+          url: task-scanning-file-shares.html
+        - title: Database schemas
+          url: task-scanning-databases.html
+        - title: OneDrive accounts
+          url: task-scanning-onedrive.html
+        - title: SharePoint accounts
+          url: task-scanning-sharepoint.html
+    - title: Manage private data
+      links:
+        - title: Categorize your data using AIP labels
+          url: task-org-private-data.html#categorizing-your-data-using-aip-labels
+        - title: Create email alerts when non-compliant data is found
+          url: task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found
+        - title: Add your own custom personal data identifiers
+          url: task-managing-data-fusion.html
+        - title: Apply tags and owners to files that need attention
+          url: task-org-private-data.html#applying-tags-to-manage-your-scanned-files
+        - title: Respond to a Data Subject Access Request
+          url: task-responding-to-dsar.html
+        - title: Copy source files
+          url: task-managing-highlights.html#copying-source-files
+        - title: Move source files
+          url: task-managing-highlights.html#moving-source-files-to-an-nfs-share
+        - title: Delete source files
+          url: task-managing-highlights.html#deleting-source-files
+    - title: View details about your data
+      links:
+        - title: Create policies to view your top searches
+          url: task-org-private-data.html#controlling-your-data-using-policies
+        - title: View files that contain private information
+          url: task-controlling-private-data.html
+        - title: View files that are duplicated in your storage
+          url: task-controlling-private-data.html#checking-for-duplicate-files-in-your-storage-systems
+        - title: Generate compliance reports
+          url: task-generating-compliance-reports.html
     - title: Blogs & community
       links:
         - title: NetApp Community
