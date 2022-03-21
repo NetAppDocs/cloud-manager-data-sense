@@ -82,7 +82,7 @@ Data Sense can automatically delete files that match the query that you define i
 
 Both Cloud Manager and Cloud Data Sense can be deployed in an on-premises site that doesn’t have internet access. Now your secure sites can use Cloud Manager to manage your on-prem ONTAP clusters, replicate data between clusters, and scan data from those clusters using Cloud Data Sense.
 
-* link:task-deploy-compliance-dark-site.html[See how to deploy Cloud Data Sense in a site with no internet access^].
+link:task-deploy-compliance-dark-site.html[See how to deploy Cloud Data Sense in a site with no internet access^].
 
 == 28 Nov 2021
 
@@ -208,7 +208,7 @@ The Last Accessed Time value has been added to the File Details page and to repo
 
 === Cloud Compliance has been renamed as *Cloud Data Sense*.
 
- Cloud Compliance has been renamed as *Cloud Data Sense* as of this release. With all the new Governance and other capabilities that have been included in the product, the Compliance name was not promoting the full set of capabilities.
+Cloud Compliance has been renamed as *Cloud Data Sense* as of this release. With all the new Governance and other capabilities that have been included in the product, the Compliance name was not promoting the full set of capabilities.
 
 === New "Full Data Mapping" report is available from the Governance Dashboard.
 
