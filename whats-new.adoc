@@ -37,7 +37,7 @@ Data Sense can read the permissions that exist for files that are being scanned 
 * French INSEE - The INSEE code is a numerical code used by the French National Institute for Statistics and Economic Studies (INSEE) to identify various entities.
 * Passwords - This information is identified using proximity validation by looking for permutations of the word "password" next to a alphanumeric string. The number of items found will be listed under "Personal Results" in the Compliance Dashboard. You can search for files that contain passwords in the Investigation pane using the Filter *Personal Data > Password*.
 
-== The Beta capability to use Cloud Data Sense to scan your Cloud Backup files has been discontinued starting with this release.
+=== The Beta capability to use Cloud Data Sense to scan your Cloud Backup files has been discontinued in this release.
 
 == 9 Feb 2022
 
