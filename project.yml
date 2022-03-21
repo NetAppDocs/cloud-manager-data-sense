@@ -7,7 +7,7 @@ settings:
     pdf_enabled: true
 sidebar:
   entries:
-    - title: Back to Cloud Manager documentation
+    - title: All Cloud Manager documentation
       url: https://docs.netapp.com/us-en/cloud-manager-family
     - title: Cloud Data Sense docs
       url: /index.html
@@ -154,6 +154,8 @@ homepage:
       links:
         - title: NetApp Community
           url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+        - title: Cloud Central use cases
+          url: https://cloud.netapp.com/netapp-cloud-data-sense
         - title: Cloud Central blog
           url: https://cloud.netapp.com/blog
         - title: Cloud webinars
