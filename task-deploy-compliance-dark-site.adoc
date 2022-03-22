@@ -37,7 +37,7 @@ Most Data Sense features work when it is deployed in a site with no internet acc
 * Managing Microsoft Azure Information Protection (AIP) labels
 * Automated software upgrades from Cloud Manager
 +
-Both the Cloud Manager Connector and Data Sense will require periodic manual upgrades to enable new features. You can see the Data Sense version at the bottom of the Data Sense UI pages. Check the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html[Cloud Manager Release Notes^] to see the new features in each release and for when a software update package is available. Then you can follow the steps to <<Upgrade Data Sense software,upgrade your Data Sense software>>.
+Both the Cloud Manager Connector and Data Sense will require periodic manual upgrades to enable new features. You can see the Data Sense version at the bottom of the Data Sense UI pages. Check the link:whats-new.html[Cloud Data Sense Release Notes] to see the new features in each release and for when a software update package is available. Then you can follow the steps to <<Upgrade Data Sense software,upgrade your Data Sense software>>.
 
 == Quick start
 
@@ -46,7 +46,7 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install the Cloud Manager Connector
 
 [role="quick-margin-para"]
-If you don't already have a Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-get-started/task-install-connector-onprem-no-internet.html[deploy the Connector^] on a Linux host now.
+If you don't already have a Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector^] on a Linux host now.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review Data Sense prerequisites
 
@@ -65,7 +65,7 @@ The first 1 TB of data that Cloud Data Sense scans in Cloud Manager is free. A B
 
 == Install the Cloud Manager Connector
 
-If you don't already have a Cloud Manager Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-get-started/task-install-connector-onprem-no-internet.html[deploy the Connector^] on a Linux host in your offline site.
+If you don't already have a Cloud Manager Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector^] on a Linux host in your offline site.
 
 == Prepare the Linux host system
 
@@ -286,7 +286,7 @@ Since Data Sense software is updated with new features on a regular basis, you s
 .Before you begin
 
 * Data Sense software can be upgraded one major version at a time. For example, if you have version 1.7.x installed, you can upgrade only to 1.8.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
-* Verify that your on-prem Connector software has been upgraded to the newest available version. https://docs.netapp.com/us-en/cloud-manager-connector/task-managing-connectors.html#upgrading-the-connector-on-prem-without-internet-access[See the Connector upgrade steps^].
+* Verify that your on-prem Connector software has been upgraded to the newest available version. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrading-the-connector-on-prem-without-internet-access[See the Connector upgrade steps^].
 
 .Steps
 

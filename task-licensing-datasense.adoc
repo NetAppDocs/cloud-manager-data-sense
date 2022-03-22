@@ -115,7 +115,7 @@ After you purchase a Cloud Data Sense license for your Cloud Manager account, yo
 +
 * If you have the Data Sense license serial number and know your NSS account, select the *Enter Serial Number* option and enter that information.
 +
-If your NetApp Support Site account isn't available from the drop-down list, https://docs.netapp.com/us-en/cloud-manager-get-started/task-adding-nss-accounts.html[add the NSS account to Cloud Manager^].
+If your NetApp Support Site account isn't available from the drop-down list, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html[add the NSS account to Cloud Manager^].
 * If you have the Data Sense license file, select the *Upload License File* option and follow the prompts to attach the file.
 // * If you have the Data Sense license file (required when installed in a dark site), select the *Upload License File* option and follow the prompts to attach the file.
 +
