@@ -54,7 +54,7 @@ image:screenshot_add_subscription.gif["A screenshot of the menu in the Credentia
 
 . Select an existing subscription and click *Associate*, or click *Add Subscription* and follow the steps.
 +
-The following video shows how to associate an https://aws.amazon.com/marketplace/pp/B07QX2QLXX[AWS Marketplace^] subscription to an AWS subscription:
+The following video shows how to associate an https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa[AWS Marketplace^] subscription to an AWS subscription:
 +
 video::video_subscribing_aws.mp4[width=848, height=480]
 +
@@ -115,7 +115,7 @@ After you purchase a Cloud Data Sense license for your Cloud Manager account, yo
 +
 * If you have the Data Sense license serial number and know your NSS account, select the *Enter Serial Number* option and enter that information.
 +
-If your NetApp Support Site account isn't available from the drop-down list, https://docs.netapp.com/us-en/cloud-manager-get-started/task-adding-nss-accounts.html[add the NSS account to Cloud Manager^].
+If your NetApp Support Site account isn't available from the drop-down list, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html[add the NSS account to Cloud Manager^].
 * If you have the Data Sense license file, select the *Upload License File* option and follow the prompts to attach the file.
 // * If you have the Data Sense license file (required when installed in a dark site), select the *Upload License File* option and follow the prompts to attach the file.
 +

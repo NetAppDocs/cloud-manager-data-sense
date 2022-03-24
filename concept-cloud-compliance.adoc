@@ -68,7 +68,7 @@ link:task-licensing-datasense.html[Learn how to license Cloud Data Sense^].
 
 * Installing Cloud Data Sense in the cloud requires deploying a cloud instance, which results in charges from the cloud provider where it is deployed. See <<The Cloud Data Sense instance,the type of instance that is deployed for each cloud provider>>. There is no cost if you install Data Sense on an on-premises system.
 
-* Cloud Data Sense requires that you have deployed a Connector. In many cases you already have a Connector because of other storage and services you are using in Cloud Manager. The Connector instance results in charges from the cloud provider where it is deployed. See the https://docs.netapp.com/us-en/cloud-manager-connector/task-installing-linux.html[type of instance that is deployed for each cloud provider^]. There is no cost if you install the Connector on an on-premises system.
+* Cloud Data Sense requires that you have deployed a Connector. In many cases you already have a Connector because of other storage and services you are using in Cloud Manager. The Connector instance results in charges from the cloud provider where it is deployed. See the https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[type of instance that is deployed for each cloud provider^]. There is no cost if you install the Connector on an on-premises system.
 
 === Data transfer costs
 
@@ -80,7 +80,7 @@ Data transfer costs depend on your setup. If the Cloud Data Sense instance and d
 
 == The Cloud Data Sense instance
 
-When you deploy Data Sense in the cloud, Cloud Manager deploys the instance in the same subnet as the Connector. https://docs.netapp.com/us-en/cloud-manager-get-started/concept-connectors.html[Learn more about Connectors.^]
+When you deploy Data Sense in the cloud, Cloud Manager deploys the instance in the same subnet as the Connector. https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html[Learn more about Connectors.^]
 
 NOTE: If the Connector is installed on-prem, it deploys the Cloud Data Sense instance in same VPC or VNet as the first Cloud Volumes ONTAP system in the request. You can install Data Sense on-prem as well.
 
@@ -209,4 +209,4 @@ The role each user has been assigned provides different capabilities within Clou
 
 * Users with the *Compliance Viewer* role can only view compliance information and generate reports for systems that they have permission to access. These users cannot enable/disable scanning of volumes, buckets, or database schemas. These users can't copy, move, or delete files either.
 
-https://docs.netapp.com/us-en/cloud-manager-accounts/reference-user-roles.html[Learn more about Cloud Manager roles^] and how to https://docs.netapp.com/us-en/cloud-manager-accounts/task-managing-cloud-central-accounts.html#adding-users[add users with specific roles^].
+https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-user-roles.html[Learn more about Cloud Manager roles^] and how to https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-cloud-central-accounts.html#adding-users[add users with specific roles^].
