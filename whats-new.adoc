@@ -16,13 +16,7 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 3 Apr 2022
-
-=== Cloud Data Sense does this and that...
-
-Really, it does this and that
-
-== 15 Mar 2022
+== 15 March 2022
 
 === New Filter to show the files to which a specific user or a group has read or write permissions.
 
@@ -39,7 +33,7 @@ Data Sense can read the permissions that exist for files that are being scanned 
 
 === The Beta capability to use Cloud Data Sense to scan your Cloud Backup files has been discontinued in this release.
 
-== 9 Feb 2022
+== 9 February 2022
 
 === Added support for scanning Microsoft SharePoint online accounts.
 
@@ -62,9 +56,8 @@ Data Sense can now find French social security numbers, French IDs, and French d
 === Security group port changed for Data Sense communication to the Connector.
 
 The security group for the Cloud Manager Connector will use port 443 instead of port 80 for inbound and outbound traffic to and from the Data Sense instance for added security. Both ports remain open at this time, so you shouldn't see any issues, but you should update the security group in any older deployments of the Connector as port 80 will be deprecated in a future release.
-// end::whats-new[]
 
-== 2 Jan 2022
+== 2 January 2022
 
 === Ability to integrate a global Active Directory to identify file owners and permissions.
 
@@ -75,8 +68,9 @@ In addition to the Active Directory credentials you enter so that Data Sense can
 === Data Sense "policies" can now be used to delete files.
 
 Data Sense can automatically delete files that match the query that you define in a Policy. link:task-managing-highlights.html#deleting-source-files-automatically-using-policies[See how to create custom Policies].
+// end::whats-new[]
 
-== 16 Dec 2021
+== 16 December 2021
 
 === Ability for Data Sense to scan data in dark sites.
 
@@ -84,7 +78,7 @@ Both Cloud Manager and Cloud Data Sense can be deployed in an on-premises site t
 
 link:task-deploy-compliance-dark-site.html[See how to deploy Cloud Data Sense in a site with no internet access^].
 
-== 28 Nov 2021
+== 28 November 2021
 
 === Data Sense can be used to clone a volume from an ONTAP system.
 
