@@ -16,6 +16,12 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
+== 3 April 2022
+
+=== Four types of Australian personal data can be identified by Data Sense.
+
+Data Sense can identify and categorize files that contain the Australian TFN (Tax File Number), Australian Driver’s License Number, Australian Medicare Number, and Australian Passport Number.
+
 == 15 March 2022
 
 === New Filter to show the files to which a specific user or a group has read or write permissions.

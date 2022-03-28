@@ -37,7 +37,11 @@ Note that you can add to the list of personal data that is found in your files i
 | IP address | No
 | Password | Yes
 
-.38+| National Identifiers | Austrian SSN | Yes
+.42+| National Identifiers | Australian TFN (Tax File Number) | Yes
+| Australian Driver’s License Number | Yes
+| Australian Medicare Number | Yes
+| Australian Passport Number | Yes
+| Austrian SSN | Yes
 | Belgian ID (Numero National) | Yes
 | Brazilian ID (CPF) | Yes
 | British Passport | Yes
