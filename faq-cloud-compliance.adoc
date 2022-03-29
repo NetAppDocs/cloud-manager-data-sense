@@ -1,0 +1,176 @@
+---
+sidebar: sidebar
+permalink: faq-cloud-compliance.html
+keywords: faq, frequently asked questions, questions, cloud compliance, data sense
+summary: This FAQ can help if you’re just looking for a quick answer to a question.
+---
+
+= Frequently asked questions about Cloud Data Sense
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+
+This FAQ can help if you’re just looking for a quick answer to a question.
+
+== What is Cloud Data Sense?
+
+Cloud Data Sense is a cloud offering that uses Artificial Intelligence (AI) driven technology to help organizations understand data context and identify sensitive data across your storage systems. The systems can be Azure NetApp Files configurations, Amazon FSx for ONTAP, Cloud Volumes ONTAP systems (hosted in AWS, Azure, or GCP), Amazon S3 buckets, on-prem ONTAP systems, non-NetApp file shares, generic S3 object storage, databases, OneDrive accounts, and SharePoint accounts.
+
+Cloud Data Sense provides pre-defined parameters (such as sensitive information types and categories) to address new data compliance regulations for data privacy and sensitivity, such as GDPR, CCPA, HIPAA, and more.
+
+== Why should I use Cloud Data Sense?
+
+Cloud Data Sense can empower you with data to help you:
+
+* Comply with data compliance and privacy regulations.
+* Comply with data retention policies.
+* Easily locate and report on specific data in response to data subjects, as required by GDPR, CCPA, HIPAA, and other data privacy regulations.
+
+== What are the common use cases for Cloud Data Sense?
+
+* Identify Personal Identifiable Information (PII).
+* Identify a wide scope of sensitive information as required by GDPR and CCPA privacy regulations.
+* Comply with new and upcoming data privacy regulations.
+
+https://cloud.netapp.com/cloud-compliance[Learn more about the use cases for Cloud Data Sense^].
+
+== What types of data can be scanned with Cloud Data Sense?
+
+Cloud Data Sense supports scanning of unstructured data over NFS and CIFS protocols that are managed by Cloud Volumes ONTAP, Azure NetApp Files, Amazon FSx for ONTAP, on-prem ONTAP systems, and in non-NetApp file shares. Data Sense supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
+
+Data Sense can also scan data stored on Amazon S3 buckets and in generic S3 object storage.
+
+Additionally, Data Sense can scan databases that are located anywhere, and user files from OneDrive and SharePoint accounts.
+
+link:concept-cloud-compliance.html#how-scans-work[Learn how scans work^].
+
+== Which cloud providers are supported?
+
+Cloud Data Sense operates as part of Cloud Manager and supports AWS, Azure, and GCP. This provides your organization with unified privacy visibility across different cloud providers.
+
+== How do I access Cloud Data Sense?
+
+Cloud Data Sense is operated and managed through Cloud Manager. You can access Data Sense features from the *Data Sense* tab in Cloud Manager.
+
+== How does Cloud Data Sense work?
+
+Cloud Data Sense deploys another layer of Artificial Intelligence alongside your Cloud Manager system and storage systems. It then scans the data on volumes, buckets, databases, and OneDrive accounts and indexes the data insights that are found.
+
+link:concept-cloud-compliance.html[Learn more about how Cloud Data Sense works^].
+
+== How much does Cloud Data Sense cost?
+
+The cost to use Cloud Data Sense depends on the amount of data that you're scanning. The first 1 TB of data that Data Sense scans in a Cloud Manager workspace is free. A subscription to the AWS, Azure, or GCP Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point. See https://cloud.netapp.com/netapp-cloud-data-sense#Pricing[pricing^] for details.
+
+== What type of instance or VM is required for Cloud Data Sense?
+
+When link:task-deploy-cloud-compliance.html[deployed in the cloud]:
+
+* In AWS, Cloud Data Sense runs on an m5.4xlarge instance with a 500 GB GP2 disk.
+* In Azure, Cloud Data Sense runs on a Standard_D16s_v3 VM with a 512 GB disk.
+* In GCP, Cloud Data Sense runs on an n2-standard-16 VM with a 512 GB Standard persistent disk.
+
+You can install Data Sense software on a Linux host that has internet access in your network or in the cloud. Everything works the same and you continue to manage your scan configuration and results through Cloud Manager. See link:task-deploy-compliance-onprem.html[Deploying Cloud Data Sense on premises^] for system requirements and installation details.
+
+Additionally, you can link:task-deploy-compliance-dark-site.html[deploy Data Sense in an on-premises site that doesn't have internet access] for completely secure sites.
+
+Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
+
+link:concept-cloud-compliance.html[Learn more about how Cloud Data Sense works^].
+
+== How often does Cloud Data Sense scan my data?
+
+Data changes frequently, so Cloud Data Sense scans your data continuously with no impact to your data. While the initial scan of your data might take longer, subsequent scans only scan the incremental changes, which reduces system scan times.
+
+link:concept-cloud-compliance.html#how-scans-work[Learn how scans work^].
+
+Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans. link:task-managing-compliance.html#reducing-the-data-sense-scan-speed[See how to reduce the scan speed].
+
+== Does Cloud Data Sense offer reports?
+
+Yes. The information offered by Cloud Data Sense can be relevant to other stakeholders in your organizations, so we enable you to generate reports to share the insights.
+
+The following reports are available for Data Sense:
+
+Privacy Risk Assessment report:: Provides privacy insights from your data and a privacy risk score. link:task-generating-compliance-reports.html[Learn more^].
+
+Data Subject Access Request report:: Enables you to extract a report of all files that contain information regarding a data subject’s specific name or personal identifier. link:task-responding-to-dsar.html[Learn more^].
+
+PCI DSS report:: Helps you identify the distribution of credit card information across your files. link:task-generating-compliance-reports.html[Learn more^].
+
+HIPAA report:: Helps you identify the distribution of health information across your files. link:task-generating-compliance-reports.html[Learn more^].
+
+Data Mapping report:: Provides information about the size and number of files in your working environments. This includes usage capacity, age of data, size of data, and file types. link:task-generating-compliance-reports.html#data-mapping-report[Learn more^].
+
+Reports on a specific information type:: Reports are available that include details about the identified files that contain personal data and sensitive personal data. You can also see files broken down by category and file type. link:task-controlling-private-data.html[Learn more^].
+
+== Does scan performance vary?
+
+Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size characteristics of the host system (either in the cloud or on-premises).  See link:concept-cloud-compliance.html#the-cloud-data-sense-instance[The Cloud Data Sense instance] and link:task-deploy-cloud-compliance.html[Deploying Cloud Data Sense] for more information.
+
+When initially adding new data sources you can also choose to only perform a "mapping" scan instead of a full "classification" scan. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.  link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[See the difference between a mapping and classification scan.]
+
+== Which file types are supported?
+
+Cloud Data Sense scans all files for category and metadata insights and displays all file types in the file types section of the dashboard.
+
+When Data Sense detects Personal Identifiable Information (PII), or when it performs a DSAR search, only the following file formats are supported:
+.CSV, .DCM, .DICOM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, and .XLSX.
+
+== How do I enable Cloud Data Sense?
+
+First you need to deploy an instance of Cloud Data Sense in Cloud Manager. Once the instance is running, you can enable the service on existing working environments and databases from the *Data Sense* tab or by selecting a specific working environment.
+
+link:task-getting-started-compliance.html[Learn how to get started^].
+
+NOTE: Activating Cloud Data Sense results in an immediate initial scan. Scan results display shortly after.
+
+== How do I disable Cloud Data Sense?
+
+You can disable Cloud Data Sense from scanning an individual working environment, database, file share group, OneDrive account, or SharePoint account from the Data Sense Configuration page.
+
+link:task-managing-compliance.html[Learn more^].
+
+NOTE: To completely remove the Cloud Data Sense instance, you can manually remove the Data Sense instance from your cloud provider's portal or on-prem location.
+
+== What happens if data tiering is enabled on your ONTAP volumes?
+
+You might want to enable Cloud Data Sense on ONTAP systems that tier cold data to object storage. If data tiering is enabled, Data Sense scans all of the data--data that's on disks and cold data tiered to object storage.
+
+The compliance scan doesn't heat up the cold data--it stays cold and tiered to object storage.
+
+== Can I use Cloud Data Sense to scan on-premises ONTAP storage?
+
+Yes. As long as you have discovered the on-prem ONTAP cluster as a working environment in Cloud Manager, you can scan the volume data.
+
+== Can Cloud Data Sense send notifications to my organization?
+
+Yes. In conjunction with the Policies feature, you can send email alerts to Cloud Manager users (daily, weekly, or monthly) when a Policy returns results so you can get notifications to protect your data. Learn more about link:task-org-private-data.html#controlling-your-data-using-policies[Policies^].
+
+You can also download status reports from the Governance page and Investigation page that you can share internally in your organization.
+
+== Can I customize the service to my organization’s needs?
+
+Cloud Data Sense provides out-of-the-box insights to your data. These insights can be extracted and used for your organization's needs.
+
+Additionally, you can use the *Data Fusion* capability to have Data Sense scan all your data based on criteria found in specific columns in databases you are scanning -- essentially allowing you to make your own custom personal data types.
+
+link:task-managing-data-fusion.html#creating-custom-personal-data-identifiers-from-your-databases[Learn more^].
+
+== Can Cloud Data Sense work with the AIP labels I have embedded in my files?
+
+Yes. You can manage AIP labels in the files that Cloud Data Sense is scanning if you have subscribed to link:https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^]. You can view the labels that are already assigned to files, add labels to files, and change existing labels.
+
+link:task-org-private-data.html#categorizing-your-data-using-aip-labels[Learn more^].
+
+== Can I limit Cloud Data Sense information to specific users?
+
+Yes, Cloud Data Sense is fully integrated with Cloud Manager. Cloud Manager users can only see information for the working environments they are eligible to view according to their workspace privileges.
+
+Additionally, if you want to allow certain users to just view Data Sense scan results without having the ability to manage Data Sense settings, you can assign those users the _Cloud Compliance Viewer_ role.
+
+link:concept-cloud-compliance.html#user-access-to-compliance-information[Learn more^].
