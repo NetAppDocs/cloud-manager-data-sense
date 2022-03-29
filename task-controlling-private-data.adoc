@@ -137,7 +137,7 @@ image:screenshot_compliance_permissions.png[A screenshot showing detailed file p
 
 You can click the name of a user or a group and the Investigation page is displayed with the name of that user or group in the “User / Group Permissions” filter so you can see all the files that the user or group has access to.
 
-Note that if you see SIDs (Security IDentifiers) instead of user and group names, you should integrate your Active Directory into Data Sense. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html[See how to do this^].
+Note that if you see SIDs (Security IDentifiers) instead of user and group names, you should integrate your Active Directory into Data Sense. link:task-add-active-directory-datasense.html[See how to do this].
 
 == Checking for duplicate files in your storage systems
 
