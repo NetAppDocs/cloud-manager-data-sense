@@ -15,9 +15,9 @@ summary: You can integrate a global Active Directory with Cloud Data Sense to en
 [.lead]
 You can integrate a global Active Directory with Cloud Data Sense to enhance the results that Data Sense reports about file owners and which users and groups have access to your files.
 
-When you set up certain data sources (listed below), you need to enter Active Directory credentials in order for Data Sense to scan CIFS volumes. This integration provides Data Sense with file owner and permissions details for those data sources. The Active Directory entered for those data sources may be different than the global Active Directory credentials you enter here. Data Sense will look in all integrated Active Directories for user and permission details.
+When you set up certain data sources (listed below), you need to enter Active Directory credentials in order for Data Sense to scan CIFS volumes. This integration provides Data Sense with file owner and permissions details for the data that resides in those data sources. The Active Directory entered for those data sources may be different than the global Active Directory credentials you enter here. Data Sense will look in all integrated Active Directories for user and permission details.
 
-This helps in the following locations in Data Sense:
+This integration provides additional information in the following locations in Data Sense:
 
 * You can use the "File Owner" link:task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[filter] and see results in the file’s metadata in the Investigation pane. Instead of the file owner containing the SID (Security IDentifier), it is populated with the actual user name.
 * You can see link:task-controlling-private-data.html#viewing-permissions-for-files[full file permissions] for each file when you click the "View all Permissions" button.
@@ -39,7 +39,7 @@ There is no support for identifying user and permission information from Databas
 
 == Connecting to your Active Directory server
 
-After you've deployed Data Sense and have activated scanning on your data sources, you can integrate Data Sense with your Active Directory.
+After you've deployed Data Sense and have activated scanning on your data sources, you can integrate Data Sense with your Active Directory. Active Directory can be accessed using a DNS Server IP address or an LDAP Server IP address.
 
 The Active Directory credentials can be read-only, but providing admin credentials ensures that Data Sense can read any data that requires elevated permissions. The credentials are stored on the Cloud Data Sense instance.
 
@@ -48,8 +48,12 @@ The Active Directory credentials can be read-only, but providing admin credentia
 * You must have an Active Directory already set up for the users in your company.
 
 * You must have the information for the Active Directory:
-** DNS Server IP Address, or multiple IP Addresses
-** User Name and Password for the server
+** DNS Server IP address, or multiple IP addresses
++
+or
++
+LDAP Server IP address, or multiple IP addresses
+** User Name and Password to access the server
 ** Domain Name (Active Directory Name)
 ** Whether you are using secure LDAP (LDAPS) or not
 ** LDAP Server Port (typically 389 for LDAP, and 636 for secure LDAP)
@@ -77,7 +81,9 @@ The Active Directory credentials can be read-only, but providing admin credentia
 +
 image:screenshot_compliance_integrate_active_directory.png[A screenshot that shows clicking the button to add an Active Directory server into Cloud Data Sense.]
 
-. In the Connect to Active Directory dialog, enter the Active Directory details and click *Connect*. Multiple IP Addresses can be added by adding a comma between entries.
+. In the Connect to Active Directory dialog, enter the Active Directory details and click *Connect*.
++
+You can add multiple IP addresses, if required, by clicking *Add IP*.
 +
 image:screenshot_compliance_active_directory_dialog.png[A screenshot of the dialog where you define the Active Directory you want to integrate with Data Sense.]
 +
