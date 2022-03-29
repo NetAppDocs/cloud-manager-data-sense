@@ -19,9 +19,9 @@ When you set up certain data sources (listed below), you need to enter Active Di
 
 This helps in the following locations in Data Sense:
 
-* You can use the "File Owner" link:task_controlling_private_data.html#filtering-data-in-the-data-investigation-page[filter] and see results in the file’s metadata in the Investigation pane. Instead of the file owner containing the SID (Security IDentifier), it is populated with the actual user name.
-* You can see link:task_controlling_private_data.html#viewing-permissions-for-files[full file permissions] for each file when you click the "View all Permissions" button.
-* In the link:task_controlling_governance_data.html[Governance dashboard], the Open Permissions panel will show a greater level of detail about your data.
+* You can use the "File Owner" link:task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[filter] and see results in the file’s metadata in the Investigation pane. Instead of the file owner containing the SID (Security IDentifier), it is populated with the actual user name.
+* You can see link:task-controlling-private-data.html#viewing-permissions-for-files[full file permissions] for each file when you click the "View all Permissions" button.
+* In the link:task-controlling-governance-data.html[Governance dashboard], the Open Permissions panel will show a greater level of detail about your data.
 
 NOTE: Local user SIDs, and SIDs from unknown domains, are not translated to the actual user name.
 
