@@ -20,11 +20,11 @@ Learn what's new in Cloud Data Sense.
 
 === Four new types of Australian personal data can be identified by Data Sense.
 
-Data Sense can identify and categorize files that contain the Australian TFN (Tax File Number), Australian Driver’s License Number, Australian Medicare Number, and Australian Passport Number.
+Data Sense can identify and categorize files that contain the Australian TFN (Tax File Number), Australian Driver’s License Number, Australian Medicare Number, and Australian Passport Number. link:reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that Data Sense can identify in your data].
 
 === Global Active Directory server can be an LDAP server now.
 
-The global Active Directory server you integrate with Data Sense can be an LDAP Server now in addition to the previously support DNS Server.
+The global Active Directory server you integrate with Data Sense can be an LDAP Server now in addition to the previously support DNS Server. link:task-add-active-directory-datasense.html[Go here for details].
 
 == 15 March 2022
 
@@ -98,7 +98,7 @@ link:task-managing-highlights.html#cloning-volume-data-to-a-new-volume[See how t
 
 === GCP Marketplace subscription for Cloud Manager now includes support for Cloud Data Sense.
 
-The link:https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved[GCP Marketplace subscription for Cloud Manager^] now includes support for Cloud Data Sense. Now you can use this pay-as-you-go (PAYGO) subscription to scan data from Cloud Volumes ONTAP systems deployed on Google Cloud storage in addition to using a BYOL license from NetApp.
+The https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved[GCP Marketplace subscription for Cloud Manager^] now includes support for Cloud Data Sense. Now you can use this pay-as-you-go (PAYGO) subscription to scan data from Cloud Volumes ONTAP systems deployed on Google Cloud storage in addition to using a BYOL license from NetApp.
 
 === Ability to view the status of your long-running compliance actions.
 
@@ -242,7 +242,7 @@ The File Size, Created Date, and Last Modified Date values have been added to re
 
 === Ability to scan data stored on Azure Blob.
 
-Scanning of data stored on Azure Blob is now supported when using the https://min.io/[MinIO service]. See link:task-scanning-object-storage.html[Scanning object storage that uses S3 protocol] for details.
+Scanning of data stored on Azure Blob is now supported when using the https://min.io/[MinIO service^]. See link:task-scanning-object-storage.html[Scanning object storage that uses S3 protocol] for details.
 
 === Additional type of personal data can be identified by Data Sense.
 

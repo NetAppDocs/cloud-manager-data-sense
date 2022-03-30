@@ -26,9 +26,10 @@ When installed in this manner (sometimes called an "offline" or "dark" site), Da
 * Non-NetApp NFS or CIFS file shares
 * Object Storage that uses the Simple Storage Service (S3) protocol
 
-For special situations where you need a very secure Cloud Manager installation, but you also want to scan OneDrive accounts or SharePoint accounts, you can use the Data Sense offline installer and provide internet access to a few select endpoints. See <<SharePoint and OneDrive special requirements,SharePoint and OneDrive special requirements>> for details.
-
-There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, or AWS S3 accounts.
+// For special situations where you need a very secure Cloud Manager installation, but you also want to scan OneDrive accounts or SharePoint accounts, you can use the Data Sense offline installer and provide internet access to a few select endpoints. See <<SharePoint and OneDrive special requirements,SharePoint and OneDrive special requirements>> for details.
+//
+// There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, or AWS S3 accounts.
+There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, AWS S3, or OneDrive and SharePoint accounts.
 
 == Limitations
 
@@ -37,7 +38,7 @@ Most Data Sense features work when it is deployed in a site with no internet acc
 * Managing Microsoft Azure Information Protection (AIP) labels
 * Automated software upgrades from Cloud Manager
 +
-Both the Cloud Manager Connector and Data Sense will require periodic manual upgrades to enable new features. You can see the Data Sense version at the bottom of the Data Sense UI pages. Check the link:whats-new.html[Cloud Data Sense Release Notes] to see the new features in each release and for when a software update package is available. Then you can follow the steps to <<Upgrade Data Sense software,upgrade your Data Sense software>>.
+Both the Cloud Manager Connector and Data Sense will require periodic manual upgrades to enable new features. You can see the Data Sense version at the bottom of the Data Sense UI pages. Check the link:whats-new.html[Cloud Data Sense Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to <<Upgrade Data Sense software,upgrade your Data Sense software>>.
 
 == Quick start
 
@@ -82,7 +83,7 @@ Data Sense software must run on a host that meets specific operating system requ
 +
 Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
-The following software must be installed on the host before you install Data Sense:
+ You must install the following software on the host before you install Data Sense:
 
 * Docker Engine version 19 or later. https://docs.docker.com/engine/install/[View installation instructions^].
 
@@ -102,29 +103,29 @@ Make sure port 8080 is open so you can see the installation progress in Cloud Ma
 * Ensure web browser connectivity to Cloud Data Sense. After Cloud Data Sense is enabled, ensure that users access the Cloud Manager interface from a host that has a connection to the Data Sense instance.
 +
 The Data Sense instance uses a private IP address to ensure that the indexed data isn't accessible to others. As a result, the web browser that you use to access Cloud Manager must have a connection to that private IP address. That connection can come from a host that's inside the same network as the Data Sense instance.
-
-== SharePoint and OneDrive special requirements
-
-When Cloud Manager and Data Sense are deployed in a site with no internet access, you can scan files in SharePoint and OneDrive accounts by providing internet access to a few select endpoints.
-
-[cols="50,50",options="header"]
-|===
-| Endpoints
-| Purpose
-
-|
-\login.microsoft.com
-\graph.microsoft.com
-
-| Communication with Microsoft servers to log in to the selected online service.
-
-| \https://cloudmanager.cloud.netapp.com
-
-| Communication with the Cloud Manager service, which includes NetApp accounts.
-
-|===
-
-Access to _cloudmanager.cloud.netapp.com_ is required only during the initial connections to these external services.
+//
+// == SharePoint and OneDrive special requirements
+//
+// When Cloud Manager and Data Sense are deployed in a site with no internet access, you can scan files in SharePoint and OneDrive accounts by providing internet access to a few select endpoints.
+//
+// [cols="50,50",options="header"]
+// |===
+// | Endpoints
+// | Purpose
+//
+// |
+// \login.microsoft.com
+// \graph.microsoft.com
+//
+// | Communication with Microsoft servers to log in to the selected online service.
+//
+// | \https://cloudmanager.cloud.netapp.com
+//
+// | Communication with the Cloud Manager service, which includes NetApp accounts.
+//
+// |===
+//
+// Access to _cloudmanager.cloud.netapp.com_ is required only during the initial connections to these external services.
 
 == Deploy Data Sense
 
@@ -175,7 +176,7 @@ image:screenshot_cloud_compliance_deploy_darksite.png[A screenshot of selecting 
 [source,cli]
 tar -xzf cc_onprem_installer_1.10.0.tar.gz
 
-. When prompted by the installer, you can enter the required values in a series of prompts, or you can enter the complete command in the first prompt:
+. When prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer:
 
 +
 [cols="50a,50",options="header"]
@@ -189,8 +190,8 @@ a. Paste the information you copied from step 7:
 b. Enter the IP address or host name of the Data Sense host machine so it can be accessed by the Connector instance.
 c. Enter the IP address or host name of the Cloud Manager Connector host machine so it can be accessed by the Data Sense instance.
 d. Enter proxy details as prompted. If your Cloud Manager already uses a proxy, there is no need to enter this information again here since Data Sense will automatically use the proxy used by Cloud Manager.
-| Alternatively, you can create the whole command in advance and enter it in the first prompt:
-`sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --cm-host <cm_host> --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password> --darksite`
+| Alternatively, you can create the whole command in advance, providing the necessary host parameters:
+`sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --manager-host <cm_host> --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password> --darksite`
 |===
 
 +
@@ -252,12 +253,12 @@ Follow these steps when installing Data Sense software on multiple on-premises h
 
 . Follow steps 1 through 8 from the link:task-deploy-compliance-dark-site.html#deploy-data-sense-on-a-single-host-typical-configuration[Single-host installation] on the manager node.
 
-. As shown in step 9, when prompted by the installer, you can enter the required values in a series of prompts, or you can enter the complete command in the first prompt.
+. As shown in step 9, when prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer.
 +
 In addition to the variables available for a single-host installation, a new option *-n <node_ip>* is used to specify the IP addresses of the scanner nodes. Multiple node IPs are separated by a comma.
 +
 For example, this command adds 3 scanner nodes:
-`sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --cm-host <cm_host> *-n <node_ip1>,<node_ip2>,<node_ip3>* --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password> --darksite`
+`sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --manager-host <cm_host> *-n <node_ip1>,<node_ip2>,<node_ip3>* --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password> --darksite`
 
 . Before the manager node installation completes, a dialog displays the installation command needed for the scanner nodes. Copy the command and save it in a text file. For example:
 +
@@ -275,7 +276,7 @@ When the installation finishes on all scanner nodes and they have been joined to
 The Cloud Data Sense installer finishes installing packages, and registers the installation. Installation can take 15 to 25 minutes.
 
 .What's Next
-From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and link:task-scanning-databases.html[databases] that you want to scan.
+From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and local link:task-scanning-databases.html[databases] that you want to scan.
 
 You can also link:task-licensing-datasense.html#use-a-cloud-data-sense-byol-license[set up BYOL licensing for Cloud Data Sense] from the Digital Wallet page at this time. You will not be charged until the amount of data exceeds 1 TB.
 

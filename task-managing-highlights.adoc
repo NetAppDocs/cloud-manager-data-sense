@@ -135,7 +135,7 @@ TIP: You can't copy and sync files that reside in databases, OneDrive accounts, 
 * You must have the Account Admin or Workspace Admin role to copy and sync files.
 * All selected files must be from the same source repository (ONTAP volume, S3 bucket, NFS or CIFS share, etc.).
 * You can copy a maximum of 200,000 files at a time.
-* You'll need to activate the Cloud Sync service and configure a minimum of one data broker that can be used to transfer files between the source and target systems. Review the Cloud Sync requirements beginning with the link:https://docs.netapp.com/us-en/occm/task-sync-quick-start.html[Quick Start description^].
+* You'll need to activate the Cloud Sync service and configure a minimum of one data broker that can be used to transfer files between the source and target systems. Review the Cloud Sync requirements beginning with the link:https://docs.netapp.com/us-en/cloud-manager-sync/task-sync-quick-start.html[Quick Start description^].
 +
 Note that the Cloud Sync service has separate service charges for your sync relationships, and will incur resource charges if you deploy the data broker in the cloud.
 
@@ -161,7 +161,7 @@ The Cloud Sync UI is opened in Cloud Manager.
 +
 You are prompted to define the sync relationship. The Source system is pre-populated based on the repository and files you already selected in Data Sense.
 
-. You'll need to select the Target system and then select (or create) the Data Broker you plan to use. Review the Cloud Sync requirements beginning with the link:https://docs.netapp.com/us-en/occm/task-sync-quick-start.html[Quick Start description^].
+. You'll need to select the Target system and then select (or create) the Data Broker you plan to use. Review the Cloud Sync requirements beginning with the link:https://docs.netapp.com/us-en/cloud-manager-sync/task-sync-quick-start.html[Quick Start description^].
 
 .Result
 

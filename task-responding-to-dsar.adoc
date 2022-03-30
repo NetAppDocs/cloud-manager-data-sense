@@ -33,7 +33,7 @@ NOTE: Data subject search is not supported within databases at this time.
 
 == Searching for data subjects and downloading reports
 
-Search for the data subject's full name or known identifier and then download a file list report or DSAR report. You can search by link:task-controlling-private-data.html#types-of-personal-data[any personal information type^].
+Search for the data subject's full name or known identifier and then download a file list report or DSAR report. You can search by link:reference-private-data-categories.html#types-of-personal-data[any personal information type^].
 
 NOTE: English, German, and Spanish are supported when searching for the names of data subjects. Support for more languages will be added later.
 
