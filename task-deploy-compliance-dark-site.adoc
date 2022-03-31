@@ -83,10 +83,9 @@ Data Sense software must run on a host that meets specific operating system requ
 +
 Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
- You must install the following software on the host before you install Data Sense:
+You must install the following software on the host before you install Data Sense:
 
 * Docker Engine version 19 or later. https://docs.docker.com/engine/install/[View installation instructions^].
-
 * Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
 
 == Verify Cloud Manager and Data Sense prerequisites
