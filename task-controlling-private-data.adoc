@@ -127,7 +127,7 @@ When viewing the details for a single file there are a few actions you can take 
 
 * You can assign the file to a Cloud Manager user to be responsible for any follow-up actions that need to be done on the file. See link:task-org-private-data.html#assigning-users-to-manage-certain-files[Assigning users to a file] for details.
 
-* If you have integrated AIP labels with Cloud Data Sense, you can assign a label to this file, or change to a different label if one already exists. See link:task-org-private-data.html#assigning-aip-labels-manually[Assigning AIP labels manually^] for details.
+* If you have integrated AIP labels with Cloud Data Sense, you can assign a label to this file, or change to a different label if one already exists. See link:task-org-private-data.html#assigning-aip-labels-manually[Assigning AIP labels manually] for details.
 
 == Viewing permissions for files
 
@@ -143,7 +143,7 @@ Note that if you see SIDs (Security IDentifiers) instead of user and group names
 
 You can view if duplicate files are being stored in your storage systems. This is useful if you want to identify areas where you can save storage space. It can also be helpful to make sure certain files that have specific permissions or sensitive information are not unnecessarily duplicated in your storage systems.
 
-You can download the list of duplicate files and send it to your storage admin so they can decide which files, if any, can be deleted. Or you can link:task-managing-highlights.html#deleting-source-files[delete the file^] yourself if you are confident that a specific version of the file is not needed.
+You can download the list of duplicate files and send it to your storage admin so they can decide which files, if any, can be deleted. Or you can link:task-managing-highlights.html#deleting-source-files[delete the file] yourself if you are confident that a specific version of the file is not needed.
 
 === Viewing all duplicated files
 
