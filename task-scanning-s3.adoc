@@ -225,7 +225,7 @@ The Cloud Data Sense instance profile account now has access to the additional A
 
 . Go to the *Amazon S3 Configuration* page and the new AWS account is displayed. Note that it can take a few minutes for Cloud Data Sense to sync the new account’s working environment and show this information.
 +
-image:screenshot_activate_and_select_buckets.png[]
+image:screenshot_activate_and_select_buckets.png[A screenshot showing how to activate Data Sense.]
 
 . Click *Activate Data Sense & Select Buckets* and select the buckets you want to scan.
 

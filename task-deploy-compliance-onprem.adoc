@@ -134,13 +134,6 @@ Cloud Data Sense requires outbound internet access. If your virtual or physical 
 
 Ensure that Cloud Manager has the required permissions::
 Ensure that Cloud Manager has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest Cloud Manager permissions in https://mysupport.netapp.com/site/info/cloud-manager-policies[the policies provided by NetApp^].
-+
-*Note:* If you created the Connector in GCP using Cloud Manager 3.9.10 or greater, then you’re all set. If you created the Connector using an earlier version, then you’ll need to add the following permissions to the GCP service account associated with the Connector to deploy Cloud Data Sense to GCP.
-+
-[source,json]
-compute.instances.addAccessConfig
-compute.subnetworks.use
-compute.subnetworks.useExternalIp
 
 Ensure that the Cloud Manager Connector can access Cloud Data Sense::
 Ensure connectivity between the Connector and the Cloud Data Sense instance. The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
@@ -178,6 +171,7 @@ Follow these steps when installing Data Sense software on a single on-premises h
 * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
 * (Optional) Verify that the system has the two prerequisite software packages installed (Docker Engine and Python 3). The installer will install this software if it is not already on the system.
 * Make sure you have root privileges on the Linux system.
+* If you are using a proxy, and it is performing TLS interception, you'll need to know the path on the Data Sense Linux system where the TLS CA certificates are stored.
 * Verify that your offline environment meets the required <<Verify Cloud Manager and Data Sense prerequisites,permissions and connectivity>>.
 
 .Steps
@@ -205,7 +199,7 @@ image:screenshot_cloud_compliance_deploy_onprem.png[A screenshot of selecting th
 [source,cli]
 tar -xzf cc_onprem_installer_1.10.0.tar.gz
 
-. When prompted by the installer, you can enter the required values in a series of prompts, or you can enter the complete command in the first prompt:
+. When prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer:
 
 +
 [cols="50a,50",options="header"]
@@ -219,8 +213,9 @@ a. Paste the information you copied from step 6:
 b. Enter the IP address or host name of the Data Sense host machine so it can be accessed by the Connector instance.
 c. Enter the IP address or host name of the Cloud Manager Connector host machine so it can be accessed by the Data Sense instance.
 d. Enter proxy details as prompted. If your Cloud Manager already uses a proxy, there is no need to enter this information again here since Data Sense will automatically use the proxy used by Cloud Manager.
-| Alternatively, you can create the whole command in advance and enter it in the first prompt:
-`sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --cm-host <cm_host> --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password>`
+| Alternatively, you can create the whole command in advance, providing the necessary host and proxy parameters:
+`sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --manager-host <cm_host> --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password> --cacert-folder-path <ca_cert_dir>`
+
 |===
 
 +
@@ -236,6 +231,7 @@ Variable values:
 * _proxy_scheme_ = Connection scheme: https or http (default http).
 * _proxy_user_ = Authenticated user to connect to the proxy server, if basic authentication is required.
 * _proxy_password_ = Password for the user name that you specified.
+* _ca_cert_dir_ = Path on the Data Sense Linux system containing additional TLS CA certificate bundles. Only required if the proxy is performing TLS interception.
 
 .Result
 
@@ -282,12 +278,12 @@ Follow these steps when installing Data Sense software on multiple on-premises h
 
 . Follow steps 1 through 7 from the <<Single-host installation for typical configurations,Single-host installation>> on the manager node.
 
-. As shown in step 8, when prompted by the installer, you can enter the required values in a series of prompts, or you can enter the complete command in the first prompt.
+. As shown in step 8, when prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer.
 +
 In addition to the variables available for a single-host installation, a new option *-n <node_ip>* is used to specify the IP addresses of the scanner nodes. Multiple scanner node IPs are separated by a comma.
 +
 For example, this command adds 3 scanner nodes:
-`sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --cm-host <cm_host> *-n <node_ip1>,<node_ip2>,<node_ip3>* --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password>`
+`sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --manager-host <cm_host> *-n <node_ip1>,<node_ip2>,<node_ip3>* --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password>`
 
 . Before the manager node installation completes, a dialog displays the installation command needed for the scanner nodes. Copy the command and save it in a text file. For example:
 +

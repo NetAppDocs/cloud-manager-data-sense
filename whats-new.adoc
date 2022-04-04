@@ -16,6 +16,16 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
+== 5 April 2022
+
+=== Four new types of Australian personal data can be identified by Data Sense.
+
+Data Sense can identify and categorize files that contain the Australian TFN (Tax File Number), Australian Driver’s License Number, Australian Medicare Number, and Australian Passport Number. https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that Data Sense can identify in your data].
+
+=== Global Active Directory server can be an LDAP server now.
+
+The global Active Directory server you integrate with Data Sense can be an LDAP Server now in addition to the previously supported DNS Server. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html[Go here for details].
+
 == 15 March 2022
 
 === New Filter to show the files to which a specific user or a group has read or write permissions.
@@ -37,13 +47,13 @@ Data Sense can read the permissions that exist for files that are being scanned 
 
 === Added support for scanning Microsoft SharePoint online accounts.
 
-Now you can add your SharePoint online accounts to Data Sense in order to scan the documents and files from your SharePoint sites. link:task-scanning-sharepoint.html[See how to scan your SharePoint accounts].
+Now you can add your SharePoint online accounts to Data Sense in order to scan the documents and files from your SharePoint sites. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html[See how to scan your SharePoint accounts].
 
 === Data Sense can copy files from a data source to a target location and synchronize those files.
 
 This is helpful for situations where you’re migrating data and you want to catch any last changes that are being made to the files. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept_cloud_sync.html[NetApp Cloud Sync^] functionality to copy and sync data from a source to a target.
 
-link:task-managing-highlights.html#copying-and-synchronizing-source-files-to-a-target-system[See how to copy and sync files].
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#copying-and-synchronizing-source-files-to-a-target-system[See how to copy and sync files].
 
 === New language support for DSAR reports.
 
@@ -51,7 +61,7 @@ German and Spanish are now supported when searching for names of data subjects i
 
 === Three additional types of personal data can be identified by Data Sense.
 
-Data Sense can now find French social security numbers, French IDs, and French driver license numbers in files. link:reference-private-data-categories.html#types-of-personal-data[See the list of all personal data types that Data Sense identifies in scans].
+Data Sense can now find French social security numbers, French IDs, and French driver license numbers in files. https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-personal-data[See the list of all personal data types that Data Sense identifies in scans].
 
 === Security group port changed for Data Sense communication to the Connector.
 
@@ -63,11 +73,11 @@ The security group for the Cloud Manager Connector will use port 443 instead of 
 
 Now you can integrate a global Active Directory with Cloud Data Sense to enhance the results that Data Sense reports about file owners and which users and groups have access to your files.
 
-In addition to the Active Directory credentials you enter so that Data Sense can scan CIFS volumes from certain data sources, this new integration provides as additional integration for other users and systems. Data Sense will look in all integrated Active Directories for user and permission details. link:task-add-active-directory-datasense.html[See how to set up your global Active Directory].
+In addition to the Active Directory credentials you enter so that Data Sense can scan CIFS volumes from certain data sources, this new integration provides as additional integration for other users and systems. Data Sense will look in all integrated Active Directories for user and permission details. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html[See how to set up your global Active Directory].
 
 === Data Sense "policies" can now be used to delete files.
 
-Data Sense can automatically delete files that match the query that you define in a Policy. link:task-managing-highlights.html#deleting-source-files-automatically-using-policies[See how to create custom Policies].
+Data Sense can automatically delete files that match the query that you define in a Policy. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#deleting-source-files-automatically-using-policies[See how to create custom Policies].
 // end::whats-new[]
 
 == 16 December 2021
@@ -88,7 +98,7 @@ link:task-managing-highlights.html#cloning-volume-data-to-a-new-volume[See how t
 
 === GCP Marketplace subscription for Cloud Manager now includes support for Cloud Data Sense.
 
-The link:https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved[GCP Marketplace subscription for Cloud Manager^] now includes support for Cloud Data Sense. Now you can use this pay-as-you-go (PAYGO) subscription to scan data from Cloud Volumes ONTAP systems deployed on Google Cloud storage in addition to using a BYOL license from NetApp.
+The https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved[GCP Marketplace subscription for Cloud Manager^] now includes support for Cloud Data Sense. Now you can use this pay-as-you-go (PAYGO) subscription to scan data from Cloud Volumes ONTAP systems deployed on Google Cloud storage in addition to using a BYOL license from NetApp.
 
 === Ability to view the status of your long-running compliance actions.
 
@@ -232,7 +242,7 @@ The File Size, Created Date, and Last Modified Date values have been added to re
 
 === Ability to scan data stored on Azure Blob.
 
-Scanning of data stored on Azure Blob is now supported when using the https://min.io/[MinIO service]. See link:task-scanning-object-storage.html[Scanning object storage that uses S3 protocol] for details.
+Scanning of data stored on Azure Blob is now supported when using the https://min.io/[MinIO service^]. See link:task-scanning-object-storage.html[Scanning object storage that uses S3 protocol] for details.
 
 === Additional type of personal data can be identified by Data Sense.
 

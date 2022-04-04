@@ -21,11 +21,11 @@ Complete a few steps to get started scanning Amazon FSx for ONTAP volume with Cl
 
 * The security group you selected when creating the working environment must allow traffic from the Cloud Data Sense instance. You can find the associated security group using the ENI connected to the FSx for ONTAP file system and edit it using the AWS Management Console.
 +
-link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html[AWS security groups for Linux instances]
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html[AWS security groups for Linux instances^]
 +
-link:https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/security-group-rules.html[AWS security groups for Windows instances]
+https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/security-group-rules.html[AWS security groups for Windows instances^]
 +
-link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html[AWS elastic network interfaces (ENI)]
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html[AWS elastic network interfaces (ENI)^]
 
 == Quick start
 
