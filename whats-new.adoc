@@ -24,7 +24,7 @@ Data Sense can identify and categorize files that contain the Australian TFN (Ta
 
 === Global Active Directory server can be an LDAP server now.
 
-The global Active Directory server you integrate with Data Sense can be an LDAP Server now in addition to the previously support DNS Server. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html[Go here for details].
+The global Active Directory server you integrate with Data Sense can be an LDAP Server now in addition to the previously supported DNS Server. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html[Go here for details].
 
 == 15 March 2022
 
