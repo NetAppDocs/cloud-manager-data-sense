@@ -685,7 +685,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-29 15:31:02 +0000">03/29/2022</time>
+    <time datetime="2022-03-29 17:49:31 +0000">03/29/2022</time>
     
   
 
@@ -709,10 +709,10 @@
 <p>You can integrate a global Active Directory with Cloud Data Sense to enhance the results that Data Sense reports about file owners and which users and groups have access to your files.</p>
 </div>
 <div class="paragraph">
-<p>When you set up certain data sources (listed below), you need to enter Active Directory credentials in order for Data Sense to scan CIFS volumes. This integration provides Data Sense with file owner and permissions details for those data sources. The Active Directory entered for those data sources may be different than the global Active Directory credentials you enter here. Data Sense will look in all integrated Active Directories for user and permission details.</p>
+<p>When you set up certain data sources (listed below), you need to enter Active Directory credentials in order for Data Sense to scan CIFS volumes. This integration provides Data Sense with file owner and permissions details for the data that resides in those data sources. The Active Directory entered for those data sources may be different than the global Active Directory credentials you enter here. Data Sense will look in all integrated Active Directories for user and permission details.</p>
 </div>
 <div class="paragraph">
-<p>This helps in the following locations in Data Sense:</p>
+<p>This integration provides additional information in the following locations in Data Sense:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -775,7 +775,7 @@ Local user SIDs, and SIDs from unknown domains, are not translated to the actual
 <h2 id="connecting-to-your-active-directory-server">Connecting to your Active Directory server</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>After you&#8217;ve deployed Data Sense and have activated scanning on your data sources, you can integrate Data Sense with your Active Directory.</p>
+<p>After you&#8217;ve deployed Data Sense and have activated scanning on your data sources, you can integrate Data Sense with your Active Directory. Active Directory can be accessed using a DNS Server IP address or an LDAP Server IP address.</p>
 </div>
 <div class="paragraph">
 <p>The Active Directory credentials can be read-only, but providing admin credentials ensures that Data Sense can read any data that requires elevated permissions. The credentials are stored on the Cloud Data Sense instance.</p>
@@ -791,10 +791,16 @@ Local user SIDs, and SIDs from unknown domains, are not translated to the actual
 <div class="ulist">
 <ul>
 <li>
-<p>DNS Server IP Address, or multiple IP Addresses</p>
+<p>DNS Server IP address, or multiple IP addresses</p>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="paragraph">
+<p>LDAP Server IP address, or multiple IP addresses</p>
+</div>
 </li>
 <li>
-<p>User Name and Password for the server</p>
+<p>User Name and Password to access the server</p>
 </li>
 <li>
 <p>Domain Name (Active Directory Name)</p>
@@ -865,7 +871,10 @@ Local user SIDs, and SIDs from unknown domains, are not translated to the actual
 </div>
 </li>
 <li>
-<p>In the Connect to Active Directory dialog, enter the Active Directory details and click <strong>Connect</strong>. Multiple IP Addresses can be added by adding a comma between entries.</p>
+<p>In the Connect to Active Directory dialog, enter the Active Directory details and click <strong>Connect</strong>.</p>
+<div class="paragraph">
+<p>You can add multiple IP addresses, if required, by clicking <strong>Add IP</strong>.</p>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_compliance_active_directory_dialog.png" alt="A screenshot of the dialog where you define the Active Directory you want to integrate with Data Sense."></span></p>
 </div>

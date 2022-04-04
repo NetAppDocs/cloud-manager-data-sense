@@ -685,7 +685,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-28 19:58:50 +0000">03/28/2022</time>
+    <time datetime="2022-04-03 15:01:06 +0000">04/03/2022</time>
     
   
 
@@ -736,10 +736,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>For special situations where you need a very secure Cloud Manager installation, but you also want to scan OneDrive accounts or SharePoint accounts, you can use the Data Sense offline installer and provide internet access to a few select endpoints. See <a href="#sharepoint-and-onedrive-special-requirements">SharePoint and OneDrive special requirements</a> for details.</p>
-</div>
-<div class="paragraph">
-<p>There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, or AWS S3 accounts.</p>
+<p>There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, AWS S3, or OneDrive and SharePoint accounts.</p>
 </div>
 </div>
 </div>
@@ -757,7 +754,7 @@
 <li>
 <p>Automated software upgrades from Cloud Manager</p>
 <div class="paragraph">
-<p>Both the Cloud Manager Connector and Data Sense will require periodic manual upgrades to enable new features. You can see the Data Sense version at the bottom of the Data Sense UI pages. Check the <a href="whats-new.html">Cloud Data Sense Release Notes</a> to see the new features in each release and for when a software update package is available. Then you can follow the steps to <a href="#upgrade-data-sense-software">upgrade your Data Sense software</a>.</p>
+<p>Both the Cloud Manager Connector and Data Sense will require periodic manual upgrades to enable new features. You can see the Data Sense version at the bottom of the Data Sense UI pages. Check the <a href="whats-new.html">Cloud Data Sense Release Notes</a> to see the new features in each release and whether you want those features. Then you can follow the steps to <a href="#upgrade-data-sense-software">upgrade your Data Sense software</a>.</p>
 </div>
 </li>
 </ul>
@@ -842,7 +839,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>The following software must be installed on the host before you install Data Sense:</p>
+<p>You must install the following software on the host before you install Data Sense:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -886,40 +883,6 @@
 </div>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="sharepoint-and-onedrive-special-requirements">SharePoint and OneDrive special requirements</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>When Cloud Manager and Data Sense are deployed in a site with no internet access, you can scan files in SharePoint and OneDrive accounts by providing internet access to a few select endpoints.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Endpoints</th>
-<th class="tableblock halign-left valign-top">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\login.microsoft.com<br>
-\graph.microsoft.com</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Communication with Microsoft servers to log in to the selected online service.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">https://cloudmanager.cloud.netapp.com</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Communication with the Cloud Manager service, which includes NetApp accounts.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Access to <em>cloudmanager.cloud.netapp.com</em> is required only during the initial connections to these external services.</p>
 </div>
 </div>
 </div>
@@ -1004,7 +967,7 @@
 </div>
 </li>
 <li>
-<p>When prompted by the installer, you can enter the required values in a series of prompts, or you can enter the complete command in the first prompt:</p>
+<p>When prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer:</p>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1030,13 +993,10 @@
 <li>
 <p>Enter the IP address or host name of the Cloud Manager Connector host machine so it can be accessed by the Data Sense instance.</p>
 </li>
-<li>
-<p>Enter proxy details as prompted. If your Cloud Manager already uses a proxy, there is no need to enter this information again here since Data Sense will automatically use the proxy used by Cloud Manager.</p>
-</li>
 </ol>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Alternatively, you can create the whole command in advance and enter it in the first prompt:<br>
-<code>sudo ./install.sh -a &lt;account_id&gt; -c &lt;agent_id&gt; -t &lt;token&gt; --host &lt;ds_host&gt; --cm-host &lt;cm_host&gt; --proxy-host &lt;proxy_host&gt; --proxy-port &lt;proxy_port&gt; --proxy-scheme &lt;proxy_scheme&gt; --proxy-user &lt;proxy_user&gt; --proxy-password &lt;proxy_password&gt; --darksite</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alternatively, you can create the whole command in advance, providing the necessary host parameters:<br>
+<code>sudo ./install.sh -a &lt;account_id&gt; -c &lt;agent_id&gt; -t &lt;token&gt; --host &lt;ds_host&gt; --manager-host &lt;cm_host&gt; --no-proxy --darksite</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -1059,21 +1019,6 @@
 </li>
 <li>
 <p><em>cm_host</em> = IP address or host name of the Cloud Manager Connector system.</p>
-</li>
-<li>
-<p><em>proxy_host</em> = IP or host name of the proxy server if the host is behind a proxy server.</p>
-</li>
-<li>
-<p><em>proxy_port</em> = Port to connect to the proxy server (default 80).</p>
-</li>
-<li>
-<p><em>proxy_scheme</em> = Connection scheme: https or http (default http).</p>
-</li>
-<li>
-<p><em>proxy_user</em> = Authenticated user to connect to the proxy server, if basic authentication is required.</p>
-</li>
-<li>
-<p><em>proxy_password</em> = Password for the user name that you specified.</p>
 </li>
 </ul>
 </div>
@@ -1179,13 +1124,13 @@
 <p>Follow steps 1 through 8 from the <a href="task-deploy-compliance-dark-site.html#deploy-data-sense-on-a-single-host-typical-configuration">Single-host installation</a> on the manager node.</p>
 </li>
 <li>
-<p>As shown in step 9, when prompted by the installer, you can enter the required values in a series of prompts, or you can enter the complete command in the first prompt.</p>
+<p>As shown in step 9, when prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer.</p>
 <div class="paragraph">
 <p>In addition to the variables available for a single-host installation, a new option <strong>-n &lt;node_ip&gt;</strong> is used to specify the IP addresses of the scanner nodes. Multiple node IPs are separated by a comma.</p>
 </div>
 <div class="paragraph">
 <p>For example, this command adds 3 scanner nodes:<br>
-<code>sudo ./install.sh -a &lt;account_id&gt; -c &lt;agent_id&gt; -t &lt;token&gt; --host &lt;ds_host&gt; --cm-host &lt;cm_host&gt; <strong>-n &lt;node_ip1&gt;,&lt;node_ip2&gt;,&lt;node_ip3&gt;</strong> --proxy-host &lt;proxy_host&gt; --proxy-port &lt;proxy_port&gt; --proxy-scheme &lt;proxy_scheme&gt; --proxy-user &lt;proxy_user&gt; --proxy-password &lt;proxy_password&gt; --darksite</code></p>
+<code>sudo ./install.sh -a &lt;account_id&gt; -c &lt;agent_id&gt; -t &lt;token&gt; --host &lt;ds_host&gt; --manager-host &lt;cm_host&gt; <strong>-n &lt;node_ip1&gt;,&lt;node_ip2&gt;,&lt;node_ip3&gt;</strong> --no-proxy --darksite</code></p>
 </div>
 </li>
 <li>
@@ -1221,7 +1166,7 @@
 </div>
 <div class="paragraph">
 <div class="title">What&#8217;s Next</div>
-<p>From the Configuration page you can select the local <a href="task-getting-started-compliance.html">on-prem ONTAP clusters</a> and <a href="task-scanning-databases.html">databases</a> that you want to scan.</p>
+<p>From the Configuration page you can select the local <a href="task-getting-started-compliance.html">on-prem ONTAP clusters</a> and local <a href="task-scanning-databases.html">databases</a> that you want to scan.</p>
 </div>
 <div class="paragraph">
 <p>You can also <a href="task-licensing-datasense.html#use-a-cloud-data-sense-byol-license">set up BYOL licensing for Cloud Data Sense</a> from the Digital Wallet page at this time. You will not be charged until the amount of data exceeds 1 TB.</p>

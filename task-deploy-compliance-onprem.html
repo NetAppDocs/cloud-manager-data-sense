@@ -685,7 +685,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-28 19:58:50 +0000">03/28/2022</time>
+    <time datetime="2022-03-30 15:47:13 +0000">03/30/2022</time>
     
   
 
@@ -914,16 +914,6 @@ http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107
 <dt class="hdlist1">Ensure that Cloud Manager has the required permissions</dt>
 <dd>
 <p>Ensure that Cloud Manager has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest Cloud Manager permissions in <a href="https://mysupport.netapp.com/site/info/cloud-manager-policies" target="_blank" rel="noopener">the policies provided by NetApp</a>.</p>
-<div class="paragraph">
-<p><strong>Note:</strong> If you created the Connector in GCP using Cloud Manager 3.9.10 or greater, then you’re all set. If you created the Connector using an earlier version, then you’ll need to add the following permissions to the GCP service account associated with the Connector to deploy Cloud Data Sense to GCP.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">compute.instances.addAccessConfig
-compute.subnetworks.use
-compute.subnetworks.useExternalIp</code></pre>
-</div>
-</div>
 </dd>
 <dt class="hdlist1">Ensure that the Cloud Manager Connector can access Cloud Data Sense</dt>
 <dd>
@@ -995,6 +985,9 @@ Cloud Data Sense is currently unable to scan S3 buckets, Azure NetApp Files, or 
 <p>Make sure you have root privileges on the Linux system.</p>
 </li>
 <li>
+<p>If you are using a proxy, and it is performing TLS interception, you&#8217;ll need to know the path on the Data Sense Linux system where the TLS CA certificates are stored.</p>
+</li>
+<li>
 <p>Verify that your offline environment meets the required <a href="#verify-cloud-manager-and-data-sense-prerequisites">permissions and connectivity</a>.</p>
 </li>
 </ul>
@@ -1038,7 +1031,7 @@ Cloud Data Sense is currently unable to scan S3 buckets, Azure NetApp Files, or 
 </div>
 </li>
 <li>
-<p>When prompted by the installer, you can enter the required values in a series of prompts, or you can enter the complete command in the first prompt:</p>
+<p>When prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer:</p>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1069,8 +1062,8 @@ Cloud Data Sense is currently unable to scan S3 buckets, Azure NetApp Files, or 
 </li>
 </ol>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Alternatively, you can create the whole command in advance and enter it in the first prompt:<br>
-<code>sudo ./install.sh -a &lt;account_id&gt; -c &lt;agent_id&gt; -t &lt;token&gt; --host &lt;ds_host&gt; --cm-host &lt;cm_host&gt; --proxy-host &lt;proxy_host&gt; --proxy-port &lt;proxy_port&gt; --proxy-scheme &lt;proxy_scheme&gt; --proxy-user &lt;proxy_user&gt; --proxy-password &lt;proxy_password&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alternatively, you can create the whole command in advance, providing the necessary host and proxy parameters:<br>
+<code>sudo ./install.sh -a &lt;account_id&gt; -c &lt;agent_id&gt; -t &lt;token&gt; --host &lt;ds_host&gt; --manager-host &lt;cm_host&gt; --proxy-host &lt;proxy_host&gt; --proxy-port &lt;proxy_port&gt; --proxy-scheme &lt;proxy_scheme&gt; --proxy-user &lt;proxy_user&gt; --proxy-password &lt;proxy_password&gt; --cacert-folder-path &lt;ca_cert_dir&gt;</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -1108,6 +1101,9 @@ Cloud Data Sense is currently unable to scan S3 buckets, Azure NetApp Files, or 
 </li>
 <li>
 <p><em>proxy_password</em> = Password for the user name that you specified.</p>
+</li>
+<li>
+<p><em>ca_cert_dir</em> = Path on the Data Sense Linux system containing additional TLS CA certificate bundles. Only required if the proxy is performing TLS interception.</p>
 </li>
 </ul>
 </div>
@@ -1213,13 +1209,13 @@ Cloud Data Sense is currently unable to scan S3 buckets, Azure NetApp Files, or 
 <p>Follow steps 1 through 7 from the <a href="#single-host-installation-for-typical-configurations">Single-host installation</a> on the manager node.</p>
 </li>
 <li>
-<p>As shown in step 8, when prompted by the installer, you can enter the required values in a series of prompts, or you can enter the complete command in the first prompt.</p>
+<p>As shown in step 8, when prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer.</p>
 <div class="paragraph">
 <p>In addition to the variables available for a single-host installation, a new option <strong>-n &lt;node_ip&gt;</strong> is used to specify the IP addresses of the scanner nodes. Multiple scanner node IPs are separated by a comma.</p>
 </div>
 <div class="paragraph">
 <p>For example, this command adds 3 scanner nodes:<br>
-<code>sudo ./install.sh -a &lt;account_id&gt; -c &lt;agent_id&gt; -t &lt;token&gt; --host &lt;ds_host&gt; --cm-host &lt;cm_host&gt; <strong>-n &lt;node_ip1&gt;,&lt;node_ip2&gt;,&lt;node_ip3&gt;</strong> --proxy-host &lt;proxy_host&gt; --proxy-port &lt;proxy_port&gt; --proxy-scheme &lt;proxy_scheme&gt; --proxy-user &lt;proxy_user&gt; --proxy-password &lt;proxy_password&gt;</code></p>
+<code>sudo ./install.sh -a &lt;account_id&gt; -c &lt;agent_id&gt; -t &lt;token&gt; --host &lt;ds_host&gt; --manager-host &lt;cm_host&gt; <strong>-n &lt;node_ip1&gt;,&lt;node_ip2&gt;,&lt;node_ip3&gt;</strong> --proxy-host &lt;proxy_host&gt; --proxy-port &lt;proxy_port&gt; --proxy-scheme &lt;proxy_scheme&gt; --proxy-user &lt;proxy_user&gt; --proxy-password &lt;proxy_password&gt;</code></p>
 </div>
 </li>
 <li>

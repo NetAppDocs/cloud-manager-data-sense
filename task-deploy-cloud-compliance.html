@@ -685,7 +685,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-22 14:12:25 +0000">03/22/2022</time>
+    <time datetime="2022-03-30 15:47:13 +0000">03/30/2022</time>
     
   
 
@@ -893,16 +893,6 @@ https://production.cloudflare.docker.com/</p></td>
 <dt class="hdlist1">Ensure that Cloud Manager has the required permissions</dt>
 <dd>
 <p>Ensure that Cloud Manager has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest Cloud Manager permissions in <a href="https://mysupport.netapp.com/site/info/cloud-manager-policies" target="_blank" rel="noopener">the policies provided by NetApp</a>.</p>
-<div class="paragraph">
-<p><strong>Note:</strong> If you created the Connector in GCP using Cloud Manager 3.9.10 or greater, then you’re all set. If you created the Connector using an earlier version, then you’ll need to add the following permissions to the GCP service account associated with the Connector to deploy Cloud Data Sense to GCP.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">compute.instances.addAccessConfig
-compute.subnetworks.use
-compute.subnetworks.useExternalIp</code></pre>
-</div>
-</div>
 </dd>
 <dt class="hdlist1">Check your vCPU limits</dt>
 <dd>
