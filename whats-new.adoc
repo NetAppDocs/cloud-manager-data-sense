@@ -51,7 +51,7 @@ Now you can add your SharePoint online accounts to Data Sense in order to scan t
 
 === Data Sense can copy files from a data source to a target location and synchronize those files.
 
-This is helpful for situations where you’re migrating data and you want to catch any last changes that are being made to the files. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept_cloud_sync.html[NetApp Cloud Sync^] functionality to copy and sync data from a source to a target.
+This is helpful for situations where you’re migrating data and you want to catch any last changes that are being made to the files. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[NetApp Cloud Sync^] functionality to copy and sync data from a source to a target.
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#copying-and-synchronizing-source-files-to-a-target-system[See how to copy and sync files].
 

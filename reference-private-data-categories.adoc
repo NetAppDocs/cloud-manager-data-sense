@@ -19,7 +19,7 @@ TIP: If you need Cloud Data Sense to identify other private data types, such as 
 
 == Types of personal data
 
-The personal data found in files can be general personal data or national identifiers. The third column identifies whether Cloud Data Sense uses link:task-controlling-private-data.html#personal-data[proximity validation^] to validate its findings for the identifier.
+The personal data found in files can be general personal data or national identifiers. The third column identifies whether Cloud Data Sense uses link:task-controlling-private-data.html#viewing-files-that-contain-personal-data[proximity validation^] to validate its findings for the identifier.
 
 The items in this category can be recognized in any language.
 

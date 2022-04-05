@@ -88,13 +88,13 @@ image:diagram_cloud_compliance_instance.png[A diagram that shows a Cloud Manager
 
 Note the following about the default instance:
 
-* In AWS, Cloud Data Sense runs on an link:https://aws.amazon.com/ec2/instance-types/m5/[m5.4xlarge instance] with a 500 GB GP2 disk. The operating system image is Amazon Linux 2 (Red Hat 7.3.1).
+* In AWS, Cloud Data Sense runs on an link:https://aws.amazon.com/ec2/instance-types/m5/[m5.4xlarge instance^] with a 500 GB GP2 disk. The operating system image is Amazon Linux 2 (Red Hat 7.3.1).
 +
 In regions where m5.4xlarge isn't available, Data Sense runs on an m4.4xlarge instance instead.
 
-* In Azure, Cloud Data Sense runs on a link:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3 VM] with a 512 GB disk. The operating system image is CentOS 7.8.
+* In Azure, Cloud Data Sense runs on a link:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3 VM^] with a 512 GB disk. The operating system image is CentOS 7.8.
 
-* In GCP, Cloud Data Sense runs on an link:https://cloud.google.com/compute/docs/machine-types#recommendations_for_machine_types[n2-standard-16 VM] with a 512 GB Standard persistent disk. The operating system image is CentOS 7.9.
+* In GCP, Cloud Data Sense runs on an link:https://cloud.google.com/compute/docs/machine-types#recommendations_for_machine_types[n2-standard-16 VM^] with a 512 GB Standard persistent disk. The operating system image is CentOS 7.9.
 +
 In regions where n2-standard-16 isn't available, Data Sense runs on an n2d-standard-16 or n1-standard-16 VM instead.
 
@@ -209,4 +209,4 @@ The role each user has been assigned provides different capabilities within Clou
 
 * Users with the *Compliance Viewer* role can only view compliance information and generate reports for systems that they have permission to access. These users cannot enable/disable scanning of volumes, buckets, or database schemas. These users can't copy, move, or delete files either.
 
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-user-roles.html[Learn more about Cloud Manager roles^] and how to https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-cloud-central-accounts.html#adding-users[add users with specific roles^].
+https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-user-roles.html[Learn more about Cloud Manager roles^] and how to https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-netapp-accounts.html#adding-users[add users with specific roles^].
