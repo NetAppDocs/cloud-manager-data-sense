@@ -74,7 +74,7 @@ When link:task-deploy-cloud-compliance.html[deployed in the cloud]:
 * In Azure, Cloud Data Sense runs on a Standard_D16s_v3 VM with a 512 GB disk.
 * In GCP, Cloud Data Sense runs on an n2-standard-16 VM with a 512 GB Standard persistent disk.
 
-You can install Data Sense software on a Linux host that has internet access in your network or in the cloud. Everything works the same and you continue to manage your scan configuration and results through Cloud Manager. See link:task-deploy-compliance-onprem.html[Deploying Cloud Data Sense on premises^] for system requirements and installation details.
+You can install Data Sense software on a Linux host that has internet access in your network or in the cloud. Everything works the same and you continue to manage your scan configuration and results through Cloud Manager. See link:task-deploy-compliance-onprem.html[Deploying Cloud Data Sense on premises] for system requirements and installation details.
 
 Additionally, you can link:task-deploy-compliance-dark-site.html[deploy Data Sense in an on-premises site that doesn't have internet access] for completely secure sites.
 
@@ -86,7 +86,7 @@ link:concept-cloud-compliance.html[Learn more about how Cloud Data Sense works^]
 
 Data changes frequently, so Cloud Data Sense scans your data continuously with no impact to your data. While the initial scan of your data might take longer, subsequent scans only scan the incremental changes, which reduces system scan times.
 
-link:concept-cloud-compliance.html#how-scans-work[Learn how scans work^].
+link:concept-cloud-compliance.html#how-scans-work[Learn how scans work].
 
 Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans. link:task-managing-compliance.html#reducing-the-data-sense-scan-speed[See how to reduce the scan speed].
 
@@ -96,13 +96,13 @@ Yes. The information offered by Cloud Data Sense can be relevant to other stakeh
 
 The following reports are available for Data Sense:
 
-Privacy Risk Assessment report:: Provides privacy insights from your data and a privacy risk score. link:task-generating-compliance-reports.html[Learn more^].
+Privacy Risk Assessment report:: Provides privacy insights from your data and a privacy risk score. link:task-generating-compliance-reports.html#privacy-risk-assessment-report[Learn more^].
 
 Data Subject Access Request report:: Enables you to extract a report of all files that contain information regarding a data subject’s specific name or personal identifier. link:task-responding-to-dsar.html[Learn more^].
 
-PCI DSS report:: Helps you identify the distribution of credit card information across your files. link:task-generating-compliance-reports.html[Learn more^].
+PCI DSS report:: Helps you identify the distribution of credit card information across your files. link:task-generating-compliance-reports.html#pci-dss-report[Learn more^].
 
-HIPAA report:: Helps you identify the distribution of health information across your files. link:task-generating-compliance-reports.html[Learn more^].
+HIPAA report:: Helps you identify the distribution of health information across your files. link:task-generating-compliance-reports.html#hipaa-report[Learn more^].
 
 Data Mapping report:: Provides information about the size and number of files in your working environments. This includes usage capacity, age of data, size of data, and file types. link:task-generating-compliance-reports.html#data-mapping-report[Learn more^].
 

@@ -44,7 +44,7 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 
 Click the name of a Policy in the _Policy_ area to display the results in the Investigation page. Click *View All* to view the list of all available Policies.
 
-Click link:task-managing-highlights.html#controlling-your-data-using-policies[here^] to learn more about Policies.
+Click link:task-org-private-data.html#controlling-your-data-using-policies[here] to learn more about Policies.
 
 === Data Overview
 
@@ -84,7 +84,7 @@ You can hover over a point in the charts to see details about the age or size of
 
 === Most identified data Classifications
 
-The _Classification_ area provides a list of the most identified link:task-controlling-private-data.html#viewing-files-by-categories[Categories^], link:task-controlling-private-data.html#viewing-files-by-file-types[File types^], and link:task-managing-highlights.html#categorizing-your-data-using-aip-labels[AIP Labels^] in your scanned data.
+The _Classification_ area provides a list of the most identified link:task-controlling-private-data.html#viewing-files-by-categories[Categories^], link:task-controlling-private-data.html#viewing-files-by-file-types[File types^], and link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP Labels^] in your scanned data.
 
 ==== Categories
 
