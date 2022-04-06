@@ -294,6 +294,13 @@ Since Data Sense software is updated with new features on a regular basis, you s
 [source,cli]
 tar -xvf DataSense-offline-bundle-v1.10.0.tar.gz
 +
+This extracts the installation file *cc_onprem_installer_<version>.tar.gz*.
+
+. Unzip the installation file on the host machine, for example:
++
+[source,cli]
+tar -xzf cc_onprem_installer_1.10.0.tar.gz
++
 This extracts the upgrade script *start_darksite_upgrade.sh* and any required third-party software.
 
 . Run the upgrade script on the host machine, for example:
