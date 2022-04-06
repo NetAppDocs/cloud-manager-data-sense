@@ -723,7 +723,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-04 14:18:07 +0000">04/04/2022</time>
+    <time datetime="2022-04-06 14:13:13 +0000">04/06/2022</time>
     
   
 
@@ -969,10 +969,6 @@ Your browser does not support the video tag.
 <p>After you pay for the license and it is registered with the NetApp Support Site, Cloud Manager automatically updates the license in the Digital Wallet and the Data Services Licenses page will reflect the change in 5 to 10 minutes.</p>
 </div>
 </li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
 <li>
 <p>If Cloud Manager can&#8217;t automatically update the license (for example, when installed in a dark site), then you’ll need to manually upload the license file.</p>
 <div class="olist loweralpha">
@@ -997,6 +993,44 @@ Your browser does not support the video tag.
 <div class="paragraph">
 <div class="title">Result</div>
 <p>Cloud Manager updates the license so that your Cloud Data Sense service continues to be active.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="byol-license-considerations">BYOL license considerations</h3>
+<div class="paragraph">
+<p>When using a Cloud Data Sense BYOL license, Cloud Manager displays a warning in the user interface when the size of all the data you are scanning is nearing the capacity limit or nearing the license expiration date. You receive these warnings:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When the amount of data you are scanning has reached 80% of licensed capacity, and again when you have reached the limit</p>
+</li>
+<li>
+<p>30 days before a license is due to expire, and again when the license expires</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Use the chat icon in the lower right of the Cloud Manager interface to renew your license when you see these warnings.</p>
+</div>
+<div class="paragraph">
+<p>Two things can happen when your license expires:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the account you are using has a marketplace subscription, Data Sense continues to run, but you are shifted over to a PAYGO licensing model. You are charged for the amount of data you are scanning.</p>
+</li>
+<li>
+<p>If the account you are using does not have a marketplace subscription, Data Sense continues to run, but you will continue to see the warnings.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Once you renew your BYOL subscription, Cloud Manager automatically updates the license. If Cloud Manager can&#8217;t access the license file over the secure internet connection (for example, when installed in a dark site), you can obtain the file yourself and manually upload it to Cloud Manager. For instructions, see <a href="#update-a-cloud-data-sense-byol-license">how to update a Cloud Data Sense license</a>.</p>
+</div>
+<div class="paragraph">
+<p>Systems that were shifted over to a PAYGO license are returned to the BYOL license automatically. And systems that were running without a license will stop seeing the warnings and will be charged for activity that occurred while the license was expired.</p>
 </div>
 </div>
 </div>
