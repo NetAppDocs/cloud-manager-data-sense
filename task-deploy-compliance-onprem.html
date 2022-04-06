@@ -723,7 +723,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-30 15:47:13 +0000">03/30/2022</time>
+    <time datetime="2022-04-06 12:24:20 +0000">04/06/2022</time>
     
   
 
@@ -833,7 +833,7 @@ If you&#8217;re planning on scanning Azure NetApp Files volumes, you need to mak
 <h2 id="prepare-the-linux-host-system">Prepare the Linux host system</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on.</p>
+<p>Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. Data Sense is not supported on a host that is shared with other applications - the host must be a dedicated host.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -859,6 +859,9 @@ If you&#8217;re planning on scanning Azure NetApp Files volumes, you need to mak
 </li>
 <li>
 <p>400 GiB available on /var</p>
+</li>
+<li>
+<p>5 GiB on /tmp</p>
 </li>
 </ul>
 </div>
