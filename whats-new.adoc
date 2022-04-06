@@ -18,117 +18,117 @@ Learn what's new in Cloud Data Sense.
 // tag::whats-new[]
 == 5 April 2022
 
-=== Four new types of Australian personal data can be identified by Data Sense.
+=== Four new types of Australian personal data can be identified by Data Sense
 
 Data Sense can identify and categorize files that contain the Australian TFN (Tax File Number), Australian Driver’s License Number, Australian Medicare Number, and Australian Passport Number. https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that Data Sense can identify in your data].
 
-=== Global Active Directory server can be an LDAP server now.
+=== Global Active Directory server can be an LDAP server now
 
 The global Active Directory server you integrate with Data Sense can be an LDAP Server now in addition to the previously supported DNS Server. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html[Go here for details].
 
 == 15 March 2022
 
-=== New Filter to show the files to which a specific user or a group has read or write permissions.
+=== New Filter to show the files to which a specific user or a group has read or write permissions
 
 A new Filter called "User / Group Permissions" has been added so you can list the files that a specific user or a group has read and/or write permissions to. You can specify a user name or group name - or partial name. This functionality is available for volumes on Cloud Volumes ONTAP, on-prem ONTAP, Azure NetApp Files, Amazon FSx for ONTAP, and File Shares.
 
-=== Data Sense can determine the permissions for files in SharePoint and OneDrive accounts.
+=== Data Sense can determine the permissions for files in SharePoint and OneDrive accounts
 
 Data Sense can read the permissions that exist for files that are being scanned in OneDrive accounts and SharePoint accounts now. This information appears in the Investigation pane details for files and in the Open Permissions area in the Governance Dashboard.
 
-=== Two additional types of personal data can be identified by Data Sense.
+=== Two additional types of personal data can be identified by Data Sense
 
 * French INSEE - The INSEE code is a numerical code used by the French National Institute for Statistics and Economic Studies (INSEE) to identify various entities.
 * Passwords - This information is identified using proximity validation by looking for permutations of the word "password" next to a alphanumeric string. The number of items found will be listed under "Personal Results" in the Compliance Dashboard. You can search for files that contain passwords in the Investigation pane using the Filter *Personal Data > Password*.
 
-=== The Beta capability to use Cloud Data Sense to scan your Cloud Backup files has been discontinued in this release.
+=== The Beta capability to use Cloud Data Sense to scan your Cloud Backup files has been discontinued in this release
 
 == 9 February 2022
 
-=== Added support for scanning Microsoft SharePoint online accounts.
+=== Added support for scanning Microsoft SharePoint online accounts
 
 Now you can add your SharePoint online accounts to Data Sense in order to scan the documents and files from your SharePoint sites. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html[See how to scan your SharePoint accounts].
 
-=== Data Sense can copy files from a data source to a target location and synchronize those files.
+=== Data Sense can copy files from a data source to a target location and synchronize those files
 
 This is helpful for situations where you’re migrating data and you want to catch any last changes that are being made to the files. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[NetApp Cloud Sync^] functionality to copy and sync data from a source to a target.
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#copying-and-synchronizing-source-files-to-a-target-system[See how to copy and sync files].
 
-=== New language support for DSAR reports.
+=== New language support for DSAR reports
 
 German and Spanish are now supported when searching for names of data subjects in order to create Data Subject Access Request (DSAR) reports. This report is designed to aid in your organization’s requirement to comply with GDPR or similar data privacy laws.
 
-=== Three additional types of personal data can be identified by Data Sense.
+=== Three additional types of personal data can be identified by Data Sense
 
 Data Sense can now find French social security numbers, French IDs, and French driver license numbers in files. https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-personal-data[See the list of all personal data types that Data Sense identifies in scans].
 
-=== Security group port changed for Data Sense communication to the Connector.
+=== Security group port changed for Data Sense communication to the Connector
 
 The security group for the Cloud Manager Connector will use port 443 instead of port 80 for inbound and outbound traffic to and from the Data Sense instance for added security. Both ports remain open at this time, so you shouldn't see any issues, but you should update the security group in any older deployments of the Connector as port 80 will be deprecated in a future release.
+// end::whats-new[]
 
 == 2 January 2022
 
-=== Ability to integrate a global Active Directory to identify file owners and permissions.
+=== Ability to integrate a global Active Directory to identify file owners and permissions
 
 Now you can integrate a global Active Directory with Cloud Data Sense to enhance the results that Data Sense reports about file owners and which users and groups have access to your files.
 
 In addition to the Active Directory credentials you enter so that Data Sense can scan CIFS volumes from certain data sources, this new integration provides as additional integration for other users and systems. Data Sense will look in all integrated Active Directories for user and permission details. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html[See how to set up your global Active Directory].
 
-=== Data Sense "policies" can now be used to delete files.
+=== Data Sense "policies" can now be used to delete files
 
 Data Sense can automatically delete files that match the query that you define in a Policy. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#deleting-source-files-automatically-using-policies[See how to create custom Policies].
-// end::whats-new[]
 
 == 16 December 2021
 
-=== Ability for Data Sense to scan data in dark sites.
+=== Ability for Data Sense to scan data in dark sites
 
-Both Cloud Manager and Cloud Data Sense can be deployed in an on-premises site that doesn’t have internet access. Now your secure sites can use Cloud Manager to manage your on-prem ONTAP clusters, replicate data between clusters, and scan data from those clusters using Cloud Data Sense.
+Both Cloud Manager (the Connector) and Cloud Data Sense can be deployed in an on-premises site that doesn’t have internet access. Now your secure sites can use Cloud Manager to manage your on-prem ONTAP clusters, replicate data between clusters, and scan data from those clusters using Cloud Data Sense.
 
 link:task-deploy-compliance-dark-site.html[See how to deploy Cloud Data Sense in a site with no internet access^].
 
 == 28 November 2021
 
-=== Data Sense can be used to clone a volume from an ONTAP system.
+=== Data Sense can be used to clone a volume from an ONTAP system
 
 You can use Data Sense to clone an ONTAP volume, but include only selected files from the source volume in the new cloned volume. This is helpful for situations where you’re migrating data and you want to exclude certain files, or if you want to create a copy of a volume for testing.
 
 link:task-managing-highlights.html#cloning-volume-data-to-a-new-volume[See how to clone a volume].
 
-=== GCP Marketplace subscription for Cloud Manager now includes support for Cloud Data Sense.
+=== GCP Marketplace subscription for Cloud Manager now includes support for Cloud Data Sense
 
 The https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved[GCP Marketplace subscription for Cloud Manager^] now includes support for Cloud Data Sense. Now you can use this pay-as-you-go (PAYGO) subscription to scan data from Cloud Volumes ONTAP systems deployed on Google Cloud storage in addition to using a BYOL license from NetApp.
 
-=== Ability to view the status of your long-running compliance actions.
+=== Ability to view the status of your long-running compliance actions
 
 When you run an action from the Investigation Results pane across many files, for example, deleting 50 files, the process can take some time. Now you can monitor the status of these asynchronous actions so you’ll know when it has been applied to all files.
 
 link:task-managing-highlights.html#viewing-the-status-of-your-compliance-actions[See how to view the status of your ongoing compliance actions].
 
-=== Two additional types of personal data can be identified by Data Sense.
+=== Two additional types of personal data can be identified by Data Sense
 
 Data Sense can now find the personal data types "British Passport" and "National Health Service (NHS) Number" in files. link:reference-private-data-categories.html#types-of-personal-data[See the list of all personal data types that Data Sense finds in scans].
 
-=== New Filter to show the files that belong to specific types of working environments.
+=== New Filter to show the files that belong to specific types of working environments
 
 When filtering data in the Data Investigation page, a new filter for “Working Environment Type” has been added. This allows you to filter the Results for Cloud Volumes ONTAP systems, FSx for ONTAP systems, on-premises ONTAP systems, and more.
 
-== 7 Nov 2021
+== 7 November 2021
 
-=== Now you can choose to map or classify individual volumes in your working environments.
+=== Now you can choose to map or classify individual volumes in your working environments
 
 In the past you could either map all volumes or map & classify all volumes in each working environment. Now you can choose to map _or_ map & classify individual volumes. This option is available for Cloud Volumes ONTAP volumes, ANF volumes, on-prem ONTAP volumes, and FSx for ONTAP volumes.
 
-=== Data Sense can copy files from a data source to a destination NFS share.
+=== Data Sense can copy files from a data source to a destination NFS share
 
 You can copy any source files that Data Sense is scanning to a destination NFS share. This is helpful if you want to make a copy of certain data and move it to a different NFS location. link:task-managing-highlights.html#copying-source-files-to-an-nfs-share[Learn more].
 
-=== Ability to scan data protection volumes on FSx for ONTAP file systems.
+=== Ability to scan data protection volumes on FSx for ONTAP file systems
 
 Now you can scan data protection volumes on FSx for ONTAP file systems. link:task-scanning-fsx.html#scanning-data-protection-volumes[Learn more].
 
-=== New Filter to show files by the date range when Data Sense first discovered them.
+=== New Filter to show files by the date range when Data Sense first discovered them
 
 A new Filter in the Investigation page called "Discovered Time" enables you to view files by the date range when Data Sense first discovered the files. Discovered Time has also been added to the File Details page and to reports that you output in CSV format for a file.
 
@@ -138,43 +138,43 @@ An independent certified public accountant firm and services auditor examined Cl
 
 https://www.netapp.com/company/trust-center/compliance/soc-2/[View NetApp's SOC 2 reports^].
 
-== 4 Oct 2021
+== 4 October 2021
 
-=== Support for BYOL licensing from NetApp.
+=== Support for BYOL licensing from NetApp
 
 In addition to licensing Data Sense through your cloud provider marketplaces, now you can purchase a bring-your-own-license (BYOL) from NetApp that you can use across all your working environments and data sources in your Cloud Manager account.
 
 link:task-licensing-datasense.html#use-a-cloud-data-sense-byol-license[Learn more about the new Cloud Data Sense BYOL license].
 
-=== Support for the Google Cloud Platform.
+=== Support for the Google Cloud Platform
 
 Now Cloud Data Sense can scan data from your Cloud Volumes ONTAP systems that are deployed on GCP. Data Sense must be deployed on GCP, and the Connector must be deployed on GCP or on-premises. The GCP service account associated with the Connector needs the latest permissions to deploy Cloud Data Sense to GCP.
 
-=== Ability to scan CIFS volumes on FSx for ONTAP file systems.
+=== Ability to scan CIFS volumes on FSx for ONTAP file systems
 
 Data Sense can now scan CIFS volumes from FSx for ONTAP systems. link:task-scanning-fsx.html[See how to scan Amazon FSx for ONTAP volumes].
 
-== 2 Sept 2021
+== 2 September 2021
 
-=== Ability to scan NFS volumes on FSx for ONTAP file systems.
+=== Ability to scan NFS volumes on FSx for ONTAP file systems
 
 Added support for scanning data on NFS volumes on Amazon FSx for ONTAP systems. link:task-scanning-fsx.html[See how to configure scanning for your FSx for ONTAP systems].
 
-=== Data Sense "Status" entries have changed to "Tags" entries.
+=== Data Sense "Status" entries have changed to "Tags" entries
 
 The capability to add "Status" information to your files using Data Sense has changed terminology to "Tags". These are file level tags - not to be confused with resource level tagging that can be applied to volumes, EC2 instances, virtual machines, etc. link:task-org-private-data.html#applying-tags-to-manage-your-scanned-files[Learn more about file-level tags].
 
-== 1 Aug 2021
+== 1 August 2021
 
-=== Ability to manage file settings for multiple files at a time.
+=== Ability to manage file settings for multiple files at a time
 
 In earlier versions of Cloud Data Sense you could perform the following actions on one file at a time: add a status tag, assign a user, and add an AIP label. Now you can select multiple files from the Data Investigation page and perform each of these actions on multiple files.
 
-=== Governance dashboard shows data by when it was created or by when it was last accessed.
+=== Governance dashboard shows data by when it was created or by when it was last accessed
 
 When viewing the Age of Data graph in the Governance dashboard, in addition to viewing data based on the last time it was modified, now you can view the data by when it was created or by when it was last accessed (when it was read). This information is provided in the Data Mapping Report as well.
 
-=== Ability to use multiple hosts for additional processing power when scanning large configurations.
+=== Ability to use multiple hosts for additional processing power when scanning large configurations
 
 When deploying Data Sense on-premises, now you can install scanning software on additional on-prem hosts when you plan to scan configurations that include petabytes of data. These additional _scanner nodes_ provide increased processing power when scanning very large configurations.
 
@@ -182,29 +182,29 @@ See how to link:task-deploy-compliance-onprem.html#multi-host-installation-for-l
 
 == 7 July 2021
 
-=== Data Sense can move files from a data source to a destination NFS share.
+=== Data Sense can move files from a data source to a destination NFS share
 
 A new feature enables you to link:task-managing-highlights.html#moving-source-files-to-an-nfs-share[move any source files that Data Sense is scanning to any NFS share]. This allows you to move sensitive or security-related files to a special area so you can do more analysis.
 
-=== Ability to quickly categorize data instead of performing a full classification scan.
+=== Ability to quickly categorize data instead of performing a full classification scan
 
 You can now choose to quickly map data into categories instead of doing a full classification scan. This enables you to link:task-generating-compliance-reports.html#data-mapping-report[view the Data Mapping report] from the Governance Dashboard to get an overview of your data when there are certain data sources that you do not need to run a complete scan on.
 
-=== Ability to assign files to Cloud Manager users.
+=== Ability to assign files to Cloud Manager users
 
 Now you can link:task-org-private-data.html#assigning-users-to-manage-certain-files[assign a file to a specific Cloud Manager user] so that person can be responsible for any follow-up actions that need to be done on the file. This capability can be used with the existing feature to add custom Tags to a file.
 
 A new Filter in the Investigation page also enables you to easily view all files that have the same person in the "Assigned To" field.
 
-=== Ability to use a smaller Cloud Data Sense instance.
+=== Ability to use a smaller Cloud Data Sense instance
 
 Some users with smaller scanning requirements have asked to be able to use a smaller Cloud Data Sense instance. Now you can. There are some limitations when using these smaller instances, so link:concept-cloud-compliance.html#using-a-smaller-instance-type[see what these restrictions are first].
 
-=== Ability to perform slow scans.
+=== Ability to perform slow scans
 
 Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans now. link:task-managing-compliance.html#reducing-the-data-sense-scan-speed[See how].
 
-=== Data Sense tracks the last time a file has been accessed.
+=== Data Sense tracks the last time a file has been accessed
 
 The Last Accessed Time value has been added to the File Details page and to reports that you output in CSV format so you can see when users have last accessed the file.
 
@@ -214,36 +214,36 @@ The Last Accessed Time value has been added to the File Details page and to repo
 
 Cloud Compliance has been renamed as *Cloud Data Sense* as of this release. With all the new Governance and other capabilities that have been included in the product, the Compliance name was not promoting the full set of capabilities.
 
-=== New "Full Data Mapping" report is available from the Governance Dashboard.
+=== New "Full Data Mapping" report is available from the Governance Dashboard
 
 A new _Full Data Mapping_ report is available from the Governance Dashboard to provide an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes.
 
 The report provides overview pages that summarize all your working environments and data sources, and then provides a breakdown for each working environment. link:task-generating-compliance-reports.html#generating-the-data-mapping-report[Go here] for more details.
 
-=== New filter in the Investigation page to view all duplicated files.
+=== New filter in the Investigation page to view all duplicated files
 
 A new filter in the Data Investigation page enables you to view a list of all files that are duplicated across your storage systems. This is helpful to identify areas where you can save storage space, or identify files that have specific permissions or sensitive information that you do not want duplicated across your storage. link:task-controlling-private-data.html#viewing-all-duplicated-files[See how to viewing all duplicated files].
 
-=== Data Sense can add custom Tags to files for organization.
+=== Data Sense can add custom Tags to files for organization
 
 You can add a custom Tags to files that Data Sense is scanning. The Tag is not added to the file in the same way as AIP Labels are added. The Tag is just seen by Cloud Manager users so you can indicate if a file needs to be deleted, or checked for some reason. link:task-org-private-data.html#applying-tags-to-manage-your-scanned-files[See how to apply and view Tags in your files].
 
 A new Filter in the Investigation page enables you to easily view all files that have a Tag assigned.
 
-=== Ability to scan .DCM and .DICOM files.
+=== Ability to scan .DCM and .DICOM files
 
 Cloud Data Sense can scan for Personal Identifiable Information (PII) in two additional types of files: .DCM and .DICOM.
 
-=== Data Sense now tracks additional attributes of files.
+=== Data Sense now tracks additional attributes of files
 
 The File Size, Created Date, and Last Modified Date values have been added to reports that you output in CSV format. Created Date is also a new Filter you can use to narrow down Investigation page search results.
 
 == 5 May 2021
 
-=== Ability to scan data stored on Azure Blob.
+=== Ability to scan data stored on Azure Blob
 
 Scanning of data stored on Azure Blob is now supported when using the https://min.io/[MinIO service^]. See link:task-scanning-object-storage.html[Scanning object storage that uses S3 protocol] for details.
 
-=== Additional type of personal data can be identified by Data Sense.
+=== Additional type of personal data can be identified by Data Sense
 
 Cloud Data Sense can now find Austrian SSNs in files.
