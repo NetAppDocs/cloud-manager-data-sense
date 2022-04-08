@@ -143,6 +143,8 @@ Note that if you see SIDs (Security IDentifiers) instead of user and group names
 
 You can view if duplicate files are being stored in your storage systems. This is useful if you want to identify areas where you can save storage space. It can also be helpful to make sure certain files that have specific permissions or sensitive information are not unnecessarily duplicated in your storage systems.
 
+Data Sense uses hashing technology to determine duplicate files. If any file has the same hash code as another file, we can be 100% sure that the files are exact duplicates -- even if the file names are different.
+
 You can download the list of duplicate files and send it to your storage admin so they can decide which files, if any, can be deleted. Or you can link:task-managing-highlights.html#deleting-source-files[delete the file] yourself if you are confident that a specific version of the file is not needed.
 
 === Viewing all duplicated files
@@ -159,7 +161,7 @@ To view the list of duplicate files and where they are located, click *View Deta
 
 image:screenshot_compliance_duplicate_file.png[A screenshot showing how to view where duplicated files are located.]
 
-TIP: You can use the "file hash" value provided in this page and enter it directly in the Investigation page to search for a specific duplicate file at any time - or to be used in a Policy.
+TIP: You can use the "file hash" value provided in this page and enter it directly in the Investigation page to search for a specific duplicate file at any time - or you can use it in a Policy.
 
 == Viewing Dashboard data for specific working environments
 
