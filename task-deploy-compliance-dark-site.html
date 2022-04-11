@@ -723,7 +723,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-06 14:13:13 +0000">04/06/2022</time>
+    <time datetime="2022-04-11 14:23:29 +0000">04/11/2022</time>
     
   
 
@@ -774,7 +774,10 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, AWS S3, or OneDrive and SharePoint accounts.</p>
+<p>For special situations where you need a very secure Cloud Manager installation, but you also want to scan local data from OneDrive accounts or SharePoint accounts, you can use the Data Sense offline installer and provide internet access to a few select endpoints. See <a href="#sharepoint-and-onedrive-special-requirements">SharePoint and OneDrive special requirements</a> for details.</p>
+</div>
+<div class="paragraph">
+<p>There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, or AWS S3 accounts.</p>
 </div>
 </div>
 </div>
@@ -788,6 +791,18 @@
 <ul>
 <li>
 <p>Managing Microsoft Azure Information Protection (AIP) labels</p>
+</li>
+<li>
+<p>Sending email alerts to Cloud Manager users when certain critical Policies return results</p>
+</li>
+<li>
+<p>Setting Cloud Manager roles for different users (for example, Account Admin or Compliance Viewer)</p>
+</li>
+<li>
+<p>Copying and synchronizing source files using Cloud Sync</p>
+</li>
+<li>
+<p>Receiving user feedback</p>
 </li>
 <li>
 <p>Automated software upgrades from Cloud Manager</p>
@@ -924,6 +939,40 @@
 </div>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sharepoint-and-onedrive-special-requirements">SharePoint and OneDrive special requirements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When Cloud Manager and Data Sense are deployed in a site with no internet access, you can scan local files in SharePoint and OneDrive accounts by providing internet access to a few select endpoints.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Endpoints</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\login.microsoft.com<br>
+\graph.microsoft.com</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Communication with Microsoft servers to log in to the selected online service.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">https://cloudmanager.cloud.netapp.com</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Communication with the Cloud Manager service, which includes NetApp accounts.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Access to <em>cloudmanager.cloud.netapp.com</em> is required only during the initial connections to these external services.</p>
 </div>
 </div>
 </div>
