@@ -723,7 +723,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-06 14:13:13 +0000">04/06/2022</time>
+    <time datetime="2022-04-14 13:05:43 +0000">04/14/2022</time>
     
   
 
@@ -952,13 +952,13 @@ Your browser does not support the video tag.
 <p><span class="image"><img src="./media/screenshot_services_license_expire_cc1.png" alt="A screenshot that shows an expiring license in the Cloud Data Sense page."></span></p>
 </div>
 <div class="paragraph">
-<p>This status also appears in the Digital Wallet page.</p>
+<p>This status also appears in the Digital Wallet.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_services_license_expire_cc2.png" alt="A screenshot that shows an expiring license in the Digital Wallet page."></span></p>
 </div>
 <div class="paragraph">
-<p>You can update your Cloud Data Sense license before it expires so that there is no interruption in your ability to scan your data.</p>
+<p>You can update your Cloud Data Sense license before it expires so that there is no interruption in your ability to access your scanned data.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -998,7 +998,7 @@ Your browser does not support the video tag.
 <div class="sect2">
 <h3 id="byol-license-considerations">BYOL license considerations</h3>
 <div class="paragraph">
-<p>When using a Cloud Data Sense BYOL license, Cloud Manager displays a warning in the user interface when the size of all the data you are scanning is nearing the capacity limit or nearing the license expiration date. You receive these warnings:</p>
+<p>When using a Cloud Data Sense BYOL license, Cloud Manager displays a warning in the Data Sense UI and in the Digital Wallet UI when the size of all the data you are scanning is nearing the capacity limit or nearing the license expiration date. You receive these warnings:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1014,23 +1014,22 @@ Your browser does not support the video tag.
 <p>Use the chat icon in the lower right of the Cloud Manager interface to renew your license when you see these warnings.</p>
 </div>
 <div class="paragraph">
-<p>Two things can happen when your license expires:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>If the account you are using has a marketplace subscription, Data Sense continues to run, but you are shifted over to a PAYGO licensing model. You are charged for the amount of data you are scanning.</p>
-</li>
-<li>
-<p>If the account you are using does not have a marketplace subscription, Data Sense continues to run, but you will continue to see the warnings.</p>
-</li>
-</ul>
+<p>If your license expires, Data Sense continues to run, but access to the Dashboards is blocked so that you can&#8217;t view information about any of your scanned data. Only the <em>Configuration</em> page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit.</p>
 </div>
 <div class="paragraph">
-<p>Once you renew your BYOL subscription, Cloud Manager automatically updates the license. If Cloud Manager can&#8217;t access the license file over the secure internet connection (for example, when installed in a dark site), you can obtain the file yourself and manually upload it to Cloud Manager. For instructions, see <a href="#update-a-cloud-data-sense-byol-license">how to update a Cloud Data Sense license</a>.</p>
+<p>Once you renew your BYOL license, Cloud Manager automatically updates the license in the Digital Wallet and provides full access to all Dashboards. If Cloud Manager can&#8217;t access the license file over the secure internet connection (for example, when installed in a dark site), you can obtain the file yourself and manually upload it to Cloud Manager. For instructions, see <a href="#update-a-cloud-data-sense-byol-license">how to update a Cloud Data Sense license</a>.</p>
 </div>
-<div class="paragraph">
-<p>Systems that were shifted over to a PAYGO license are returned to the BYOL license automatically. And systems that were running without a license will stop seeing the warnings and will be charged for activity that occurred while the license was expired.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-manager-data-sense/images/tip.svg" alt="Tip">
+</td>
+<td class="content">
+If the account you are using has both a BYOL license and a PAYGO subscription, Data Sense <em>will not</em> shift over to the PAYGO subscription when the BYOL license expires. You must renew the BYOL license.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
