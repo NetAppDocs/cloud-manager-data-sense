@@ -130,11 +130,11 @@ If your licensed term is nearing the expiration date, or if your licensed capaci
 
 image:screenshot_services_license_expire_cc1.png[A screenshot that shows an expiring license in the Cloud Data Sense page.]
 
-This status also appears in the Digital Wallet page.
+This status also appears in the Digital Wallet.
 
 image:screenshot_services_license_expire_cc2.png[A screenshot that shows an expiring license in the Digital Wallet page.]
 
-You can update your Cloud Data Sense license before it expires so that there is no interruption in your ability to scan your data.
+You can update your Cloud Data Sense license before it expires so that there is no interruption in your ability to access your scanned data.
 
 .Steps
 
@@ -155,18 +155,15 @@ Cloud Manager updates the license so that your Cloud Data Sense service continue
 
 === BYOL license considerations
 
-When using a Cloud Data Sense BYOL license, Cloud Manager displays a warning in the user interface when the size of all the data you are scanning is nearing the capacity limit or nearing the license expiration date. You receive these warnings:
+When using a Cloud Data Sense BYOL license, Cloud Manager displays a warning in the Data Sense UI and in the Digital Wallet UI when the size of all the data you are scanning is nearing the capacity limit or nearing the license expiration date. You receive these warnings:
 
 * When the amount of data you are scanning has reached 80% of licensed capacity, and again when you have reached the limit
 * 30 days before a license is due to expire, and again when the license expires
 
 Use the chat icon in the lower right of the Cloud Manager interface to renew your license when you see these warnings.
 
-Two things can happen when your license expires:
+If your license expires, Data Sense continues to run, but access to the Dashboards is blocked so that you can't view information about any of your scanned data. Only the _Configuration_ page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit.
 
-* If the account you are using has a marketplace subscription, Data Sense continues to run, but you are shifted over to a PAYGO licensing model. You are charged for the amount of data you are scanning.
-* If the account you are using does not have a marketplace subscription, Data Sense continues to run, but you will continue to see the warnings.
+Once you renew your BYOL license, Cloud Manager automatically updates the license in the Digital Wallet and provides full access to all Dashboards. If Cloud Manager can't access the license file over the secure internet connection (for example, when installed in a dark site), you can obtain the file yourself and manually upload it to Cloud Manager. For instructions, see <<Update a Cloud Data Sense BYOL license,how to update a Cloud Data Sense license>>.
 
-Once you renew your BYOL subscription, Cloud Manager automatically updates the license. If Cloud Manager can't access the license file over the secure internet connection (for example, when installed in a dark site), you can obtain the file yourself and manually upload it to Cloud Manager. For instructions, see <<Update a Cloud Data Sense BYOL license,how to update a Cloud Data Sense license>>.
-
-Systems that were shifted over to a PAYGO license are returned to the BYOL license automatically. And systems that were running without a license will stop seeing the warnings and will be charged for activity that occurred while the license was expired.
+TIP: If the account you are using has both a BYOL license and a PAYGO subscription, Data Sense _will not_ shift over to the PAYGO subscription when the BYOL license expires. You must renew the BYOL license.

@@ -72,7 +72,7 @@ link:task-licensing-datasense.html[Learn how to license Cloud Data Sense^].
 
 === Data transfer costs
 
-Data transfer costs depend on your setup. If the Cloud Data Sense instance and data source are in the same Availability Zone and region, then there are no data transfer costs. But if the data source, such as a Cloud Volumes ONTAP cluster or S3 Bucket, is in a _different_ Availability Zone or region, then you'll be charged by your cloud provider for data transfer costs. See these links for more details:
+Data transfer costs depend on your setup. If the Cloud Data Sense instance and data source are in the same Availability Zone and region, then there are no data transfer costs. But if the data source, such as a Cloud Volumes ONTAP system or S3 Bucket, is in a _different_ Availability Zone or region, then you'll be charged by your cloud provider for data transfer costs. See these links for more details:
 
 * https://aws.amazon.com/ec2/pricing/on-demand/[AWS: Amazon EC2 Pricing^]
 * https://azure.microsoft.com/en-us/pricing/details/bandwidth/[Microsoft Azure: Bandwidth Pricing Details^]
