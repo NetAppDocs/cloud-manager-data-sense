@@ -723,7 +723,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-30 15:47:13 +0000">03/30/2022</time>
+    <time datetime="2022-04-18 17:15:02 +0000">04/18/2022</time>
     
   
 
@@ -957,9 +957,12 @@ https://production.cloudflare.docker.com/</p></td>
 </dd>
 <dt class="hdlist1">Ensure that the Cloud Manager Connector can access Cloud Data Sense</dt>
 <dd>
-<p>Ensure connectivity between the Connector and the Cloud Data Sense instance. The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance. This connection enables deployment of the Data Sense instance and enables you to view information in the Compliance and Governance tabs.</p>
+<p>Ensure connectivity between the Connector and the Cloud Data Sense instance. The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance. This connection enables deployment of the Data Sense instance and enables you to view information in the Compliance and Governance tabs. Cloud Data Sense is supported in Government regions in AWS and Azure.</p>
 <div class="paragraph">
-<p>Cloud Data Sense is supported in Government regions in AWS and Azure. Additional inbound and outbound rules are required for AWS and AWS GovCloud deployments. See <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-cloud-manager.html#rules-for-the-connector-in-aws" target="_blank" rel="noopener">Rules for the Connector in AWS</a> for details.</p>
+<p>Additional inbound and outbound rules are required for AWS and AWS GovCloud deployments. See <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-cloud-manager.html#rules-for-the-connector-in-aws" target="_blank" rel="noopener">Rules for the Connector in AWS</a> for details.</p>
+</div>
+<div class="paragraph">
+<p>Additional inbound and outbound rules are required for Azure and Azure Government deployments. See <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-cloud-manager.html#rules-for-the-connector-in-azure" target="_blank" rel="noopener">Rules for the Connector in Azure</a> for details.</p>
 </div>
 </dd>
 <dt class="hdlist1">Ensure that you can keep Cloud Data Sense running</dt>
