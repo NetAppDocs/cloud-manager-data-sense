@@ -41,6 +41,8 @@ sidebar:
               url: /task-scanning-onedrive.html
             - title: SharePoint accounts
               url: /task-scanning-sharepoint.html
+            - title: Google Drive accounts
+              url: /task-scanning-google-drive.html
             - title: File shares
               url: /task-scanning-file-shares.html
             - title: Object storage
@@ -122,6 +124,8 @@ homepage:
           url: task-scanning-onedrive.html
         - title: SharePoint accounts
           url: task-scanning-sharepoint.html
+        - title: Google Drive accounts
+          url: task-scanning-google-drive.html
     - title: Manage private data
       links:
         - title: Categorize your data using AIP labels
