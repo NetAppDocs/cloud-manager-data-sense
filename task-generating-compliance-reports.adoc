@@ -15,11 +15,13 @@ summary: Cloud Data Sense provides reports that you can use to better understand
 [.lead]
 Cloud Data Sense provides reports that you can use to better understand the status of your organization's data privacy program.
 
-By default, the Cloud Data Sense dashboards display compliance and governance data for all working environments and databases. If you want to view reports that contain data for only some of the working environments, <<Selecting the working environments for reports,select those working environments>>.
+By default, the Cloud Data Sense dashboards display compliance and governance data for all working environments, databases, and data sources. If you want to view reports that contain data for only some of the working environments, <<Selecting the working environments for reports,select those working environments>>.
 
-NOTE: The reports described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan can only generate the Data Mapping Report.
-
-NOTE: NetApp can't guarantee 100% accuracy of the personal data and sensitive personal data that Cloud Data Sense identifies. You should always validate the information by reviewing the data.
+[NOTE]
+====
+* The reports described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan can only generate the Data Mapping Report.
+* NetApp can't guarantee 100% accuracy of the personal data and sensitive personal data that Cloud Data Sense identifies. You should always validate the information by reviewing the data.
+====
 
 == Privacy Risk Assessment Report
 
@@ -175,6 +177,72 @@ image:screenshot_compliance_data_mapping_report_button.png[A screen shot of the 
 .Result
 
 Cloud Data Sense generates a PDF report that you can review and send to other groups as needed.
+
+== Data Investigation Report
+
+The Data Investigation Report is a download of the contents of the Data Investigation page. Go link:task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[here] to learn more about the Data Investigation page.
+
+You can save the report on the local machine as a .CSV file (which can include up to 5,000 rows of data), or as a .JSON file that you export to an NFS Share (which can include an unlimited number of rows). If Data Sense is scanning database tables (structured data), files (unstructured data), and folders (unstructured data), there can be up to three .CSV or .JSON reports downloaded.
+
+=== Generating the Data Investigation Report
+
+.Steps
+
+. From the Data Investigation page, click the image:button_download.png[download button] button on the top, right of the page.
++
+image:screenshot_compliance_investigation_report.png[A screenshot of the Download Investigation Report page with multiple options.]
+
+. Select whether you want to download a .CSV report or .JSON report of the data, and click *Download Report*.
++
+When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
++
+A dialog displays a message that the report is bring downloaded.
+
+=== What’s included in each Data Investigation Report
+
+The *Unstructured Files Data Report* includes the following information about your files:
+
+* File name
+* Location type
+* Working environment name
+* Storage repository (for example, a volume, bucket, shares)
+* Working environment type
+* File path
+* File type
+* File size
+* Created time
+* Last modified
+* Last accessed
+* File owner
+* Category
+* Personal information
+* Sensitive personal information
+* Deletion detection date
++
+A deletion detection date identifies the date that the file was deleted or moved. This enables you to identify when sensitive files have been moved. Deleted files aren't part of the file number count that appears in the dashboard or on the Investigation page. The files only appear in the CSV reports.
+
+The *Unstructured Folders Data Report* includes the following information about your folders:
+
+* File name
+* Location type
+* Working environment name
+* Storage repository (for example, a volume, bucket, shares)
+* Folder path
+* File size
+* Created time
+* Last modified
+* Last accessed
+
+The *Structured Data Report* includes the following information about your database tables:
+
+* DB Table name
+* Location type
+* Working environment name
+* Storage repository (for example, a schema)
+* Column count
+* Row count
+* Personal information
+* Sensitive personal information
 
 == Selecting the working environments for reports
 

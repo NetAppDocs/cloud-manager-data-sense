@@ -177,11 +177,13 @@ image:screenshot_cloud_compliance_filter.gif[A screenshot showing how to filter 
 
 == Filtering data in the Data Investigation page
 
-You can filter the contents of the investigation page to display only the results you want to see. If you want to save a CSV version of the content as a report after you have refined it, click the image:button_download.png[download button] button.
+You can filter the contents of the investigation page to display only the results you want to see. This is a very powerful feature because after you've refined the data, you can use the button bar at the top of the page to perform a variety of actions, including copying files, moving files, adding a tag or AIP label to the files, and more.
+
+If you want to download the contents of the page as a report after you've refined it, click the image:button_download.png[download button] button. You can save the report as a .CSV file (which can include up to 5,000 rows of data), or as a .JSON file that you can export to an NFS Share (which can include an unlimited number of rows). Go link:task-generating-compliance-reports.html#data-investigation-report[here] for details about Data Investigation reports.
 
 image:screenshot_compliance_investigation_filtered.png[A screenshot of the filters available when refining the results in the investigation page.]
 
-* The top-level tabs allow you to view data from files (unstructured data) or from databases (structured data).
+* The top-level tabs allow you to view data from files (unstructured data), folders (unstructured data), or from databases (structured data).
 
 * The controls at the top of each column allow you to sort the results in numerical or alphabetical order.
 
@@ -221,41 +223,3 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 |===
 
 * The _Policies_ filter at the top of the Filters pane lists the custom filters that provide commonly requested combinations of filters; like a saved database query or Favorites list. Go link:task-org-private-data.html#controlling-your-data-using-policies[here^] to view the list of predefined Policies and to see how you can create your own custom Policies.
-
-== What’s included in each file list report (CSV file)
-
-From each Investigation page you can click the image:button_download.png[download button] button to download file lists (in CSV format) that include details about the identified files. If Data Sense is scanning both Structured (database tables) and Unstructured (files) data, there are two reports contained in the downloaded ZIP file.
-
-If there are more than 10,000 results, only the top 10,000 appear in the list.
-
-The *Unstructured Data Report* includes the following information:
-
-* File name
-* Location type
-* Working environment name
-* Storage repository (for example, a volume, bucket, shares)
-* Working environment type
-* File path
-* File type
-* File size
-* Created time
-* Last modified
-* Last accessed
-* File owner
-* Category
-* Personal information
-* Sensitive personal information
-* Deletion detection date
-+
-A deletion detection date identifies the date that the file was deleted or moved. This enables you to identify when sensitive files have been moved. Deleted files aren't part of the file number count that appears in the dashboard or on the Investigation page. The files only appear in the CSV reports.
-
-The *Structured Data Report* includes the following information:
-
-* DB Table name
-* Location type
-* Working environment name
-* Storage repository (for example, a schema)
-* Column count
-* Row count
-* Personal information
-* Sensitive personal information
