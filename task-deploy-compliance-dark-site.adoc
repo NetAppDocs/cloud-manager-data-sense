@@ -28,7 +28,7 @@ When installed in this manner (sometimes called an "offline" or "dark" site), Da
 
 For special situations where you need a very secure Cloud Manager installation, but you also want to scan local data from OneDrive accounts or SharePoint accounts, you can use the Data Sense offline installer and provide internet access to a few select endpoints. See <<SharePoint and OneDrive special requirements,SharePoint and OneDrive special requirements>> for details.
 
-There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, or AWS S3 accounts.
+There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, AWS S3, or Google Drive accounts when Data Sense is deployed in a dark site.
 
 == Limitations
 

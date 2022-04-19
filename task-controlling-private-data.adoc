@@ -198,7 +198,7 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 | User / Group Permissions | Enter a user name or group name, or partial name
 | File Owner | Enter the file owner name
 | Label |	Select AIP labels
-| Working Environment Type | Select the type of working environment. Note that OneDrive and SharePoint are categorized under "Cloud Apps".
+| Working Environment Type | Select the type of working environment. OneDrive, SharePoint, and Google Drive are categorized under "Cloud Apps".
 | Working Environment name | Select specific working environments
 | Storage Repository | Select the storage repository, for example, a volume or a schema
 | File Path | Enter a partial or full path

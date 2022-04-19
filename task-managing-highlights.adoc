@@ -21,7 +21,11 @@ Cloud Data Sense provides many ways for you to manage your private data. Some fu
 * You can move source files that Data Sense is scanning to any NFS share.
 * You can delete files that seem insecure or too risky to leave in your storage system, or that you have identified as duplicate.
 
-NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
+[NOTE]
+====
+* The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
+* Data from Google Drive accounts can't use any of these capabilities at this time.
+====
 
 == Copying source files
 

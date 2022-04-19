@@ -18,7 +18,7 @@ This FAQ can help if you’re just looking for a quick answer to a question.
 
 == What is Cloud Data Sense?
 
-Cloud Data Sense is a cloud offering that uses Artificial Intelligence (AI) driven technology to help organizations understand data context and identify sensitive data across your storage systems. The systems can be Azure NetApp Files configurations, Amazon FSx for ONTAP, Cloud Volumes ONTAP systems (hosted in AWS, Azure, or GCP), Amazon S3 buckets, on-prem ONTAP systems, non-NetApp file shares, generic S3 object storage, databases, OneDrive accounts, and SharePoint accounts.
+Cloud Data Sense is a cloud offering that uses Artificial Intelligence (AI) driven technology to help organizations understand data context and identify sensitive data across your storage systems. The systems can be Azure NetApp Files configurations, Amazon FSx for ONTAP, Cloud Volumes ONTAP systems (hosted in AWS, Azure, or GCP), Amazon S3 buckets, on-prem ONTAP systems, non-NetApp file shares, generic S3 object storage, databases, OneDrive accounts, SharePoint accounts, and Google Drive accounts.
 
 Cloud Data Sense provides pre-defined parameters (such as sensitive information types and categories) to address new data compliance regulations for data privacy and sensitivity, such as GDPR, CCPA, HIPAA, and more.
 
@@ -44,7 +44,7 @@ Cloud Data Sense supports scanning of unstructured data over NFS and CIFS protoc
 
 Data Sense can also scan data stored on Amazon S3 buckets and in generic S3 object storage.
 
-Additionally, Data Sense can scan databases that are located anywhere, and user files from OneDrive and SharePoint accounts.
+Additionally, Data Sense can scan databases that are located anywhere, and user files from OneDrive, SharePoint, and Google Drive accounts.
 
 link:concept-cloud-compliance.html#how-scans-work[Learn how scans work^].
 
@@ -89,6 +89,10 @@ Data changes frequently, so Cloud Data Sense scans your data continuously with n
 link:concept-cloud-compliance.html#how-scans-work[Learn how scans work].
 
 Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans. link:task-managing-compliance.html#reducing-the-data-sense-scan-speed[See how to reduce the scan speed].
+
+== Can anyone access the private data sent between my browser and Data Sense?
+
+No. The private data sent between your browser and the Data Sense instance are secured with end-to-end encryption, which means NetApp and third parties can’t read it. Data Sense won’t share any data or results with NetApp unless you request and approve access.
 
 == Does Cloud Data Sense offer reports?
 
