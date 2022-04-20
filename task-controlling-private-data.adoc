@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-controlling-private-data.html
-keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, highlights, policies
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies
 summary: Gain control of your private data by viewing details about the personal data and sensitive personal data in your organization. You can also gain visibility by reviewing the categories and file types that Cloud Data Sense found in your data.
 ---
 
@@ -195,7 +195,7 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 | Filter
 | Details
 
-| Policies | Select a policy or policies. Go link:task-org-private-data.html#controlling-your-data-using-policies[here^] to view the list of existing policies and to create your own policies.
+| Policies | Select a policy or policies. Go link:task-org-private-data.html#controlling-your-data-using-policies[here^] to view the list of existing policies and to create your own custom policies.
 | Open Permissions | Select the type of permissions
 | User / Group Permissions | Enter a user name or group name, or partial name
 | File Owner | Enter the file owner name
@@ -221,5 +221,3 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 | Assigned To | Select the name of the person to which the file is assigned
 
 |===
-
-* The _Policies_ filter at the top of the Filters pane lists the custom filters that provide commonly requested combinations of filters; like a saved database query or Favorites list. Go link:task-org-private-data.html#controlling-your-data-using-policies[here^] to view the list of predefined Policies and to see how you can create your own custom Policies.

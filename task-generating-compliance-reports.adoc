@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-generating-compliance-reports.html
-keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa
+keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa, csv file, json file
 summary: Cloud Data Sense provides reports that you can use to better understand the status of your organization's data privacy program.
 ---
 
@@ -196,7 +196,7 @@ image:screenshot_compliance_investigation_report.png[A screenshot of the Downloa
 +
 When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
 +
-A dialog displays a message that the report is bring downloaded.
+A dialog displays a message that the report is being downloaded.
 
 === What’s included in each Data Investigation Report
 
