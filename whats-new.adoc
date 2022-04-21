@@ -26,7 +26,7 @@ Data Sense can identify Personal Identifiable Information (PII) within the follo
 
 === Ability to download the results from the Data Investigation page as a .JSON report
 
-After you have filtered the data in the Data Investigation page, you can save the data as a report in a .CSV file to your local system (which can include up to 5,000 rows of data), or in a .JSON file that you can export to an NFS Share (which can include an unlimited number of rows). https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#data-investigation-report[See how to create reports from the Data Investigation page].
+After you have filtered the data in the Data Investigation page, now you can save the data as a report in a .JSON file that you can export to an NFS Share, in addition to saving the data to a .CSV file on your local system. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#data-investigation-report[See how to create reports from the Data Investigation page].
 
 === Folder level view added to the Data Investigation page
 

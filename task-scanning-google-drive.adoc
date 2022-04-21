@@ -46,6 +46,13 @@ Review the following prerequisites to make sure you are ready to enable Cloud Da
 * You must have the Admin login credentials for the Google Drive account that provides read access to all Google Drive sites.
 * You will need a line-separated list of the Google Drive site URLs for all the data you want to scan.
 
+=== Current restrictions
+
+The following Data Sense features are not currently supported with Google Drive files:
+
+* When viewing files in the Data Investigation page, the actions in the button bar aren't active. You can't copy, move, delete, etc. any files.
+* Permissions can't be identified within files in Google Drive, so no permission information is displayed in the Investigation page.
+
 == Deploying the Cloud Data Sense instance
 
 Deploy Cloud Data Sense if there isn't already an instance deployed.
@@ -54,7 +61,7 @@ Data Sense can be link:task-deploy-cloud-compliance.html[deployed in the cloud^]
 
 Upgrades to Data Sense software is automated as long as the instance has internet connectivity.
 //
-// Data Sense can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local SharePoint files. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[See the list of required endpoints here].
+// Data Sense can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local Google Drive files. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[See the list of required endpoints here].
 
 == Adding the Google Drive account
 
