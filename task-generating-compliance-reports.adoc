@@ -189,13 +189,13 @@ You can save the report on the local machine as a .CSV file (which can include u
 .Steps
 
 . From the Data Investigation page, click the image:button_download.png[download button] button on the top, right of the page.
-+
-image:screenshot_compliance_investigation_report.png[A screenshot of the Download Investigation Report page with multiple options.]
 
 . Select whether you want to download a .CSV report or .JSON report of the data, and click *Download Report*.
 +
-When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
+image:screenshot_compliance_investigation_report.png[A screenshot of the Download Investigation Report page with multiple options.]
 +
+When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
+
 A dialog displays a message that the report is being downloaded.
 
 === What’s included in each Data Investigation Report
@@ -220,18 +220,18 @@ The *Unstructured Files Data Report* includes the following information about yo
 * Deletion detection date
 +
 A deletion detection date identifies the date that the file was deleted or moved. This enables you to identify when sensitive files have been moved. Deleted files aren't part of the file number count that appears in the dashboard or on the Investigation page. The files only appear in the CSV reports.
-
-The *Unstructured Folders Data Report* includes the following information about your folders:
-
-* File name
-* Location type
-* Working environment name
-* Storage repository (for example, a volume, bucket, shares)
-* Folder path
-* File size
-* Created time
-* Last modified
-* Last accessed
+//
+//The *Unstructured Folders Data Report* includes the following information about your folders:
+//
+//* File name
+//* Location type
+//* Working environment name
+//* Storage repository (for example, a volume, bucket, shares)
+//* Folder path
+//* File size
+//* Created time
+//* Last modified
+//* Last accessed
 
 The *Structured Data Report* includes the following information about your database tables:
 
@@ -243,6 +243,8 @@ The *Structured Data Report* includes the following information about your datab
 * Row count
 * Personal information
 * Sensitive personal information
+
+*Note:* Information about Folders is not currently available in the reports.
 
 == Selecting the working environments for reports
 

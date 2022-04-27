@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-scanning-google-drive.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, google drive, data sense
-summary: Complete a few steps to start scanning files in your Google Drive accounts with Cloud Data Sense.
+summary: Complete a few steps to start scanning user files in your Google Drive accounts with Cloud Data Sense.
 ---
 
 = Scanning Google Drive accounts
@@ -13,7 +13,7 @@ summary: Complete a few steps to start scanning files in your Google Drive accou
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to start scanning files in your Google Drive accounts with Cloud Data Sense.
+Complete a few steps to start scanning user files in your Google Drive accounts with Cloud Data Sense.
 
 == Quick start
 
@@ -22,9 +22,10 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Review Google Drive prerequisites
 
 [role="quick-margin-para"]
-Ensure that you have the Admin credentials to log into the Google Drive account, and that you have the URLs for the Google Drive sites that you want to scan.
+Ensure that you have the Admin credentials to log into the Google Drive account.
+//, and that you have the URLs for the Google Drive sites that you want to scan.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Cloud Data Sense instance
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy Cloud Data Sense
 
 [role="quick-margin-para"]
 link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense^] if there isn't already an instance deployed.
@@ -34,17 +35,23 @@ link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense^] if there isn't 
 [role="quick-margin-para"]
 Using Admin user credentials, log into the Google Drive account that you want to access so that it is added as a new data source.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add the Google Drive site URLs to scan
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Select the type of scanning for the user files
 
 [role="quick-margin-para"]
-Add the list of Google Drive site URLs that you want to scan in the Google Drive account, and select the type of scanning. You can add up to 100 URLs at time.
+Select the type of scanning you want to perform on the user files; mapping or mapping and classifying.
+//
+//.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add the Google Drive site URLs to scan
+//
+//[role="quick-margin-para"]
+//Add the list of Google Drive site URLs that you want to scan in the Google Drive account, and select the type of scanning. You can add up to 100 URLs at time.
 
 == Reviewing Google Drive requirements
 
 Review the following prerequisites to make sure you are ready to enable Cloud Data Sense on a Google Drive account.
 
-* You must have the Admin login credentials for the Google Drive account that provides read access to all Google Drive sites.
-* You will need a line-separated list of the Google Drive site URLs for all the data you want to scan.
+* You must have the Admin login credentials for the Google Drive account that provides read access to the user's files
+// all Google Drive sites.
+// * You will need a line-separated list of the Google Drive site URLs for all the data you want to scan.
 
 === Current restrictions
 
@@ -53,7 +60,7 @@ The following Data Sense features are not currently supported with Google Drive 
 * When viewing files in the Data Investigation page, the actions in the button bar aren't active. You can't copy, move, delete, etc. any files.
 * Permissions can't be identified within files in Google Drive, so no permission information is displayed in the Investigation page.
 
-== Deploying the Cloud Data Sense instance
+== Deploying Cloud Data Sense
 
 Deploy Cloud Data Sense if there isn't already an instance deployed.
 
@@ -79,33 +86,34 @@ image:screenshot_compliance_add_google_drive_button.png[A screenshot of the Scan
 
 The Google Drive account is added to the list of working environments.
 
-== Adding Google Drive sites to compliance scans
+== Selecting the type of scanning for user data
 
-You can add individual Google Drive sites, or all of the Google Drive sites in the account, so that the associated files will be scanned by Cloud Data Sense.
+Select the type of scanning that Cloud Data Sense will perform on the user's data.
 
 .Steps
 
 . From the _Configuration_ page, click the *Configuration* button for the Google Drive account.
 +
-image:screenshot_compliance_google_drive_add_sites.png[A screenshot of the Scan Configuration page where you can select the Configuration button.]
+image:screenshot_compliance_google_drive_add_sites.png[A screenshot of the Configuration page where you can select the Configuration button.]
+//
+//. If this is the first time adding sites for this Google Drive account, click *Add your first Google Drive site*.
+//+
+//image:screenshot_compliance_google_drive_add_initial_sites.png[A screenshot showing the Add your first Google Drive sites button to add initial sites to be scanned.]
+//+
+//If you are adding additional users from a Google Drive account, click *Add Google Drive Sites*.
+//+
+//image:screenshot_compliance_sharepoint_add_more_sites.png[A screenshot showing the Add Google Drive sites button to add more sites to an account.]
+//. Add the URLs for the sites whose files you want to scan - one URL per line (up to 100 maximum per session) - and click *Add Sites*.
+//+
+//image:screenshot_compliance_google_drive_add_site.png[A screenshot of the Add Google Drive Sites page where you can add sites to be scanned.]
+//+
+//A confirmation dialog displays the number of sites that were added.
+//+
+//If the dialog lists any sites that could not be added, capture this information so that you can resolve the issue. In some cases you can re-add the site with a corrected URL.
 
-. If this is the first time adding sites for this Google Drive account, click *Add your first Google Drive site*.
+. Enable mapping-only scans, or mapping and classification scans, on the files in the Google Drive account.
 +
-image:screenshot_compliance_google_drive_add_initial_sites.png[A screenshot showing the Add your first Google Drive sites button to add initial sites to be scanned.]
-+
-If you are adding additional users from a Google Drive account, click *Add Google Drive Sites*.
-+
-image:screenshot_compliance_sharepoint_add_more_sites.png[A screenshot showing the Add Google Drive sites button to add more sites to an account.]
-
-. Add the URLs for the sites whose files you want to scan - one URL per line (up to 100 maximum per session) - and click *Add Sites*.
-+
-image:screenshot_compliance_google_drive_add_site.png[A screenshot of the Add Google Drive Sites page where you can add sites to be scanned.]
-+
-A confirmation dialog displays the number of sites that were added.
-+
-If the dialog lists any sites that could not be added, capture this information so that you can resolve the issue. In some cases you can re-add the site with a corrected URL.
-
-. Enable mapping-only scans, or mapping and classification scans, on the files in the Google Drive sites.
+image:screenshot_compliance_google_drive_select_scan.png[A screenshot showing how to select the type of scanning Data Sense will perform on the Google Drive data.]
 +
 [cols="45,45",width=90%,options="header"]
 |===
@@ -120,10 +128,11 @@ If the dialog lists any sites that could not be added, capture this information 
 
 .Result
 
-Cloud Data Sense starts scanning the files in the Google Drive sites you added, and the results are displayed in the Dashboard and in other locations.
+Cloud Data Sense starts scanning the files in the Google Drive account you added, and the results are displayed in the Dashboard and in other locations.
 
-== Removing a Google Drive site from compliance scans
+== Removing a Google Drive account from compliance scans
 
-If you remove a Google Drive site in the future, or decide not to scan files in a Google Drive site, you can remove individual Google Drive sites from having their files scanned at any time. Just click *Remove Google Drive Site* from the Configuration page.
-
-image:screenshot_compliance_sharepoint_remove_site.png[A screenshot showing how to remove a single Google Drive site from having their files scanned.]
+//If you remove a Google Drive site in the future, or decide not to scan files in a Google Drive site, you can remove individual Google Drive sites from having their files scanned at any time. Just click *Remove Google Drive Site* from the Configuration page.
+//
+//image:screenshot_compliance_sharepoint_remove_site.png[A screenshot showing how to remove a single Google Drive site from having their files scanned.]
+Since only a single user's Google Drive files are part of a single Google Drive account, if you want to stop scanning files from a user's Google Drive account, then you should link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-cloud-data-sense[delete the Google Drive account from Data Sense].

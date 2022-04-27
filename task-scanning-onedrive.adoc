@@ -34,7 +34,7 @@ link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense^] if there isn't 
 [role="quick-margin-para"]
 Using Admin user credentials, log into the OneDrive account that you want to access so that it is added as a new working environment.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add the users and select the users to scan
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add the users and select the type of scanning
 
 [role="quick-margin-para"]
 Add the list of users from the OneDrive account that you want to scan and select the type of scanning. You can add up to 100 users at time.
@@ -43,8 +43,8 @@ Add the list of users from the OneDrive account that you want to scan and select
 
 Review the following prerequisites to make sure that you have a supported configuration before you enable Cloud Data Sense.
 
-* You must have the Admin login credentials for the OneDrive for Business account that provides read access to all user files.
-* You will need a line-separated list of the email addresses for all the users whose OneDrive folders you want to scan.
+* You must have the Admin login credentials for the OneDrive for Business account that provides read access to the user's files.
+* You'll need a line-separated list of the email addresses for all the users whose OneDrive folders you want to scan.
 
 == Deploying the Cloud Data Sense instance
 
@@ -120,3 +120,5 @@ Cloud Data Sense starts scanning the files for the users you added, and the resu
 If users leave the company or if their email address changes, you can remove individual OneDrive users from having their files scanned at any time. Just click *Remove OneDrive User* from the Configuration page.
 
 image:screenshot_compliance_onedrive_remove_user.png[A screenshot showing how to remove a single user from having their files scanned.]
+
+Note that you can link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-cloud-data-sense[delete the entire OneDrive account from Data Sense] if you no longer want to scan any user data from the OneDrive account.
