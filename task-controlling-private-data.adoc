@@ -181,7 +181,9 @@ image:screenshot_cloud_compliance_filter.gif[A screenshot showing how to filter 
 
 You can filter the contents of the investigation page to display only the results you want to see. This is a very powerful feature because after you've refined the data, you can use the button bar at the top of the page to perform a variety of actions, including copying files, moving files, adding a tag or AIP label to the files, and more.
 
-If you want to download the contents of the page as a report after you've refined it, click the image:button_download.png[download button] button. You can save the report locally as a .CSV file (which can include up to 5,000 rows of data), or as a .JSON file that you export to an NFS Share (which can include an unlimited number of rows). link:task-generating-compliance-reports.html#data-investigation-report[Go here for details about Data Investigation reports].
+If you want to download the contents of the page as a report after you've refined it, click the image:button_download.png[download button] button to save a .CSV file. 
+
+// You can save the report locally as a .CSV file (which can include up to 5,000 rows of data), or as a .JSON file that you export to an NFS Share (which can include an unlimited number of rows). link:task-generating-compliance-reports.html#data-investigation-report[Go here for details about Data Investigation reports].
 
 image:screenshot_compliance_investigation_filtered.png[A screenshot of the filters available when refining the results in the investigation page.]
 

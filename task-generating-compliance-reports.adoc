@@ -180,21 +180,22 @@ Cloud Data Sense generates a PDF report that you can review and send to other gr
 
 == Data Investigation Report
 
-The Data Investigation Report is a download of the contents of the Data Investigation page. Go link:task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[here] to learn more about the Data Investigation page.
+The Data Investigation Report is a download of the contents of the Data Investigation page. link:task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[Learn more about the Data Investigation page].
 
-You can save the report on the local machine as a .CSV file (which can include up to 5,000 rows of data), or as a .JSON file that you export to an NFS Share (which can include an unlimited number of rows). If Data Sense is scanning database tables (structured data), files (unstructured data), and folders (unstructured data), there can be up to three .CSV or .JSON reports downloaded.
+You can save the report on the local machine as a .CSV file; which can include up to 5,000 rows of data. If Data Sense is scanning database tables (structured data) and files (unstructured data), there can be up to two .CSV reports downloaded.
+//(), or as a .JSON file that you export to an NFS Share (which can include an unlimited number of rows). If Data Sense is scanning database tables (structured data), files (unstructured data), and folders (unstructured data), there can be up to three .CSV or .JSON reports downloaded.
 
 === Generating the Data Investigation Report
 
 .Steps
 
 . From the Data Investigation page, click the image:button_download.png[download button] button on the top, right of the page.
-
-. Select whether you want to download a .CSV report or .JSON report of the data, and click *Download Report*.
-+
-image:screenshot_compliance_investigation_report.png[A screenshot of the Download Investigation Report page with multiple options.]
-+
-When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
+//
+//. Select whether you want to download a .CSV report or .JSON report of the data, and click *Download Report*.
+//+
+//image:screenshot_compliance_investigation_report.png[A screenshot of the Download Investigation Report page with multiple options.]
+//+
+//When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
 
 A dialog displays a message that the report is being downloaded.
 

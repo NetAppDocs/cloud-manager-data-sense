@@ -23,18 +23,18 @@ Learn what's new in Cloud Data Sense.
 Now you can add your Google Drive accounts to Data Sense in order to scan the documents and files from those Google Drive accounts. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-google-drive.html[See how to scan your Google Drive accounts].
 
 Data Sense can identify Personal Identifiable Information (PII) within the following Google file types from the Google Docs suite -- Docs, Sheets, and Slides -- in addition to the https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-files[existing file types].
-
-=== Ability to download the results from the Data Investigation page as a .JSON report
-
-After you have filtered the data in the Data Investigation page, now you can save the data as a report in a .JSON file that you can export to an NFS Share, in addition to saving the data to a .CSV file on your local system. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#data-investigation-report[See how to create reports from the Data Investigation page].
+//
+//=== Ability to download the results from the Data Investigation page as a .JSON report
+//
+//After you have filtered the data in the Data Investigation page, now you can save the data as a report in a .JSON file that you can export to an NFS Share, in addition to saving the data to a .CSV file on your local system. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#data-investigation-report[See how to create reports from the Data Investigation page].
 
 === Folder level view added to the Data Investigation page
 
 In addition to viewing and filtering data within files and databases, now you can view and filter data based on all the data within folders in the Data Investigation page. So now you can manage your data on the folder level. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See how to select a folders view of your scanned data].
-
-=== Ability to uninstall Data Sense from the Data Sense UI
-
-You can uninstall Data Sense to permanently remove the software from the host, and in the case of a cloud deployment, delete the virtual machine / instance on which Data Sense was deployed. Deleting the instance permanently deletes all the information Data Sense has scanned. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-compliance.html#deleting-the-cloud-data-sense-instance[See how].
+//
+//=== Ability to uninstall Data Sense from the Data Sense UI
+//
+//You can uninstall Data Sense to permanently remove the software from the host, and in the case of a cloud deployment, delete the virtual machine / instance on which Data Sense was deployed. Deleting the instance permanently deletes all the information Data Sense has scanned. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-compliance.html#deleting-the-cloud-data-sense-instance[See how].
 
 == 5 April 2022
 
