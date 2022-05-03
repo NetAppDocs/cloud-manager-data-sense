@@ -16,21 +16,32 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 8 May 2022
+== 9 May 2022
 
 === Support added for scanning data in Google Drive accounts
 
 Now you can add your Google Drive accounts to Data Sense in order to scan the documents and files from those Google Drive accounts. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-google-drive.html[See how to scan your Google Drive accounts].
 
 Data Sense can identify Personal Identifiable Information (PII) within the following Google file types from the Google Docs suite -- Docs, Sheets, and Slides -- in addition to the https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-files[existing file types].
+
+=== Folder level view added to the Data Investigation page
+
+In addition to viewing and filtering data from all your files and databases, now you can view and filter data based on all the data within folders in the Data Investigation page. So now you can manage your data on the folder level. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See how to select a folders view of your scanned data].
+
+=== Expand groups to show the users/members that have permissions to access a file
+
+As part the Data Sense permissions capabilities, now you can view the list of users and groups that have access to a file. Each group can be expanded to show the list of users in the group. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#viewing-permissions-for-files[See how to view users and groups who have read and/or write permissions to your files].
+
+=== Two new Filters have been added to the Data Investigation page
+
+* The “Directory type” filter enables you to refine your data to see folders or shares only. The results will be shown in the new *Directories* tab.
+* The "User / Group Permissions" filter enables you to list the files, folders, and shares that a specific user or a group has read and/or write permissions to. You can select multiple users and/or group names - or enter a partial name. T
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
 //
 //=== Ability to download the results from the Data Investigation page as a .JSON report
 //
 //After you have filtered the data in the Data Investigation page, now you can save the data as a report in a .JSON file that you can export to an NFS Share, in addition to saving the data to a .CSV file on your local system. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#data-investigation-report[See how to create reports from the Data Investigation page].
-
-=== Folder level view added to the Data Investigation page
-
-In addition to viewing and filtering data within files and databases, now you can view and filter data based on all the data within folders in the Data Investigation page. So now you can manage your data on the folder level. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See how to select a folders view of your scanned data].
 //
 //=== Ability to uninstall Data Sense from the Data Sense UI
 //
@@ -50,7 +61,7 @@ The global Active Directory server you integrate with Data Sense can be an LDAP 
 
 === New Filter to show the files to which a specific user or a group has read or write permissions
 
-A new Filter called "User / Group Permissions" has been added so you can list the files that a specific user or a group has read and/or write permissions to. You can specify a user name or group name - or partial name. This functionality is available for volumes on Cloud Volumes ONTAP, on-prem ONTAP, Azure NetApp Files, Amazon FSx for ONTAP, and File Shares.
+A new Filter called "User / Group Permissions" has been added so you can list the files that a specific user or a group has read and/or write permissions to. You can select one or more user and/or group names - or enter a partial name. This functionality is available for volumes on Cloud Volumes ONTAP, on-prem ONTAP, Azure NetApp Files, Amazon FSx for ONTAP, and File Shares.
 
 === Data Sense can determine the permissions for files in SharePoint and OneDrive accounts
 

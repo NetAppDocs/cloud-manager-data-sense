@@ -136,6 +136,7 @@ To view a list of all users or groups who have access to a file, and the types o
 Note that if you see SIDs (Security IDentifiers) instead of user and group names, you should integrate your Active Directory into Data Sense. link:task-add-active-directory-datasense.html[See how to do this].
 
 image:screenshot_compliance_permissions.png[A screenshot showing detailed file permissions.]
+//replace screenshot later with Role and Department headings using screenshot_compliance_permissions_future.png in repo
 
 You can click the name of a user or a group and the Investigation page is displayed with the name of that user or group in the “User / Group Permissions” filter so you can see all the files that the user or group has access to.
 
@@ -181,7 +182,7 @@ image:screenshot_cloud_compliance_filter.gif[A screenshot showing how to filter 
 
 You can filter the contents of the investigation page to display only the results you want to see. This is a very powerful feature because after you've refined the data, you can use the button bar at the top of the page to perform a variety of actions, including copying files, moving files, adding a tag or AIP label to the files, and more.
 
-If you want to download the contents of the page as a report after you've refined it, click the image:button_download.png[download button] button to save a .CSV file. 
+If you want to download the contents of the page as a report after you've refined it, click the image:button_download.png[download button] button to save a .CSV file.
 
 // You can save the report locally as a .CSV file (which can include up to 5,000 rows of data), or as a .JSON file that you export to an NFS Share (which can include an unlimited number of rows). link:task-generating-compliance-reports.html#data-investigation-report[Go here for details about Data Investigation reports].
 
@@ -201,9 +202,9 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 
 | Policies | Select a policy or policies. Go link:task-org-private-data.html#controlling-your-data-using-policies[here^] to view the list of existing policies and to create your own custom policies.
 | Open Permissions | Select the type of permissions
-| User / Group Permissions | Enter a user name or group name, or partial name
+| User / Group Permissions | Select one or multiple user names and/or group names, or enter a partial name
 | File Owner | Enter the file owner name
-| Label |	Select AIP labels
+| Label |	Select link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP labels] that are assigned to your files
 | Working Environment Type | Select the type of working environment. OneDrive, SharePoint, and Google Drive are categorized under "Cloud Apps".
 | Working Environment name | Select specific working environments
 | Storage Repository | Select the storage repository, for example, a volume or a schema
@@ -213,6 +214,7 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 | Personal Data | Select the link:reference-private-data-categories.html#types-of-personal-data[types of personal data^]
 | Sensitive Personal Data | Select the link:reference-private-data-categories.html#types-of-sensitive-personal-data[types of sensitive personal data^]
 | Data Subject | Enter a data subject’s full name or known identifier
+| Directory Type | Select the directory type; either "Share" or "Folder"
 | File Type | Select the link:reference-private-data-categories.html#types-of-files[types of files^]
 | File Size | Select the file size range
 | Created Time | Select a range when the file was created
@@ -221,7 +223,7 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 | Last Accessed | Select a range when the file was last accessed. For the types of files that Data Sense scans, this is the last time Data Sense scanned the file.
 | Duplicates | Select whether the file is duplicated in the repositories
 | File Hash | Enter the file's hash to find a specific file, even if the name is different
-| Tags | Select the tag or tags
+| Tags | Select link:task-org-private-data.html#applying-tags-to-manage-your-scanned-files[the tag or tags] that are assigned to your files
 | Assigned To | Select the name of the person to which the file is assigned
 
 |===
