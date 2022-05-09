@@ -31,6 +31,7 @@ Cloud Data Sense provides pre-defined parameters (such as sensitive information 
 Cloud Data Sense can empower you with data to help you:
 
 * Comply with data compliance and privacy regulations.
+* Migrate data from legacy systems to the cloud.
 * Comply with data retention policies.
 * Easily locate and report on specific data in response to data subjects, as required by GDPR, CCPA, HIPAA, and other data privacy regulations.
 
@@ -55,6 +56,10 @@ Data changes frequently, so Cloud Data Sense scans your data continuously with n
 link:concept-cloud-compliance.html#how-scans-work[Learn how scans work].
 
 Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans. link:task-managing-compliance.html#reducing-the-data-sense-scan-speed[See how to reduce the scan speed].
+
+=== What deployment models does Cloud Data Sense support?
+
+Cloud Data Sense is normally deployed using a SaaS model, in which the service is enabled via the Cloud Manager interface. Cloud Data Sense can be deployed to scan and report on systems virtually anywhere, including on-premises, cloud, and hybrid environments. For secure installations, Cloud Manager and Cloud Data Sense can be deployed in a “dark site” model, which is installed as a package on premises and requires no external network connections.
 
 === Can anyone access the private data sent between my browser and Data Sense?
 
@@ -84,11 +89,11 @@ When initially adding new data sources you can also choose to only perform a "ma
 
 === How do I enable Cloud Data Sense?
 
-First you need to deploy an instance of Cloud Data Sense in Cloud Manager. Once the instance is running, you can enable the service on existing working environments and databases from the *Data Sense* tab or by selecting a specific working environment.
+First you need to deploy an instance of Cloud Data Sense in Cloud Manager. Once the instance is running, you can enable the service on existing working environments, databases, and other data sources from the *Data Sense* tab or by selecting a specific working environment.
 
 link:task-getting-started-compliance.html[Learn how to get started^].
 
-NOTE: Activating Cloud Data Sense results in an immediate initial scan. Scan results display shortly after.
+NOTE: Activating Cloud Data Sense on a data source results in an immediate initial scan. Scan results display shortly after.
 
 === How do I disable Cloud Data Sense?
 
@@ -188,12 +193,12 @@ Cloud Data Sense enables you to run a general "mapping" scan or a full "classifi
 +
 Data Sense scans the metadata only. This is useful for overall data management and governance, quick project scoping, very large estates, and prioritization. Data mapping is based on metadata and is considered a *fast* scan.
 +
-After a fast scan, you can generate a Data Mapping Report. This report is an overview of the data stored in your corporate data sources to assist you with decisions about resource utilization, migration, backup, security, and compliance processes. The format includes an overview report that summarizes the working environments and data sources, and then a detailed report that provides a detailed breakdown for each working environment to allow granular actions.
+After a fast scan, you can generate a Data Mapping Report. This report is an overview of the data stored in your corporate data sources to assist you with decisions about resource utilization, migration, backup, security, and compliance processes.
 * Data classification (deep) scan.
 +
 Data Sense scans using standard protocols and read-only permission throughout the customer’s environment. Select files are opened and scanned for sensitive business-related data, private information, and issues related to ransomware.
 +
-After a full scan there are many additional Data Sense features you can apply to your data, such as viewing and refining data in the Data Investigation page, search for names within files, copy, move, and delete source files, and more.
+After a full scan there are many additional Data Sense features you can apply to your data, such as view and refine data in the Data Investigation page, search for names within files, copy, move, and delete source files, and more.
 
 == Licenses and costs
 
@@ -201,7 +206,16 @@ The following questions relate to licensing and costs to use Cloud Data Sense.
 
 === How much does Cloud Data Sense cost?
 
-The cost to use Cloud Data Sense depends on the amount of data that you're scanning. The first 1 TB of data that Data Sense scans in a Cloud Manager workspace is free. A subscription to the Cloud Manager Marketplace listing from your cloud provider, or a BYOL license from NetApp, is required to continue scanning data over 1 TB. See https://cloud.netapp.com/netapp-cloud-data-sense#Pricing[pricing^] for details.
+The cost to use Cloud Data Sense depends on the amount of data that you're scanning. The first 1 TB of data that Data Sense scans in a Cloud Manager workspace is free. After reaching that limit, you'll need one of the following to continue scanning data over 1 TB:
+
+* A subscription to the Cloud Manager Marketplace listing from your cloud provider, or
+* A Bring-your-own-license (BYOL) from NetApp
+
+See https://cloud.netapp.com/netapp-cloud-data-sense#Pricing[pricing^] for details.
+
+=== What happens if I have reached the BYOL capacity limit?
+
+If you reach a BYOL capacity limit, Data Sense continues to run, but access to the Dashboards is blocked so that you can’t view information about any of your scanned data. Only the Configuration page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit. You must renew your BYOL license to regain full access to Data Sense.
 
 == Connector deployment
 

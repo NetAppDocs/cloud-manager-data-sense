@@ -188,7 +188,7 @@ If you want to download the contents of the page as a report after you've refine
 
 image:screenshot_compliance_investigation_filtered.png[A screenshot of the filters available when refining the results in the investigation page.]
 
-* The top-level tabs allow you to view data from files (unstructured data), folders (unstructured data), or from databases (structured data).
+* The top-level tabs allow you to view data from files (unstructured data), directories (unstructured data), or from databases (structured data).
 
 * The controls at the top of each column allow you to sort the results in numerical or alphabetical order.
 
