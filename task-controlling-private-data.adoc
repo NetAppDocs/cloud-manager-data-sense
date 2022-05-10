@@ -47,7 +47,7 @@ image:screenshot_personal_files.gif[A screenshot of the personal files dialog bo
 
 . Investigate the data by searching, sorting, expanding details for a specific file, clicking *Investigate Results* to see masked information, or by downloading the file list.
 +
-image:screenshot_compliance_investigation_page.gif[A screenshot of details information after clicking Investigate Results.]
+image:screenshot_compliance_investigation_page.png[A screenshot of details information after clicking Investigate Results.]
 
 == Viewing files that contain sensitive personal data
 
