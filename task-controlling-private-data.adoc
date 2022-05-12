@@ -188,7 +188,7 @@ If you want to download the contents of the page as a report after you've refine
 
 image:screenshot_compliance_investigation_filtered.png[A screenshot of the filters available when refining the results in the investigation page.]
 
-* The top-level tabs allow you to view data from files (unstructured data), directories (unstructured data), or from databases (structured data).
+* The top-level tabs allow you to view data from files (unstructured data), directories (folders and file shares), or from databases (structured data).
 
 * The controls at the top of each column allow you to sort the results in numerical or alphabetical order.
 
@@ -201,7 +201,7 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 | Details
 
 | Policies | Select a policy or policies. Go link:task-org-private-data.html#controlling-your-data-using-policies[here^] to view the list of existing policies and to create your own custom policies.
-| Open Permissions | Select the type of permissions
+| Open Permissions | Select the type of permissions within the data and within folders/shares
 | User / Group Permissions | Select one or multiple user names and/or group names, or enter a partial name
 | File Owner | Enter the file owner name
 | Label |	Select link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP labels] that are assigned to your files
@@ -227,3 +227,5 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 | Assigned To | Select the name of the person to which the file is assigned
 
 |===
+
+Note that the actions available in the button bar and Policies are not currently supported at the "Directory" level.

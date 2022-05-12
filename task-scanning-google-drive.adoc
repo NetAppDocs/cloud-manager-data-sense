@@ -72,7 +72,7 @@ Upgrades to Data Sense software is automated as long as the instance has interne
 
 == Adding the Google Drive account
 
-Add the Google Drive account where the user files reside.
+Add the Google Drive account where the user files reside. If you want to scan files from multiple users, you'll need to run through this step for each user.
 
 .Steps
 
