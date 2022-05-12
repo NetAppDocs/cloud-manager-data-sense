@@ -120,3 +120,5 @@ Cloud Data Sense starts scanning the files in the SharePoint sites you added, an
 If you remove a SharePoint site in the future, or decide not to scan files in a SharePoint site, you can remove individual SharePoint sites from having their files scanned at any time. Just click *Remove SharePoint Site* from the Configuration page.
 
 image:screenshot_compliance_sharepoint_remove_site.png[A screenshot showing how to remove a single SharePoint site from having their files scanned.]
+
+Note that you can link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-cloud-data-sense[delete the entire SharePoint account from Data Sense] if you no longer want to scan any user data from the SharePoint account.
