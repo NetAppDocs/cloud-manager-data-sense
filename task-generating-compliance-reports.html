@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Cloud Data Sense provides reports that you can use to better understand the status of your organization's data privacy program.">
-  <meta name="keywords" content=" report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa"><!-- Icons -->
+  <meta name="keywords" content=" report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa, csv file, json file"><!-- Icons -->
   <link rel="icon" href="/us-en/cloud-manager-data-sense/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/us-en/cloud-manager-data-sense/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -450,6 +450,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -630,6 +632,8 @@
         OneDrive accounts
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html">
         SharePoint accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-google-drive.html">
+        Google Drive accounts
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-file-shares.html">
         File shares
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-object-storage.html">
@@ -725,11 +729,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-17 06:37:56 +0000">03/17/2022</time>
+    <time datetime="2022-04-29 20:03:55 +0000">04/29/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-tonacki">
+    <img  class="avatar avatar-small"
+          alt="netapp-tonacki"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/38222299?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -741,7 +753,7 @@
 <p>Cloud Data Sense provides reports that you can use to better understand the status of your organization&#8217;s data privacy program.</p>
 </div>
 <div class="paragraph">
-<p>By default, the Cloud Data Sense dashboards display compliance and governance data for all working environments and databases. If you want to view reports that contain data for only some of the working environments, <a href="#selecting-the-working-environments-for-reports">select those working environments</a>.</p>
+<p>By default, the Cloud Data Sense dashboards display compliance and governance data for all working environments, databases, and data sources. If you want to view reports that contain data for only some of the working environments, <a href="#selecting-the-working-environments-for-reports">select those working environments</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -750,19 +762,16 @@
 <img src="/us-en/cloud-manager-data-sense/images/note.svg" alt="Note">
 </td>
 <td class="content">
-The reports described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan can only generate the Data Mapping Report.
-</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>The reports described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan can only generate the Data Mapping Report.</p>
+</li>
+<li>
+<p>NetApp can&#8217;t guarantee 100% accuracy of the personal data and sensitive personal data that Cloud Data Sense identifies. You should always validate the information by reviewing the data.</p>
+</li>
+</ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-manager-data-sense/images/note.svg" alt="Note">
-</td>
-<td class="content">
-NetApp can&#8217;t guarantee 100% accuracy of the personal data and sensitive personal data that Cloud Data Sense identifies. You should always validate the information by reviewing the data.
 </td>
 </tr>
 </table>
@@ -1083,6 +1092,126 @@ For single working environments: Lists the files that are using the most capacit
 <div class="paragraph">
 <div class="title">Result</div>
 <p>Cloud Data Sense generates a PDF report that you can review and send to other groups as needed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="data-investigation-report">Data Investigation Report</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Data Investigation Report is a download of the contents of the Data Investigation page. <a href="task-controlling-private-data.html#filtering-data-in-the-data-investigation-page">Learn more about the Data Investigation page</a>.</p>
+</div>
+<div class="paragraph">
+<p>You can save the report on the local machine as a .CSV file; which can include up to 5,000 rows of data. If Data Sense is scanning database tables (structured data) and files (unstructured data), there can be up to two .CSV reports downloaded.</p>
+</div>
+<div class="sect2">
+<h3 id="generating-the-data-investigation-report">Generating the Data Investigation Report</h3>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>From the Data Investigation page, click the <span class="image"><img src="./media/button_download.png" alt="download button"></span> button on the top, right of the page.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>A dialog displays a message that the report is being downloaded.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="whats-included-in-each-data-investigation-report">What’s included in each Data Investigation Report</h3>
+<div class="paragraph">
+<p>The <strong>Unstructured Files Data Report</strong> includes the following information about your files:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>File name</p>
+</li>
+<li>
+<p>Location type</p>
+</li>
+<li>
+<p>Working environment name</p>
+</li>
+<li>
+<p>Storage repository (for example, a volume, bucket, shares)</p>
+</li>
+<li>
+<p>Working environment type</p>
+</li>
+<li>
+<p>File path</p>
+</li>
+<li>
+<p>File type</p>
+</li>
+<li>
+<p>File size</p>
+</li>
+<li>
+<p>Created time</p>
+</li>
+<li>
+<p>Last modified</p>
+</li>
+<li>
+<p>Last accessed</p>
+</li>
+<li>
+<p>File owner</p>
+</li>
+<li>
+<p>Category</p>
+</li>
+<li>
+<p>Personal information</p>
+</li>
+<li>
+<p>Sensitive personal information</p>
+</li>
+<li>
+<p>Deletion detection date</p>
+<div class="paragraph">
+<p>A deletion detection date identifies the date that the file was deleted or moved. This enables you to identify when sensitive files have been moved. Deleted files aren&#8217;t part of the file number count that appears in the dashboard or on the Investigation page. The files only appear in the CSV reports.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <strong>Structured Data Report</strong> includes the following information about your database tables:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DB Table name</p>
+</li>
+<li>
+<p>Location type</p>
+</li>
+<li>
+<p>Working environment name</p>
+</li>
+<li>
+<p>Storage repository (for example, a schema)</p>
+</li>
+<li>
+<p>Column count</p>
+</li>
+<li>
+<p>Row count</p>
+</li>
+<li>
+<p>Personal information</p>
+</li>
+<li>
+<p>Sensitive personal information</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> Information about Folders is not currently available in the reports.</p>
 </div>
 </div>
 </div>

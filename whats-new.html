@@ -459,6 +459,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -630,6 +632,8 @@
         OneDrive accounts
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html">
         SharePoint accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-google-drive.html">
+        Google Drive accounts
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-file-shares.html">
         File shares
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-object-storage.html">
@@ -725,7 +729,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-11 14:23:29 +0000">04/11/2022</time>
+    <time datetime="2022-05-11 15:47:47 +0000">05/11/2022</time>
     
   
 
@@ -747,6 +751,48 @@
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>Learn what&#8217;s new in Cloud Data Sense.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="11-may-2022">11 May 2022</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="support-added-for-scanning-data-in-google-drive-accounts">Support added for scanning data in Google Drive accounts</h3>
+<div class="paragraph">
+<p>Now you can add your Google Drive accounts to Data Sense in order to scan the documents and files from those Google Drive accounts. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-google-drive.html">See how to scan your Google Drive accounts</a>.</p>
+</div>
+<div class="paragraph">
+<p>Data Sense can identify Personal Identifiable Information (PII) within the following Google file types from the Google Docs suite&#8201;&#8212;&#8201;Docs, Sheets, and Slides&#8201;&#8212;&#8201;in addition to the <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-files">existing file types</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="directory-level-view-added-to-the-data-investigation-page">Directory level view added to the Data Investigation page</h3>
+<div class="paragraph">
+<p>In addition to viewing and filtering data from all your files and databases, now you can view and filter data based on all the data within folders and shares in the Data Investigation page. So now you can manage your data on the directory level. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page">See how to select the Directories view of your scanned data</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expand-groups-to-show-the-usersmembers-that-have-permissions-to-access-a-file">Expand groups to show the users/members that have permissions to access a file</h3>
+<div class="paragraph">
+<p>As part the Data Sense permissions capabilities, now you can view the list of users and groups that have access to a file. Each group can be expanded to show the list of users in the group. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#viewing-permissions-for-files">See how to view users and groups who have read and/or write permissions to your files</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="two-new-filters-have-been-added-to-the-data-investigation-page">Two new Filters have been added to the Data Investigation page</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The “Directory type” filter enables you to refine your data to see folders or shares only. The results will be shown in the new <strong>Directories</strong> tab.</p>
+</li>
+<li>
+<p>The "User / Group Permissions" filter enables you to list the files, folders, and shares that a specific user or a group has read and/or write permissions to. You can select multiple users and/or group names - or enter a partial name. T</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page">See the list of all the filters you can use to investigate your data</a>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -773,7 +819,7 @@
 <div class="sect2">
 <h3 id="new-filter-to-show-the-files-to-which-a-specific-user-or-a-group-has-read-or-write-permissions">New Filter to show the files to which a specific user or a group has read or write permissions</h3>
 <div class="paragraph">
-<p>A new Filter called "User / Group Permissions" has been added so you can list the files that a specific user or a group has read and/or write permissions to. You can specify a user name or group name - or partial name. This functionality is available for volumes on Cloud Volumes ONTAP, on-prem ONTAP, Azure NetApp Files, Amazon FSx for ONTAP, and File Shares.</p>
+<p>A new Filter called "User / Group Permissions" has been added so you can list the files that a specific user or a group has read and/or write permissions to. You can select one or more user and/or group names - or enter a partial name. This functionality is available for volumes on Cloud Volumes ONTAP, on-prem ONTAP, Azure NetApp Files, Amazon FSx for ONTAP, and File Shares.</p>
 </div>
 </div>
 <div class="sect2">
@@ -813,7 +859,7 @@
 <div class="sect2">
 <h3 id="added-support-for-scanning-microsoft-sharepoint-online-accounts">Added support for scanning Microsoft SharePoint online accounts</h3>
 <div class="paragraph">
-<p>Now you can add your SharePoint online accounts to Data Sense in order to scan the documents and files from your SharePoint sites. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html">See how to scan your SharePoint accounts</a>.</p>
+<p>Now you can add your SharePoint online accounts to Data Sense in order to scan the documents and files from your SharePoint sites. <a href="task-scanning-sharepoint.html">See how to scan your SharePoint accounts</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -822,7 +868,7 @@
 <p>This is helpful for situations where you’re migrating data and you want to catch any last changes that are being made to the files. This action uses the <a href="https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html" target="_blank" rel="noopener">NetApp Cloud Sync</a> functionality to copy and sync data from a source to a target.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#copying-and-synchronizing-source-files-to-a-target-system">See how to copy and sync files</a>.</p>
+<p><a href="task-managing-highlights.html#copying-and-synchronizing-source-files-to-a-target-system">See how to copy and sync files</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -834,7 +880,7 @@
 <div class="sect2">
 <h3 id="three-additional-types-of-personal-data-can-be-identified-by-data-sense">Three additional types of personal data can be identified by Data Sense</h3>
 <div class="paragraph">
-<p>Data Sense can now find French social security numbers, French IDs, and French driver license numbers in files. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-personal-data">See the list of all personal data types that Data Sense identifies in scans</a>.</p>
+<p>Data Sense can now find French social security numbers, French IDs, and French driver license numbers in files. <a href="reference-private-data-categories.html#types-of-personal-data">See the list of all personal data types that Data Sense identifies in scans</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -854,13 +900,13 @@
 <p>Now you can integrate a global Active Directory with Cloud Data Sense to enhance the results that Data Sense reports about file owners and which users and groups have access to your files.</p>
 </div>
 <div class="paragraph">
-<p>In addition to the Active Directory credentials you enter so that Data Sense can scan CIFS volumes from certain data sources, this new integration provides as additional integration for other users and systems. Data Sense will look in all integrated Active Directories for user and permission details. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html">See how to set up your global Active Directory</a>.</p>
+<p>In addition to the Active Directory credentials you enter so that Data Sense can scan CIFS volumes from certain data sources, this new integration provides as additional integration for other users and systems. Data Sense will look in all integrated Active Directories for user and permission details. <a href="task-add-active-directory-datasense.html">See how to set up your global Active Directory</a>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="data-sense-policies-can-now-be-used-to-delete-files">Data Sense "policies" can now be used to delete files</h3>
 <div class="paragraph">
-<p>Data Sense can automatically delete files that match the query that you define in a Policy. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#deleting-source-files-automatically-using-policies">See how to create custom Policies</a>.</p>
+<p>Data Sense can automatically delete files that match the query that you define in a Policy. <a href="task-managing-highlights.html#deleting-source-files-automatically-using-policies">See how to create custom Policies</a>.</p>
 </div>
 </div>
 </div>

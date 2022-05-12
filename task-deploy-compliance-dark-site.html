@@ -459,6 +459,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -630,6 +632,8 @@
         OneDrive accounts
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html">
         SharePoint accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-google-drive.html">
+        Google Drive accounts
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-file-shares.html">
         File shares
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-object-storage.html">
@@ -725,7 +729,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-11 14:23:29 +0000">04/11/2022</time>
+    <time datetime="2022-05-12 12:16:54 +0000">05/12/2022</time>
     
   
 
@@ -779,7 +783,7 @@
 <p>For special situations where you need a very secure Cloud Manager installation, but you also want to scan local data from OneDrive accounts or SharePoint accounts, you can use the Data Sense offline installer and provide internet access to a few select endpoints. See <a href="#sharepoint-and-onedrive-special-requirements">SharePoint and OneDrive special requirements</a> for details.</p>
 </div>
 <div class="paragraph">
-<p>There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, or AWS S3 accounts.</p>
+<p>There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, AWS S3, or Google Drive accounts when Data Sense is deployed in a dark site.</p>
 </div>
 </div>
 </div>
@@ -860,9 +864,6 @@
 <p>Operating system: Red Hat Enterprise Linux or CentOS version 8.0 or 8.1</p>
 <div class="ulist">
 <ul>
-<li>
-<p>Version 7.8 can be used, but the Linux kernel version must be 4.14 or greater</p>
-</li>
 <li>
 <p>The OS must be capable of installing the Docker Engine (for example, disable the <em>firewalld</em> service if needed)</p>
 </li>

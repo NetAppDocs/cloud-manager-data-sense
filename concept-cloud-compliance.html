@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Cloud Data Sense is a data governance service for Cloud Manager that scans your corporate on-premises and cloud data sources and working environments to map ...">
-  <meta name="keywords" content=" artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, azure netapp files, amazon fsx for ontap, fsx, cloud volumes ontap, Amazon S3, database, onedrive, sharepoint, on-prem ontap, file shares, object storage, aip labels, governance, data sense"><!-- Icons -->
+  <meta name="keywords" content=" artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, azure netapp files, amazon fsx for ontap, fsx, cloud volumes ontap, Amazon S3, database, onedrive, sharepoint, google drive, on-prem ontap, file shares, object storage, aip labels, governance, data sense"><!-- Icons -->
   <link rel="icon" href="/us-en/cloud-manager-data-sense/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/us-en/cloud-manager-data-sense/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -459,6 +459,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -630,6 +632,8 @@
         OneDrive accounts
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html">
         SharePoint accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-google-drive.html">
+        Google Drive accounts
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-file-shares.html">
         File shares
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-object-storage.html">
@@ -725,7 +729,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-14 13:05:43 +0000">04/14/2022</time>
+    <time datetime="2022-04-19 15:55:02 +0000">04/19/2022</time>
     
   
 
@@ -853,6 +857,9 @@
 <li>
 <p>SharePoint accounts</p>
 </li>
+<li>
+<p>Google Drive accounts</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
@@ -875,7 +882,7 @@
 <p>Installing Cloud Data Sense in the cloud requires deploying a cloud instance, which results in charges from the cloud provider where it is deployed. See <a href="#the-cloud-data-sense-instance">the type of instance that is deployed for each cloud provider</a>. There is no cost if you install Data Sense on an on-premises system.</p>
 </li>
 <li>
-<p>Cloud Data Sense requires that you have deployed a Connector. In many cases you already have a Connector because of other storage and services you are using in Cloud Manager. The Connector instance results in charges from the cloud provider where it is deployed. See the <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html" target="_blank" rel="noopener">type of instance that is deployed for each cloud provider</a>. There is no cost if you install the Connector on an on-premises system.</p>
+<p>Cloud Data Sense requires that you have deployed a Cloud Manager Connector. In many cases you already have a Connector because of other storage and services you are using in Cloud Manager. The Connector instance results in charges from the cloud provider where it is deployed. See the <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html" target="_blank" rel="noopener">type of instance that is deployed for each cloud provider</a>. There is no cost if you install the Connector on an on-premises system.</p>
 </li>
 </ul>
 </div>
@@ -1057,7 +1064,7 @@ The instance should remain running at all times because Cloud Data Sense continu
 <p>Cloud Data Sense enables you to run a general "mapping" scan on selected working environments and data sources. Mapping provides only a high-level overview of your data, whereas Classification provides deep-level scanning of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.</p>
 </div>
 <div class="paragraph">
-<p>Many users like this functionality because they want to quickly scan their data to identify the data sources that require more research - and then they can enable classification scans only on those data sources or volumes.</p>
+<p>Many users like this functionality because they want to quickly scan their data to identify the data sources that require more research - and then they can enable classification scans only on those required data sources or volumes.</p>
 </div>
 <div class="paragraph">
 <p>The table below shows some of the differences:</p>

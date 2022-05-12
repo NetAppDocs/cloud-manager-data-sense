@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Gain control of your private data by viewing details about the personal data and sensitive personal data in your organization. You can also gain visibility b...">
-  <meta name="keywords" content=" personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, highlights, policies"><!-- Icons -->
+  <meta name="keywords" content=" personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies"><!-- Icons -->
   <link rel="icon" href="/us-en/cloud-manager-data-sense/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/us-en/cloud-manager-data-sense/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -450,6 +450,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -630,6 +632,8 @@
         OneDrive accounts
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html">
         SharePoint accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-google-drive.html">
+        Google Drive accounts
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-file-shares.html">
         File shares
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-scanning-object-storage.html">
@@ -725,7 +729,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-08 10:52:47 +0000">04/08/2022</time>
+    <time datetime="2022-05-10 13:48:32 +0000">05/10/2022</time>
     
   
 
@@ -807,7 +811,7 @@ The capabilities described in this section are available only if you have chosen
 <li>
 <p>Investigate the data by searching, sorting, expanding details for a specific file, clicking <strong>Investigate Results</strong> to see masked information, or by downloading the file list.</p>
 <div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_compliance_investigation_page.gif" alt="A screenshot of details information after clicking Investigate Results."></span></p>
+<p><span class="image"><img src="./media/screenshot_compliance_investigation_page.png" alt="A screenshot of details information after clicking Investigate Results."></span></p>
 </div>
 </li>
 </ol>
@@ -977,13 +981,16 @@ English, German, and Spanish are supported for categories. Support for more lang
 <p>To view a list of all users or groups who have access to a file, and the types of permissions they have, click <strong>View all Permissions</strong>. This button is available only for files in CIFS shares, SharePoint, and OneDrive.</p>
 </div>
 <div class="paragraph">
+<p>Note that if you see SIDs (Security IDentifiers) instead of user and group names, you should integrate your Active Directory into Data Sense. <a href="task-add-active-directory-datasense.html">See how to do this</a>.</p>
+</div>
+<div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_compliance_permissions.png" alt="A screenshot showing detailed file permissions."></span></p>
 </div>
 <div class="paragraph">
 <p>You can click the name of a user or a group and the Investigation page is displayed with the name of that user or group in the “User / Group Permissions” filter so you can see all the files that the user or group has access to.</p>
 </div>
 <div class="paragraph">
-<p>Note that if you see SIDs (Security IDentifiers) instead of user and group names, you should integrate your Active Directory into Data Sense. <a href="task-add-active-directory-datasense.html">See how to do this</a>.</p>
+<p>Additionally, you can click <span class="image"><img src="./media/button_down_caret.png" alt="down-caret"></span> for any group to see the list of users who are part of the group.</p>
 </div>
 </div>
 </div>
@@ -1060,7 +1067,10 @@ You can use the "file hash" value provided in this page and enter it directly in
 <h2 id="filtering-data-in-the-data-investigation-page">Filtering data in the Data Investigation page</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can filter the contents of the investigation page to display only the results you want to see. If you want to save a CSV version of the content as a report after you have refined it, click the <span class="image"><img src="./media/button_download.png" alt="download button"></span> button.</p>
+<p>You can filter the contents of the investigation page to display only the results you want to see. This is a very powerful feature because after you&#8217;ve refined the data, you can use the button bar at the top of the page to perform a variety of actions, including copying files, moving files, adding a tag or AIP label to the files, and more.</p>
+</div>
+<div class="paragraph">
+<p>If you want to download the contents of the page as a report after you&#8217;ve refined it, click the <span class="image"><img src="./media/button_download.png" alt="download button"></span> button to save a .CSV file.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_compliance_investigation_filtered.png" alt="A screenshot of the filters available when refining the results in the investigation page."></span></p>
@@ -1068,7 +1078,7 @@ You can use the "file hash" value provided in this page and enter it directly in
 <div class="ulist">
 <ul>
 <li>
-<p>The top-level tabs allow you to view data from files (unstructured data) or from databases (structured data).</p>
+<p>The top-level tabs allow you to view data from files (unstructured data), directories (unstructured data), or from databases (structured data).</p>
 </li>
 <li>
 <p>The controls at the top of each column allow you to sort the results in numerical or alphabetical order.</p>
@@ -1089,7 +1099,7 @@ You can use the "file hash" value provided in this page and enter it directly in
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Policies</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select a policy or policies. Go <a href="task-org-private-data.html#controlling-your-data-using-policies" target="_blank" rel="noopener">here</a> to view the list of existing policies and to create your own policies.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select a policy or policies. Go <a href="task-org-private-data.html#controlling-your-data-using-policies" target="_blank" rel="noopener">here</a> to view the list of existing policies and to create your own custom policies.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Open Permissions</p></td>
@@ -1097,7 +1107,7 @@ You can use the "file hash" value provided in this page and enter it directly in
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User / Group Permissions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enter a user name or group name, or partial name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select one or multiple user names and/or group names, or enter a partial name</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">File Owner</p></td>
@@ -1105,11 +1115,11 @@ You can use the "file hash" value provided in this page and enter it directly in
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select AIP labels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select <a href="task-org-private-data.html#categorizing-your-data-using-aip-labels">AIP labels</a> that are assigned to your files</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Working Environment Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select the type of working environment. Note that OneDrive and SharePoint are categorized under "Cloud Apps".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select the type of working environment. OneDrive, SharePoint, and Google Drive are categorized under "Cloud Apps".</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Working Environment name</p></td>
@@ -1142,6 +1152,10 @@ You can use the "file hash" value provided in this page and enter it directly in
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Data Subject</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Enter a data subject’s full name or known identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Directory Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select the directory type; either "Share" or "Folder"</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">File Type</p></td>
@@ -1177,7 +1191,7 @@ You can use the "file hash" value provided in this page and enter it directly in
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tags</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select the tag or tags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select <a href="task-org-private-data.html#applying-tags-to-manage-your-scanned-files">the tag or tags</a> that are assigned to your files</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Assigned To</p></td>
@@ -1185,109 +1199,6 @@ You can use the "file hash" value provided in this page and enter it directly in
 </tr>
 </tbody>
 </table>
-</li>
-<li>
-<p>The <em>Policies</em> filter at the top of the Filters pane lists the custom filters that provide commonly requested combinations of filters; like a saved database query or Favorites list. Go <a href="task-org-private-data.html#controlling-your-data-using-policies" target="_blank" rel="noopener">here</a> to view the list of predefined Policies and to see how you can create your own custom Policies.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="whats-included-in-each-file-list-report-csv-file">What’s included in each file list report (CSV file)</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>From each Investigation page you can click the <span class="image"><img src="./media/button_download.png" alt="download button"></span> button to download file lists (in CSV format) that include details about the identified files. If Data Sense is scanning both Structured (database tables) and Unstructured (files) data, there are two reports contained in the downloaded ZIP file.</p>
-</div>
-<div class="paragraph">
-<p>If there are more than 10,000 results, only the top 10,000 appear in the list.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>Unstructured Data Report</strong> includes the following information:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>File name</p>
-</li>
-<li>
-<p>Location type</p>
-</li>
-<li>
-<p>Working environment name</p>
-</li>
-<li>
-<p>Storage repository (for example, a volume, bucket, shares)</p>
-</li>
-<li>
-<p>Working environment type</p>
-</li>
-<li>
-<p>File path</p>
-</li>
-<li>
-<p>File type</p>
-</li>
-<li>
-<p>File size</p>
-</li>
-<li>
-<p>Created time</p>
-</li>
-<li>
-<p>Last modified</p>
-</li>
-<li>
-<p>Last accessed</p>
-</li>
-<li>
-<p>File owner</p>
-</li>
-<li>
-<p>Category</p>
-</li>
-<li>
-<p>Personal information</p>
-</li>
-<li>
-<p>Sensitive personal information</p>
-</li>
-<li>
-<p>Deletion detection date</p>
-<div class="paragraph">
-<p>A deletion detection date identifies the date that the file was deleted or moved. This enables you to identify when sensitive files have been moved. Deleted files aren&#8217;t part of the file number count that appears in the dashboard or on the Investigation page. The files only appear in the CSV reports.</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The <strong>Structured Data Report</strong> includes the following information:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>DB Table name</p>
-</li>
-<li>
-<p>Location type</p>
-</li>
-<li>
-<p>Working environment name</p>
-</li>
-<li>
-<p>Storage repository (for example, a schema)</p>
-</li>
-<li>
-<p>Column count</p>
-</li>
-<li>
-<p>Row count</p>
-</li>
-<li>
-<p>Personal information</p>
-</li>
-<li>
-<p>Sensitive personal information</p>
 </li>
 </ul>
 </div>
