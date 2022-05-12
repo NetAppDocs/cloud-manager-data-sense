@@ -45,7 +45,7 @@ https://cloud.netapp.com/cloud-compliance[Learn more about the use cases for Clo
 
 === How does Cloud Data Sense work?
 
-Cloud Data Sense deploys another layer of Artificial Intelligence alongside your Cloud Manager system and storage systems. It then scans the data on volumes, buckets, databases, and other storage accounts and indexes the data insights that are found.
+Cloud Data Sense deploys another layer of Artificial Intelligence alongside your Cloud Manager system and storage systems. It then scans the data on volumes, buckets, databases, and other storage accounts and indexes the data insights that are found. Data Sense leverages both artificial intelligence and natural language processing, as opposed to alternative solutions that are commonly built around regular expressions and pattern matching. Cloud Data Sense uses AI to provide contextual understanding of data for accurate detection and classification. It is driven by AI because it is designed for modern data types and scale. It also understands data context in order to provide strong, accurate, discovery and classification.
 
 link:concept-cloud-compliance.html[Learn more about how Cloud Data Sense works^].
 
