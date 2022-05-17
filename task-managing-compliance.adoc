@@ -77,39 +77,39 @@ image:screenshot_slow_scan_disable.png[A screenshot showing how to enable slow c
 
 == Deleting the Cloud Data Sense instance
 
-You can delete the Cloud Data Sense instance if you no longer want to use Data Sense. Deleting the instance also deletes the associated disks where the indexed data resides.
+You can uninstall the Data Sense software to troubleshoot issues or to permanently remove the software from the host. Deleting the instance also deletes the associated disks where the indexed data resides - all the information Data Sense has scanned will be permanently deleted.
 
-. Go to your cloud provider's console and delete the Cloud Data Sense instance.
+The steps that you need to use depend on whether you deployed Data Sense in the cloud or on an on-premises host.
+
+=== Uninstall Data Sense from a cloud deployment
+
+You can uninstall and delete the Cloud Data Sense instance from the cloud provider if you no longer want to use Data Sense.
+
+. At the top of the Data Sense page, click the image:screenshot_gallery_options.gif[More button] button and then click *Uninstall Data Sense*.
 +
-The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
+image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstall Data Sense software.]
 
-//You can uninstall the Data Sense software to troubleshoot issues or to permanently remove the software from the host. Deleting the instance also deletes the associated disks where the indexed data resides - all the information Data Sense has scanned will be permanently deleted.
+. In the _Uninstall Data Sense_ dialog, type *uninstall* to confirm that you want to delete the instance and all associated data, and then click *Uninstall*.
+
+Note that you can go to your cloud provider's console and delete the Cloud Data Sense instance from there as well. The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
+
+=== Uninstall Data Sense from an on-premises deployment
+
+You can uninstall Data Sense from a host if you no longer want to use Data Sense, or if you had an issue that requires reinstallation.
+
+. At the top of the Data Sense page, click the image:screenshot_gallery_options.gif[More button] button and then click *Uninstall Data Sense*.
++
+image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstall Data Sense software.]
+
+. In the _Uninstall Data Sense_ dialog, type *uninstall* to confirm that you want to clear all the configuration information, and then click *Uninstall*.
+
+. To complete the uninstallation from the host, run the uninstall script on the host machine, for example:
++
+[source,cli]
+uninstall.sh
+
+//You can delete the Cloud Data Sense instance if you no longer want to use Data Sense. Deleting the instance also deletes the associated disks where the indexed data resides.
 //
-//The steps that you need to use depend on whether you deployed Data Sense in the cloud or on a standalone host.
-//
-//=== Uninstall Data Sense from a cloud deployment
-//
-//You can uninstall and delete the Cloud Data Sense instance from the cloud provider if you no longer want to use Data Sense.
-//
-//. At the top of the Data Sense page, click the image:screenshot_gallery_options.gif[More button] button and then click *Uninstall Data Sense*.
+//. Go to your cloud provider's console and delete the Cloud Data Sense instance.
 //+
-//image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstall Data Sense software.]
-//
-//. In the _Uninstall Data Sense_ dialog, type *uninstall* to confirm that you want to delete the instance and all associated data, and then click *Uninstall*.
-//
-//Note that you can go to your cloud provider's console and delete the Cloud Data Sense instance from there as well. The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
-//
-//=== Uninstall Data Sense from an on-premises deployment
-//
-//You can uninstall Data Sense from a host if you no longer want to use Data Sense, or if you had an issue that requires reinstallation.
-//
-//. At the top of the Data Sense page, click the image:screenshot_gallery_options.gif[More button] button and then click *Uninstall Data Sense*.
-//+
-//image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstall Data Sense software.]
-//
-//. In the _Uninstall Data Sense_ dialog, type *uninstall* to confirm that you want to clear all the configuration information, and then click *Uninstall*.
-//
-//. To complete the uninstallation from the host, run the uninstall script on the host machine, for example:
-//+
-//[source,cli]
-//uninstall.sh
+//The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
