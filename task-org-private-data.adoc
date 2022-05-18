@@ -372,14 +372,29 @@ The first email is sent now if there are any results from the Policy - but only 
 
 === Editing Policies
 
-You can modify certain parts of a Policy depending on the type of Policy:
+You can modify any criteria for an existing policy that you previously created. This can be especially useful if you want to change the query (the items you defined using Filters) to add or remove certain parameters.
 
-* Custom Policies - You can modify the _Name_, the _Description_, whether email notifications are sent, and whether AIP labels are added.
-* Predefined Policies - You can modify only whether email notifications are sent and whether AIP labels are added.
+Note that for Predefined Policies that you can only modify whether email notifications are sent and whether AIP labels are added. No other values can be changed.
 
-NOTE: If you need to change the filter parameters for a custom Policy, you'll need to create a new Policy with the parameters you want, and then delete the old Policy.
+.Steps
 
-To modify a Policy, click the *Edit* button, enter your changes on the _Edit Policy_ page, and click *Save Policy*.
+. From the Policies List page, click *Edit* for the Policy that you want to change.
++
+image:screenshot_compliance_edit_policy_button.png[A screenshot showing how to initiate an edit to an existing Policy.]
+
+. If you just want to change the items on this page (the Name, Description, whether email notifications are sent, and whether AIP labels are added), make the change and click *Save Policy*.
++
+If you want to change the filters for the saved query, click *Edit Query*.
++
+image:screenshot_compliance_edit_policy_dialog.png[A screenshot of selecting the Edit Query button on the Edit Policy page.]
+
+. In the Investigation page that defines that query, edit the query by adding, removing, or customizing the filters, and click *Save Changes* .
++
+image:screenshot_compliance_edit_policy_query.png[A screenshot showing how to edit the query by changing filter settings.]
+
+.Result
+
+The policy is changed immediately. Any actions defined for that policy to send an email, add AIP labels, or delete files will occur at the next internal.
 
 === Deleting Policies
 
