@@ -129,18 +129,18 @@ When viewing the details for a single file there are a few actions you can take 
 
 * If you have integrated AIP labels with Cloud Data Sense, you can assign a label to this file, or change to a different label if one already exists. See link:task-org-private-data.html#assigning-aip-labels-manually[Assigning AIP labels manually] for details.
 
-== Viewing permissions for files
+== Viewing permissions for files and directories
 
-To view a list of all users or groups who have access to a file, and the types of permissions they have, click *View all Permissions*. This button is available only for files in CIFS shares, SharePoint, and OneDrive.
+To view a list of all users or groups who have access to a file or to a directory, and the types of permissions they have, click *View all Permissions*. This button is available only for data in CIFS shares, SharePoint, and OneDrive.
 
 Note that if you see SIDs (Security IDentifiers) instead of user and group names, you should integrate your Active Directory into Data Sense. link:task-add-active-directory-datasense.html[See how to do this].
 
 image:screenshot_compliance_permissions.png[A screenshot showing detailed file permissions.]
 //replace screenshot later with Role and Department headings using screenshot_compliance_permissions_future.png in repo
 
-You can click the name of a user or a group and the Investigation page is displayed with the name of that user or group in the “User / Group Permissions” filter so you can see all the files that the user or group has access to.
+You can click image:button_down_caret.png[down-caret] for any group to see the list of users who are part of the group.
 
-Additionally, you can click image:button_down_caret.png[down-caret] for any group to see the list of users who are part of the group.
+Additionally, you can click the name of a user or a group and the Investigation page is displayed with the name of that user or group populated in the “User / Group Permissions” filter so you can see all the files and directories that the user or group has access to.
 
 == Checking for duplicate files in your storage systems
 
@@ -209,6 +209,7 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 | File Path | Enter a partial or full path
 | Category | Select the link:reference-private-data-categories.html#types-of-categories[types of categories^]
 | Sensitivity Level | Select the sensitivity level
+| Number of identifiers | Select the range of detected sensitive identifiers per file. Includes personal data and sensitive personal data.
 | Personal Data | Select the link:reference-private-data-categories.html#types-of-personal-data[types of personal data^]
 | Sensitive Personal Data | Select the link:reference-private-data-categories.html#types-of-sensitive-personal-data[types of sensitive personal data^]
 | Data Subject | Enter a data subject’s full name or known identifier
