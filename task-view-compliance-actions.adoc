@@ -1,0 +1,38 @@
+---
+sidebar: sidebar
+permalink: task-view-compliance-actions.html
+keywords: compliance, actions, view progress
+summary: When you run an action from the Investigation Results pane across many files, for example, deleting 100 files, the process can take some time. You can monitor the status of these asynchronous actions in the Action Status pane so you'll know when it has been applied to all files.
+---
+
+= Viewing the status of your compliance actions
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When you run an action from the Investigation Results pane across many files, for example, deleting 100 files, the process can take some time. You can monitor the status of these asynchronous actions in the _Action Status_ pane so you'll know when it has been applied to all files.
+
+This allows you to see the actions that have completed successfully, those currently in progress, and those that have failed so you can diagnose and fix any problems.
+
+The status can be:
+
+* Finished
+* In Progress
+* Queued
+* Canceled
+* Failed
+
+Note that you can Cancel any actions that have the "Queued" or "In Progress" status.
+
+.Steps
+
+. In the bottom-right of the Data Sense UI you can see the *Actions Status* button image:button_actions_status.png[].
+
+. Click this button and the most recent 20 actions are listed.
++
+image:screenshot_compliance_action_status.png[A screenshot that shows the last 20 actions, and their status, in the Configuration page.]
+
+You can click the name of an action to view details corresponding to that operation.

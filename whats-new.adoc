@@ -24,7 +24,7 @@ After you have filtered the data in the Data Investigation page, now you can sav
 
 === Ability to uninstall Data Sense from the Data Sense UI
 
-You can uninstall Data Sense to permanently remove the software from the host, and in the case of a cloud deployment, delete the virtual machine / instance on which Data Sense was deployed. Deleting the instance permanently deletes all the indexed information Data Sense has scanned. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-compliance.html#deleting-the-cloud-data-sense-instance[See how].
+You can uninstall Data Sense to permanently remove the software from the host, and in the case of a cloud deployment, delete the virtual machine / instance on which Data Sense was deployed. Deleting the instance permanently deletes all the indexed information Data Sense has scanned. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-uninstall-data-sense.html[See how].
 
 === New Filter for number of sensitive identifiers in the Data Investigation page
 
@@ -32,9 +32,16 @@ The “Number of identifiers” filter enables you to list the files that have a
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
 
-=== Now you can view the users and groups who have access to your directories
+== Audit logging is now available to track the history of actions that Data Sense has performed
 
-In the past you could view the type of open permissions allowed on a folder or file share. Now you can view a list of all users or groups who have access to these directories, and the types of permissions they have. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#viewing-permissions-for-files-and-directories[See how to view the users and groups that have access to your folders and file shares].
+The audit log tracks the management activities that are performed on files from all the working environments and data sources that Data Sense is scanning. The activities could be user generated (delete a file, create a policy, etc.) or policy generated (automatically add labels to files, automatically delete files, etc.).
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-audit-data-sense-actions.html[See more details about the audit log].
+
+//
+//=== Now you can view the users and groups who have access to your directories
+//
+//In the past you could view the type of open permissions allowed on a folder or file share. Now you can view a list of all users or groups who have access to these directories, and the types of permissions they have. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#viewing-permissions-for-files-and-directories[See how to view the users and groups that have access to your folders and file shares].
 
 == 11 May 2022
 

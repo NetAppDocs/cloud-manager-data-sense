@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task-managing-compliance.html
-keywords: remove, delete, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, delete cloud compliance, terminate, deactivate, deactivating cloud compliance, data sense
-summary: If you need to, you can stop Cloud Data Sense from scanning one or more working environments, databases, file share groups, OneDrive accounts, Google Drive accounts, or SharePoint accounts. You can also delete the Cloud Data Sense instance if you no longer want to use Data Sense with your working environments.
+keywords: remove, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, deactivate, deactivating cloud compliance, data sense
+summary: If you need to, you can stop Cloud Data Sense from scanning one or more working environments, databases, file share groups, OneDrive accounts, Google Drive accounts, or SharePoint accounts.
 ---
 
 = Removing data sources from Cloud Data Sense
@@ -13,7 +13,7 @@ summary: If you need to, you can stop Cloud Data Sense from scanning one or more
 :imagesdir: ./media/
 
 [.lead]
-If you need to, you can stop Cloud Data Sense from scanning one or more working environments, databases, file share groups, OneDrive accounts, Google Drive accounts, or SharePoint accounts. You can also delete the Cloud Data Sense instance if you no longer want to use Data Sense with your working environments.
+If you need to, you can stop Cloud Data Sense from scanning one or more working environments, databases, file share groups, OneDrive accounts, Google Drive accounts, or SharePoint accounts.
 
 == Deactivating compliance scans for a working environment
 
@@ -56,60 +56,3 @@ If you no longer want to scan user files from a file shares group, you can delet
 image:screenshot_compliance_remove_fileshare_group.png[A screenshot of the Remove File Share Group button from the Scan Configuration page.]
 
 . Click *Delete Group of Shares* from the confirmation dialog.
-
-== Reducing the Data Sense scan speed
-
-Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans. When enabled, slow scanning is used on all data sources - you can't configure slow scanning for a single working environment or data source.
-
-TIP: The scan speed can't be reduced when scanning databases.
-
-.Steps
-
-. From the bottom of the _Configuration_ page, move the slider to the right to activate slow scanning.
-+
-image:screenshot_slow_scan_enable.png[A screenshot showing how to enable slow compliance scanning.]
-+
-The top of the Configuration page indicates that slow scanning is enabled.
-+
-image:screenshot_slow_scan_disable.png[A screenshot showing how to enable slow compliance scanning.]
-
-. You can disable slow scanning by clicking *Disable* from this message.
-
-== Deleting the Cloud Data Sense instance
-
-You can uninstall the Data Sense software to troubleshoot issues or to permanently remove the software from the host. Deleting the instance also deletes the associated disks where the indexed data resides - all the information Data Sense has scanned will be permanently deleted.
-
-The steps that you need to use depend on whether you deployed Data Sense in the cloud or on an on-premises host.
-
-=== Uninstall Data Sense from a cloud deployment
-
-You can uninstall and delete the Cloud Data Sense instance from the cloud provider if you no longer want to use Data Sense.
-
-. At the top of the Data Sense page, click the image:screenshot_gallery_options.gif[More button] button and then click *Uninstall Data Sense*.
-+
-image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstall Data Sense software.]
-
-. In the _Uninstall Data Sense_ dialog, type *uninstall* to confirm that you want to delete the instance and all associated data, and then click *Uninstall*.
-
-Note that you can go to your cloud provider's console and delete the Cloud Data Sense instance from there as well. The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
-
-=== Uninstall Data Sense from an on-premises deployment
-
-You can uninstall Data Sense from a host if you no longer want to use Data Sense, or if you had an issue that requires reinstallation.
-
-. At the top of the Data Sense page, click the image:screenshot_gallery_options.gif[More button] button and then click *Uninstall Data Sense*.
-+
-image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstall Data Sense software.]
-
-. In the _Uninstall Data Sense_ dialog, type *uninstall* to confirm that you want to clear all the configuration information, and then click *Uninstall*.
-
-. To complete the uninstallation from the host, run the uninstall script on the host machine, for example:
-+
-[source,cli]
-uninstall.sh
-
-//You can delete the Cloud Data Sense instance if you no longer want to use Data Sense. Deleting the instance also deletes the associated disks where the indexed data resides.
-//
-//. Go to your cloud provider's console and delete the Cloud Data Sense instance.
-//+
-//The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
