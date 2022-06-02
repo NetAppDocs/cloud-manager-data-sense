@@ -32,12 +32,11 @@ The “Number of identifiers” filter enables you to list the files that have a
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
 
-== Audit logging is now available to track the history of actions that Data Sense has performed
+=== Audit logging is now available to track the history of actions that Data Sense has performed
 
 The audit log tracks the management activities that are performed on files from all the working environments and data sources that Data Sense is scanning. The activities could be user generated (delete a file, create a policy, etc.) or policy generated (automatically add labels to files, automatically delete files, etc.).
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-audit-data-sense-actions.html[See more details about the audit log].
-
 //
 //=== Now you can view the users and groups who have access to your directories
 //
@@ -291,13 +290,3 @@ Cloud Data Sense can scan for Personal Identifiable Information (PII) in two add
 === Data Sense now tracks additional attributes of files
 
 The File Size, Created Date, and Last Modified Date values have been added to reports that you output in CSV format. Created Date is also a new Filter you can use to narrow down Investigation page search results.
-
-== 5 May 2021
-
-=== Ability to scan data stored on Azure Blob
-
-Scanning of data stored on Azure Blob is now supported when using the https://min.io/[MinIO service^]. See link:task-scanning-object-storage.html[Scanning object storage that uses S3 protocol] for details.
-
-=== Additional type of personal data can be identified by Data Sense
-
-Cloud Data Sense can now find Austrian SSNs in files.
