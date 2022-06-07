@@ -16,7 +16,7 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 6 June 2022
+== 7 June 2022
 
 === Now you can download the results from the Data Investigation page as a .JSON report
 
@@ -26,17 +26,17 @@ After you have filtered the data in the Data Investigation page, now you can sav
 
 You can uninstall Data Sense to permanently remove the software from the host, and in the case of a cloud deployment, delete the virtual machine / instance on which Data Sense was deployed. Deleting the instance permanently deletes all the indexed information Data Sense has scanned. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-uninstall-data-sense.html[See how].
 
-=== New Filter for number of sensitive identifiers in the Data Investigation page
-
-The “Number of identifiers” filter enables you to list the files that have a certain number of sensitive identifiers - including both personal data and sensitive personal data. You can select a range like 1-10 or 501-1000 to view only the files that contain that number of sensitive identifiers.
-
-https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
-
 === Audit logging is now available to track the history of actions that Data Sense has performed
 
 The audit log tracks the management activities that are performed on files from all the working environments and data sources that Data Sense is scanning. The activities could be user generated (delete a file, create a policy, etc.) or policy generated (automatically add labels to files, automatically delete files, etc.).
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-audit-data-sense-actions.html[See more details about the audit log].
+
+=== New Filter for number of sensitive identifiers in the Data Investigation page
+
+The “Number of identifiers” filter enables you to list the files that have a certain number of sensitive identifiers - including both personal data and sensitive personal data. You can select a range like 1-10 or 501-1000 to view only the files that contain that number of sensitive identifiers.
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
 //
 //=== Now you can view the users and groups who have access to your directories
 //

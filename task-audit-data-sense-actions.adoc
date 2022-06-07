@@ -21,14 +21,12 @@ For example, you can see what request was issued, the time of the request, and d
 
 Each line in the audit log contains information in this format:
 
-`2022-05-25T11:25:14,297 | INFO | audit_logger | <module> | 0 | 0 | None | File <full file path> deleted from device <device path>`
+`<full date> | <status> | datasense_audit_logger | <module> | 0 | 0 | File <full file path> deleted from device <device path> - <result>`
 
 * Date and time – full timestamp for the event
-
+* Status - INFO, WARNING
 * Action type (delete, copy, move, create policy, update policy, download JSON report, etc.)
-
 * File name (if the action is relevant to a file)
-
 * Details for the action – what was done: depends on the action
 
 ** Policy name
@@ -37,6 +35,11 @@ Each line in the audit log contains information in this format:
 ** For tag – tag name
 ** For assign to – user name
 ** For email alert – email address / account
+
+For example, the following lines from the log file show a successful copy operation and a failed copy operation.
+
+ 2022-06-06 15:23:08,910 | INFO | datasense_audit_logger | es_scanned_file | 237 | 49 | Copy file /idanCIFS_share/data/dop1/random_positives.tsv from device 172.31.133.183 (type: SMB_SHARE) to device 172.31.130.133:/export_reports (NFS_SHARE) – SUCCESS
+ 2022-06-06 15:23:08,968 | WARNING | datasense_audit_logger | es_scanned_file | 239 | 153 | Copy file /idanCIFS_share/data/compliance-netapp.tar.gz from device 172.31.133.183 (type: SMB_SHARE) to device 172.31.130.133:/export_reports (NFS_SHARE) - FAILURE
 
 == Accessing the log file
 
@@ -49,8 +52,7 @@ When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance
  ssh -i <path to the ssh key> <machine user>@<datasense ip>
 
 * <path to the ssh key> = location of ssh authentication keys
-
-* <machine user>
+* <machine user>:
 
 ** For AWS = use the <ec2-user>
 ** For Azure: use the user created for the Cloud Manager instance
