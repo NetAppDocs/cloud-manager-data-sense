@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/cloud-manager-data-sense/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/cloud-manager-data-sense/task-generating-compliance-reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/cloud-manager-data-sense/task-generating-compliance-reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/cloud-manager-data-sense/task-generating-compliance-reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/cloud-manager-data-sense/task-generating-compliance-reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/cloud-manager-data-sense/task-generating-compliance-reports.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/cloud-manager-data-sense/task-generating-compliance-reports.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/cloud-manager-data-sense/task-generating-compliance-reports.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/cloud-manager-data-sense/task-generating-compliance-reports.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -360,8 +352,6 @@
         
         <a target="_blank" href="/us-en/cloud-manager-data-sense/pdfs/fullsite-sidebar/Cloud_Data_Sense_documentation.pdf" >
           <img src="/us-en/cloud-manager-data-sense/images/pdf.png" width="16" height="16"/>PDF of this doc site</a>
-
-
 
 
 
@@ -499,8 +489,6 @@
 
 
 
-
-
     <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
   <a target="_blank" href="/us-en/cloud-manager-data-sense/pdfs/pages/task-generating-compliance-reports.pdf" >
     <img src="/us-en/cloud-manager-data-sense/images/pdf.png" width="16" height="16"/>
@@ -510,6 +498,41 @@
 
 </ul>
   
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/cloud-manager-data-sense/pdfs/sidebar/Manage_Cloud_Data_Sense.pdf" 
+            
+          >
+            <img src="/us-en/cloud-manager-data-sense/images/pdf.png" width="16" height="16"/>
+            Manage Cloud Data Sense
+          </a>
+          
+
+
+
+
 
 
 
@@ -594,10 +617,10 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
-  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/cloud-manager-family">
-        All Cloud Manager documentation
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/index.html">
+</script><div class="prod-nav" id="product-nav">
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/us-en/cloud-manager-family/"><img src="/us-en/cloud-manager-data-sense/images/left_arrow.png" alt=""><pre>All Cloud Manager documentation</pre></a>
+</div><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/index.html">
         Cloud Data Sense docs
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/whats-new.html">
         Release notes
@@ -655,16 +678,27 @@
         Organize your private data
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-highlights.html">
         Manage your private data
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-data-fusion.html">
-        Add custom personal data identifiers
       </a></li><li class="  active "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html">
         Generate reports
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-responding-to-dsar.html">
         Respond to a DSAR
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/reference-private-data-categories.html">
         Categories of private data
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage Cloud Data Sense</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-data-fusion.html">
+        Add custom personal data identifiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-view-compliance-actions.html">
+        View the status of Data Sense actions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-audit-data-sense-actions.html">
+        Audit the history of Data Sense actions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-reduce-scan-speed.html">
+        Reduce the Data Sense scan speed
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-compliance.html">
         Remove data sources from Data Sense
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-uninstall-data-sense.html">
+        Uninstall Data Sense
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Knowledge and support</div>
       </a>
@@ -729,7 +763,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-29 20:03:55 +0000">04/29/2022</time>
+    <time datetime="2022-06-13 13:01:44 +0000">06/13/2022</time>
     
   
 
@@ -1103,7 +1137,10 @@ For single working environments: Lists the files that are using the most capacit
 <p>The Data Investigation Report is a download of the contents of the Data Investigation page. <a href="task-controlling-private-data.html#filtering-data-in-the-data-investigation-page">Learn more about the Data Investigation page</a>.</p>
 </div>
 <div class="paragraph">
-<p>You can save the report on the local machine as a .CSV file; which can include up to 5,000 rows of data. If Data Sense is scanning database tables (structured data) and files (unstructured data), there can be up to two .CSV reports downloaded.</p>
+<p>You can save the report to the local machine as a .CSV file (which can include up to 5,000 rows of data), or as a .JSON file that you export to an NFS Share (which can include an unlimited number of rows). If Data Sense is scanning files (unstructured data), directories (folders and file shares), or databases (structured data), there can be up to three report files downloaded.</p>
+</div>
+<div class="paragraph">
+<p>When exporting to a file share, make sure Data Sense has the correct permissions for export access.</p>
 </div>
 <div class="sect2">
 <h3 id="generating-the-data-investigation-report">Generating the Data Investigation Report</h3>
@@ -1113,10 +1150,23 @@ For single working environments: Lists the files that are using the most capacit
 <li>
 <p>From the Data Investigation page, click the <span class="image"><img src="./media/button_download.png" alt="download button"></span> button on the top, right of the page.</p>
 </li>
+<li>
+<p>Select whether you want to download a .CSV report or .JSON report of the data, and click <strong>Download Report</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_compliance_investigation_report.png" alt="A screenshot of the Download Investigation Report page with multiple options."></span></p>
+</div>
+<div class="paragraph">
+<p>When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format <code>&lt;host_name&gt;:/&lt;share_path&gt;</code>.</p>
+</div>
+</li>
 </ol>
 </div>
 <div class="paragraph">
-<p>A dialog displays a message that the report is being downloaded.</p>
+<div class="title">Result</div>
+<p>A dialog displays a message that the reports are being downloaded.</p>
+</div>
+<div class="paragraph">
+<p>You can view the progress of JSON report generation in the <a href="#Viewing the status of your compliance actions">Actions Status pane</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1180,6 +1230,46 @@ For single working environments: Lists the files that are using the most capacit
 </ul>
 </div>
 <div class="paragraph">
+<p>The <strong>Unstructured Directories Data Report</strong> includes the following information about your folders and file shares:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Working environment name</p>
+</li>
+<li>
+<p>Storage repository (for example, a folder or file shares)</p>
+</li>
+<li>
+<p>Working environment type</p>
+</li>
+<li>
+<p>File path (directory name)</p>
+</li>
+<li>
+<p>File owner</p>
+</li>
+<li>
+<p>Created time</p>
+</li>
+<li>
+<p>Discovered time</p>
+</li>
+<li>
+<p>Last modified</p>
+</li>
+<li>
+<p>Last accessed</p>
+</li>
+<li>
+<p>Open permissions</p>
+</li>
+<li>
+<p>Directory type</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p>The <strong>Structured Data Report</strong> includes the following information about your database tables:</p>
 </div>
 <div class="ulist">
@@ -1209,9 +1299,6 @@ For single working environments: Lists the files that are using the most capacit
 <p>Sensitive personal information</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p><strong>Note:</strong> Information about Folders is not currently available in the reports.</p>
 </div>
 </div>
 </div>
@@ -1384,4 +1471,5 @@ For single working environments: Lists the files that are using the most capacit
     </script>
     <script src='/us-en/cloud-manager-data-sense/js/www-ntap.js'></script>
     <script src='/us-en/cloud-manager-data-sense/js/tabbed-blocks.js'></script>
+    <script src='/us-en/cloud-manager-data-sense/js/sidebar.js'></script>
   </body></html>

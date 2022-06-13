@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/cloud-manager-data-sense/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-onedrive.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/cloud-manager-data-sense/task-scanning-onedrive.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/cloud-manager-data-sense/task-scanning-onedrive.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/cloud-manager-data-sense/task-scanning-onedrive.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/cloud-manager-data-sense/task-scanning-onedrive.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-onedrive.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/cloud-manager-data-sense/task-scanning-onedrive.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/cloud-manager-data-sense/task-scanning-onedrive.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/cloud-manager-data-sense/task-scanning-onedrive.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/cloud-manager-data-sense/task-scanning-onedrive.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -360,8 +352,6 @@
         
         <a target="_blank" href="/us-en/cloud-manager-data-sense/pdfs/fullsite-sidebar/Cloud_Data_Sense_documentation.pdf" >
           <img src="/us-en/cloud-manager-data-sense/images/pdf.png" width="16" height="16"/>PDF of this doc site</a>
-
-
 
 
 
@@ -515,6 +505,39 @@
 
 
 
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/cloud-manager-data-sense/pdfs/sidebar/Manage_Cloud_Data_Sense.pdf" 
+            
+          >
+            <img src="/us-en/cloud-manager-data-sense/images/pdf.png" width="16" height="16"/>
+            Manage Cloud Data Sense
+          </a>
+          
+
+
+
+
+
+
+
+
+
 
 
 
@@ -594,10 +617,10 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
-  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/cloud-manager-family">
-        All Cloud Manager documentation
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/index.html">
+</script><div class="prod-nav" id="product-nav">
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/us-en/cloud-manager-family/"><img src="/us-en/cloud-manager-data-sense/images/left_arrow.png" alt=""><pre>All Cloud Manager documentation</pre></a>
+</div><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/index.html">
         Cloud Data Sense docs
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/whats-new.html">
         Release notes
@@ -655,16 +678,27 @@
         Organize your private data
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-highlights.html">
         Manage your private data
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-data-fusion.html">
-        Add custom personal data identifiers
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html">
         Generate reports
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-responding-to-dsar.html">
         Respond to a DSAR
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/reference-private-data-categories.html">
         Categories of private data
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage Cloud Data Sense</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-data-fusion.html">
+        Add custom personal data identifiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-view-compliance-actions.html">
+        View the status of Data Sense actions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-audit-data-sense-actions.html">
+        Audit the history of Data Sense actions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-reduce-scan-speed.html">
+        Reduce the Data Sense scan speed
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-compliance.html">
         Remove data sources from Data Sense
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-uninstall-data-sense.html">
+        Uninstall Data Sense
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Knowledge and support</div>
       </a>
@@ -1077,4 +1111,5 @@
     </script>
     <script src='/us-en/cloud-manager-data-sense/js/www-ntap.js'></script>
     <script src='/us-en/cloud-manager-data-sense/js/tabbed-blocks.js'></script>
+    <script src='/us-en/cloud-manager-data-sense/js/sidebar.js'></script>
   </body></html>

@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/cloud-manager-data-sense/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/cloud-manager-data-sense/task-managing-highlights.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/cloud-manager-data-sense/task-managing-highlights.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/cloud-manager-data-sense/task-managing-highlights.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/cloud-manager-data-sense/task-managing-highlights.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/cloud-manager-data-sense/task-managing-highlights.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/cloud-manager-data-sense/task-managing-highlights.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/cloud-manager-data-sense/task-managing-highlights.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/cloud-manager-data-sense/task-managing-highlights.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -360,8 +352,6 @@
         
         <a target="_blank" href="/us-en/cloud-manager-data-sense/pdfs/fullsite-sidebar/Cloud_Data_Sense_documentation.pdf" >
           <img src="/us-en/cloud-manager-data-sense/images/pdf.png" width="16" height="16"/>PDF of this doc site</a>
-
-
 
 
 
@@ -515,6 +505,39 @@
 
 
 
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/cloud-manager-data-sense/pdfs/sidebar/Manage_Cloud_Data_Sense.pdf" 
+            
+          >
+            <img src="/us-en/cloud-manager-data-sense/images/pdf.png" width="16" height="16"/>
+            Manage Cloud Data Sense
+          </a>
+          
+
+
+
+
+
+
+
+
+
 
 
 
@@ -594,10 +617,10 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
-  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/cloud-manager-family">
-        All Cloud Manager documentation
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/index.html">
+</script><div class="prod-nav" id="product-nav">
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/us-en/cloud-manager-family/"><img src="/us-en/cloud-manager-data-sense/images/left_arrow.png" alt=""><pre>All Cloud Manager documentation</pre></a>
+</div><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/index.html">
         Cloud Data Sense docs
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/whats-new.html">
         Release notes
@@ -655,16 +678,27 @@
         Organize your private data
       </a></li><li class="  active "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-highlights.html">
         Manage your private data
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-data-fusion.html">
-        Add custom personal data identifiers
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html">
         Generate reports
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-responding-to-dsar.html">
         Respond to a DSAR
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/reference-private-data-categories.html">
         Categories of private data
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage Cloud Data Sense</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-data-fusion.html">
+        Add custom personal data identifiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-view-compliance-actions.html">
+        View the status of Data Sense actions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-audit-data-sense-actions.html">
+        Audit the history of Data Sense actions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-reduce-scan-speed.html">
+        Reduce the Data Sense scan speed
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-managing-compliance.html">
         Remove data sources from Data Sense
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/cloud-manager-data-sense/task-uninstall-data-sense.html">
+        Uninstall Data Sense
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Knowledge and support</div>
       </a>
@@ -729,7 +763,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-11 15:47:47 +0000">05/11/2022</time>
+    <time datetime="2022-06-02 18:22:02 +0000">06/02/2022</time>
     
   
 
@@ -890,7 +924,7 @@ You can&#8217;t copy files that reside in databases.
 </ol>
 </div>
 <div class="paragraph">
-<p>You can view the progress of the copy operation in the <a href="#viewing-the-status-of-your-compliance-actions">Actions Status pane</a>.</p>
+<p>You can view the progress of the copy operation in the <a href="task-view-compliance-actions.html">Actions Status pane</a>.</p>
 </div>
 <div class="paragraph">
 <p>Note that you can also copy an individual file when viewing the metadata details for a file. Just click <strong>Copy File</strong>.</p>
@@ -977,7 +1011,7 @@ You can&#8217;t copy files that reside in databases.
 <p>The new, cloned volume is created in the same aggregate as the source volume.</p>
 </div>
 <div class="paragraph">
-<p>You can view the progress of the clone operation in the <a href="#viewing-the-status-of-your-compliance-actions">Actions Status pane</a>.</p>
+<p>You can view the progress of the clone operation in the <a href="task-view-compliance-actions.html">Actions Status pane</a>.</p>
 </div>
 <div class="paragraph">
 <p>If you initially selected <strong>Map all volumes</strong> or <strong>Map &amp; Classify all volumes</strong> when you enabled Data Sense for the working environment where the source volume resides, then Data Sense will scan the new cloned volume automatically. If you didn&#8217;t use either of these selections initially, then if you want to scan this new volume, you&#8217;ll need to <a href="task-getting-started-compliance.html#enabling-and-disabling-compliance-scans-on-volumes">enable scanning on the volume manually</a>.</p>
@@ -1222,7 +1256,7 @@ You can&#8217;t delete files that reside in databases.
 </ol>
 </div>
 <div class="paragraph">
-<p>You can view the progress of the delete operation in the <a href="#viewing-the-status-of-your-compliance-actions">Actions Status pane</a>.</p>
+<p>You can view the progress of the delete operation in the <a href="task-view-compliance-actions.html">Actions Status pane</a>.</p>
 </div>
 <div class="paragraph">
 <p>Note that you can also delete an individual file when viewing the metadata details for a file. Just click <strong>Delete file</strong>.</p>
@@ -1286,58 +1320,8 @@ All files that match the policy will be permanently deleted once a day.
 <p>The new Policy appears in the Policies tab. Files that match the policy are deleted once per day when the policy runs.</p>
 </div>
 <div class="paragraph">
-<p>You can view the list of files that have been deleted in the <a href="#viewing-the-status-of-your-compliance-actions">Actions Status pane</a>.</p>
+<p>You can view the list of files that have been deleted in the <a href="task-view-compliance-actions.html">Actions Status pane</a>.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="viewing-the-status-of-your-compliance-actions">Viewing the status of your compliance actions</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>When you run an action from the Investigation Results pane across many files, for example, deleting 100 files, the process can take some time. You can monitor the status of these asynchronous actions in the <em>Action Status</em> pane so you&#8217;ll know when it has been applied to all files. This allows you to see the actions that have completed successfully, those currently in progress, and those that have failed so you can diagnose and fix any problems.</p>
-</div>
-<div class="paragraph">
-<p>The status can be:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Finished</p>
-</li>
-<li>
-<p>In Progress</p>
-</li>
-<li>
-<p>Queued</p>
-</li>
-<li>
-<p>Canceled</p>
-</li>
-<li>
-<p>Failed</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Note that you can Cancel any actions that have the "Queued" or "In Progress" status.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Steps</div>
-<ol class="arabic">
-<li>
-<p>In the bottom-right of the Data Sense UI you can see the <strong>Actions Status</strong> button <span class="image"><img src="./media/button_actions_status.png" alt="button actions status"></span>.</p>
-</li>
-<li>
-<p>Click this button and the most recent 20 actions are listed.</p>
-<div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_compliance_action_status.png" alt="A screenshot that shows the last 20 actions" width="and their status" height="in the Configuration page."></span></p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>You can click the name of an action to view details corresponding to that operation.</p>
 </div>
 </div>
 </div>
@@ -1487,4 +1471,5 @@ All files that match the policy will be permanently deleted once a day.
     </script>
     <script src='/us-en/cloud-manager-data-sense/js/www-ntap.js'></script>
     <script src='/us-en/cloud-manager-data-sense/js/tabbed-blocks.js'></script>
+    <script src='/us-en/cloud-manager-data-sense/js/sidebar.js'></script>
   </body></html>
