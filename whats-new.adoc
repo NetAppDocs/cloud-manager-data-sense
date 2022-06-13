@@ -16,11 +16,11 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 7 June 2022
+== 12 June 2022
 
 === Now you can download the results from the Data Investigation page as a .JSON report
 
-After you have filtered the data in the Data Investigation page, now you can save the data as a report in a .JSON file that you can export to an NFS Share, in addition to saving the data to a .CSV file on your local system. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#data-investigation-report[See how to create reports from the Data Investigation page].
+After you have filtered the data in the Data Investigation page, now you can save the data as a report in a .JSON file that you can export to an NFS Share, in addition to saving the data to a .CSV file on your local system. Make sure Data Sense has the correct permissions for export access. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#data-investigation-report[See how to create reports from the Data Investigation page].
 
 === Ability to uninstall Data Sense from the Data Sense UI
 
@@ -28,7 +28,7 @@ You can uninstall Data Sense to permanently remove the software from the host, a
 
 === Audit logging is now available to track the history of actions that Data Sense has performed
 
-The audit log tracks the management activities that are performed on files from all the working environments and data sources that Data Sense is scanning. The activities could be user generated (delete a file, create a policy, etc.) or policy generated (automatically add labels to files, automatically delete files, etc.).
+The audit log tracks the management activities that Data Sense has performed on files from all the working environments and data sources that Data Sense is scanning. The activities could be user generated (delete a file, create a policy, etc.) or policy generated (automatically add labels to files, automatically delete files, etc.).
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-audit-data-sense-actions.html[See more details about the audit log].
 
@@ -37,6 +37,10 @@ https://docs.netapp.com/us-en/cloud-manager-data-sense/task-audit-data-sense-act
 The “Number of identifiers” filter enables you to list the files that have a certain number of sensitive identifiers - including both personal data and sensitive personal data. You can select a range like 1-10 or 501-1000 to view only the files that contain that number of sensitive identifiers.
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
+
+=== Now you can edit existing policies that you created
+
+If you need to make a change to a custom policy that you created in the past, now you can edit the policy instead of creating a new policy. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#editing-policies[See how to edit a policy].
 //
 //=== Now you can view the users and groups who have access to your directories
 //
