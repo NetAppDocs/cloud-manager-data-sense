@@ -71,7 +71,7 @@ NOTE: If you're planning on scanning Azure NetApp Files volumes, you need to mak
 
 Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. Data Sense is not supported on a host that is shared with other applications - the host must be a dedicated host.
 
-* Operating system: Red Hat Enterprise Linux or CentOS version 8.0 or 8.1
+* Operating system: Red Hat Enterprise Linux or CentOS version 8.0, 8.1, or 8.4
 ** The OS must be capable of installing the docker engine (for example, disable the _firewalld_ service if needed)
 * Disk: SSD with 500 GiB available on /, or
 ** 100 GiB available on /opt

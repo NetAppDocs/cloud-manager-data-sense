@@ -1,0 +1,63 @@
+---
+sidebar: sidebar
+permalink: task-audit-data-sense-actions.html
+keywords: compliance, actions, view progress
+summary: Data Sense logs management activities that have been performed on files from all the working environments and data sources that Data Sense is scanning. You can view the contents of the Data Sense audit log files, or download them, to see what file changes have occurred, and when.
+---
+
+= Auditing the history of Data Sense actions
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Data Sense logs management activities that have been performed on files from all the working environments and data sources that Data Sense is scanning. You can view the contents of the Data Sense audit log files, or download them, to see what file changes have occurred, and when.
+
+For example, you can see what request was issued, the time of the request, and details such as source location in case a file was deleted, or source and destination location in case a file was moved.
+
+== Log file contents
+
+Each line in the audit log contains information in this format:
+
+`<full date> | <status> | datasense_audit_logger | <module> | 0 | 0 | File <full file path> deleted from device <device path> - <result>`
+
+* Date and time – full timestamp for the event
+* Status - INFO, WARNING
+* Action type (delete, copy, move, create policy, update policy, download JSON report, etc.)
+* File name (if the action is relevant to a file)
+* Details for the action – what was done: depends on the action
+
+** Policy name
+** For move - Source and destination
+** For copy - Source and destination
+** For tag – tag name
+** For assign to – user name
+** For email alert – email address / account
+
+For example, the following lines from the log file show a successful copy operation and a failed copy operation.
+
+ 2022-06-06 15:23:08,910 | INFO | datasense_audit_logger | es_scanned_file | 237 | 49 | Copy file /idanCIFS_share/data/dop1/random_positives.tsv from device 172.31.133.183 (type: SMB_SHARE) to device 172.31.130.133:/export_reports (NFS_SHARE) – SUCCESS
+ 2022-06-06 15:23:08,968 | WARNING | datasense_audit_logger | es_scanned_file | 239 | 153 | Copy file /idanCIFS_share/data/compliance-netapp.tar.gz from device 172.31.133.183 (type: SMB_SHARE) to device 172.31.130.133:/export_reports (NFS_SHARE) - FAILURE
+
+== Accessing the log file
+
+The audit log is located on the Data Sense machine in: `/opt/netapp/audit_logs/<date>/DataSense_audit_log_<date>_<process_name>.log`
+
+For on-premises deployments you can navigate directly to the log files.
+
+When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance. You can SSH to the system by entering the user and password, or by using the SSH key you provided during the Cloud Manager Connector installation. The SSH command is:
+
+ ssh -i <path to the ssh key> <machine user>@<datasense ip>
+
+* <path to the ssh key> = location of ssh authentication keys
+* <machine user>:
+
+** For AWS = use the <ec2-user>
+** For Azure: use the user created for the Cloud Manager instance
+** For GCP: use the user created for the Cloud Manager instance
+
+* <data sense ip> = IP address of the virtual machine instance
+
+Note that you'll need to modify the security group inbound rules to access the system. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-cloud-manager.html#ports-and-security-groups[Ports and security groups^] for more information.
