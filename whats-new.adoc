@@ -16,6 +16,36 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
+== 12 June 2022
+
+=== Now you can download the results from the Data Investigation page as a .JSON report
+
+After you have filtered the data in the Data Investigation page, now you can save the data as a report in a .JSON file that you can export to an NFS Share, in addition to saving the data to a .CSV file on your local system. Make sure Data Sense has the correct permissions for export access. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#data-investigation-report[See how to create reports from the Data Investigation page].
+
+=== Ability to uninstall Data Sense from the Data Sense UI
+
+You can uninstall Data Sense to permanently remove the software from the host, and in the case of a cloud deployment, delete the virtual machine / instance on which Data Sense was deployed. Deleting the instance permanently deletes all the indexed information Data Sense has scanned. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-uninstall-data-sense.html[See how].
+
+=== Audit logging is now available to track the history of actions that Data Sense has performed
+
+The audit log tracks the management activities that Data Sense has performed on files from all the working environments and data sources that Data Sense is scanning. The activities could be user generated (delete a file, create a policy, etc.) or policy generated (automatically add labels to files, automatically delete files, etc.).
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-audit-data-sense-actions.html[See more details about the audit log].
+
+=== New Filter for number of sensitive identifiers in the Data Investigation page
+
+The “Number of identifiers” filter enables you to list the files that have a certain number of sensitive identifiers - including both personal data and sensitive personal data. You can select a range like 1-10 or 501-1000 to view only the files that contain that number of sensitive identifiers.
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
+
+=== Now you can edit existing policies that you created
+
+If you need to make a change to a custom policy that you created in the past, now you can edit the policy instead of creating a new policy. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#editing-policies[See how to edit a policy].
+//
+//=== Now you can view the users and groups who have access to your directories
+//
+//In the past you could view the type of open permissions allowed on a folder or file share. Now you can view a list of all users or groups who have access to these directories, and the types of permissions they have. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#viewing-permissions-for-files-and-directories[See how to view the users and groups that have access to your folders and file shares].
+
 == 11 May 2022
 
 === Support added for scanning data in Google Drive accounts
@@ -38,14 +68,6 @@ As part the Data Sense permissions capabilities, now you can view the list of us
 * The "User / Group Permissions" filter enables you to list the files, folders, and shares that a specific user or a group has read and/or write permissions to. You can select multiple users and/or group names - or enter a partial name. T
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
-//
-//=== Ability to download the results from the Data Investigation page as a .JSON report
-//
-//After you have filtered the data in the Data Investigation page, now you can save the data as a report in a .JSON file that you can export to an NFS Share, in addition to saving the data to a .CSV file on your local system. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#data-investigation-report[See how to create reports from the Data Investigation page].
-//
-//=== Ability to uninstall Data Sense from the Data Sense UI
-//
-//You can uninstall Data Sense to permanently remove the software from the host, and in the case of a cloud deployment, delete the virtual machine / instance on which Data Sense was deployed. Deleting the instance permanently deletes all the information Data Sense has scanned. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-compliance.html#deleting-the-cloud-data-sense-instance[See how].
 
 == 5 April 2022
 
@@ -56,6 +78,7 @@ Data Sense can identify and categorize files that contain the Australian TFN (Ta
 === Global Active Directory server can be an LDAP server now
 
 The global Active Directory server you integrate with Data Sense can be an LDAP Server now in addition to the previously supported DNS Server. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html[Go here for details].
+// end::whats-new[]
 
 == 15 March 2022
 
@@ -74,10 +97,9 @@ Data Sense can read the permissions that exist for files that are being scanned 
 
 === Support for scanning OneDrive and SharePoint data when deployed in a dark site
 
-When you've deployed Cloud Data Sense on a host in an on-premises site that doesn’t have internet access, now you can scan local data from OneDrive accounts or SharePoint accounts. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-dark-site.html#sharepoint_and_onedrive_special_requirements[You'll need to allow access to the following endpoints.]
+When you've deployed Cloud Data Sense on a host in an on-premises site that doesn’t have internet access, now you can scan local data from OneDrive accounts or SharePoint accounts. link:task-deploy-compliance-dark-site.html#sharepoint_and_onedrive_special_requirements[You'll need to allow access to the following endpoints.]
 
 === The Beta capability to use Cloud Data Sense to scan your Cloud Backup files has been discontinued in this release
-// end::whats-new[]
 
 == 9 February 2022
 
@@ -272,13 +294,3 @@ Cloud Data Sense can scan for Personal Identifiable Information (PII) in two add
 === Data Sense now tracks additional attributes of files
 
 The File Size, Created Date, and Last Modified Date values have been added to reports that you output in CSV format. Created Date is also a new Filter you can use to narrow down Investigation page search results.
-
-== 5 May 2021
-
-=== Ability to scan data stored on Azure Blob
-
-Scanning of data stored on Azure Blob is now supported when using the https://min.io/[MinIO service^]. See link:task-scanning-object-storage.html[Scanning object storage that uses S3 protocol] for details.
-
-=== Additional type of personal data can be identified by Data Sense
-
-Cloud Data Sense can now find Austrian SSNs in files.

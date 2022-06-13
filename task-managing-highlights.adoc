@@ -72,7 +72,7 @@ image:screenshot_compliance_copy_files_dialog.png[A screenshot showing the Copy 
 +
 A dialog appears with the status of the copy operation.
 
-You can view the progress of the copy operation in the <<Viewing the status of your compliance actions,Actions Status pane>>.
+You can view the progress of the copy operation in the link:task-view-compliance-actions.html[Actions Status pane].
 
 Note that you can also copy an individual file when viewing the metadata details for a file. Just click *Copy File*.
 
@@ -122,7 +122,7 @@ A dialog appears with the status of the clone operation.
 
 The new, cloned volume is created in the same aggregate as the source volume.
 
-You can view the progress of the clone operation in the <<Viewing the status of your compliance actions,Actions Status pane>>.
+You can view the progress of the clone operation in the link:task-view-compliance-actions.html[Actions Status pane].
 
 If you initially selected *Map all volumes* or *Map & Classify all volumes* when you enabled Data Sense for the working environment where the source volume resides, then Data Sense will scan the new cloned volume automatically. If you didn't use either of these selections initially, then if you want to scan this new volume, you'll need to link:task-getting-started-compliance.html#enabling-and-disabling-compliance-scans-on-volumes[enable scanning on the volume manually].
 
@@ -244,7 +244,7 @@ image:screenshot_compliance_delete_multi_files.png["A screenshot showing how to 
 
 . Because the delete operation is permanent, you must type "*permanently delete*" in the subsequent _Delete File_ dialog and click *Delete File*.
 
-You can view the progress of the delete operation in the <<Viewing the status of your compliance actions,Actions Status pane>>.
+You can view the progress of the delete operation in the link:task-view-compliance-actions.html[Actions Status pane].
 
 Note that you can also delete an individual file when viewing the metadata details for a file. Just click *Delete file*.
 
@@ -275,28 +275,4 @@ image:screenshot_compliance_delete_files_using_policies.png[A screenshot that sh
 
 The new Policy appears in the Policies tab. Files that match the policy are deleted once per day when the policy runs.
 
-You can view the list of files that have been deleted in the <<Viewing the status of your compliance actions,Actions Status pane>>.
-
-== Viewing the status of your compliance actions
-
-When you run an action from the Investigation Results pane across many files, for example, deleting 100 files, the process can take some time. You can monitor the status of these asynchronous actions in the _Action Status_ pane so you'll know when it has been applied to all files. This allows you to see the actions that have completed successfully, those currently in progress, and those that have failed so you can diagnose and fix any problems.
-
-The status can be:
-
-* Finished
-* In Progress
-* Queued
-* Canceled
-* Failed
-
-Note that you can Cancel any actions that have the "Queued" or "In Progress" status.
-
-.Steps
-
-. In the bottom-right of the Data Sense UI you can see the *Actions Status* button image:button_actions_status.png[].
-
-. Click this button and the most recent 20 actions are listed.
-+
-image:screenshot_compliance_action_status.png[A screenshot that shows the last 20 actions, and their status, in the Configuration page.]
-
-You can click the name of an action to view details corresponding to that operation.
+You can view the list of files that have been deleted in the link:task-view-compliance-actions.html[Actions Status pane].
