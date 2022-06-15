@@ -16,7 +16,7 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 12 June 2022
+== 12 June 2022 (version 1.13.1)
 
 === Now you can download the results from the Data Investigation page as a .JSON report
 
@@ -46,7 +46,7 @@ If you need to make a change to a custom policy that you created in the past, no
 //
 //In the past you could view the type of open permissions allowed on a folder or file share. Now you can view a list of all users or groups who have access to these directories, and the types of permissions they have. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#viewing-permissions-for-files-and-directories[See how to view the users and groups that have access to your folders and file shares].
 
-== 11 May 2022
+== 11 May 2022 (version 1.12.1)
 
 === Support added for scanning data in Google Drive accounts
 
@@ -69,7 +69,7 @@ As part the Data Sense permissions capabilities, now you can view the list of us
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
 
-== 5 April 2022
+== 5 April 2022 (version 1.11.1)
 
 === Four new types of Australian personal data can be identified by Data Sense
 
@@ -80,7 +80,7 @@ Data Sense can identify and categorize files that contain the Australian TFN (Ta
 The global Active Directory server you integrate with Data Sense can be an LDAP Server now in addition to the previously supported DNS Server. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html[Go here for details].
 // end::whats-new[]
 
-== 15 March 2022
+== 15 March 2022 (version 1.10.0)
 
 === New Filter to show the files to which a specific user or a group has read or write permissions
 
