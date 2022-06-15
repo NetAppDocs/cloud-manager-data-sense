@@ -197,7 +197,7 @@ image:screenshot_cloud_compliance_deploy_onprem.png[A screenshot of selecting th
 . Unzip the installer file on the host machine, for example:
 +
 [source,cli]
-tar -xzf cc_onprem_installer_1.10.0.tar.gz
+tar -xzf cc_onprem_installer_1.13.1.tar.gz
 
 . When prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer:
 

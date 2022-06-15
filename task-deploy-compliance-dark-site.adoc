@@ -155,7 +155,7 @@ Follow these steps when installing Data Sense software on a single on-premises h
 . Unzip the installer bundle on the host machine, for example:
 +
 [source,cli]
-tar -xzf DataSense-offline-bundle-v1.10.0.tar.gz
+tar -xzf DataSense-offline-bundle-v1.13.1.tar.gz
 +
 This extracts required software and the actual installation file *cc_onprem_installer_<version>.tar.gz*.
 
@@ -176,7 +176,7 @@ image:screenshot_cloud_compliance_deploy_darksite.png[A screenshot of selecting 
 . Unzip the installation file on the host machine, for example:
 +
 [source,cli]
-tar -xzf cc_onprem_installer_1.10.0.tar.gz
+tar -xzf cc_onprem_installer_1.13.1.tar.gz
 
 . When prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer:
 
@@ -282,7 +282,7 @@ Since Data Sense software is updated with new features on a regular basis, you s
 
 .Before you begin
 
-* Data Sense software can be upgraded one major version at a time. For example, if you have version 1.9.x installed, you can upgrade only to 1.10.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
+* Data Sense software can be upgraded one major version at a time. For example, if you have version 1.11.x installed, you can upgrade only to 1.12.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
 * Verify that your on-prem Connector software has been upgraded to the newest available version. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-on-prem-without-internet-access[See the Connector upgrade steps^].
 
 .Steps
@@ -294,14 +294,14 @@ Since Data Sense software is updated with new features on a regular basis, you s
 . Unzip the software bundle on the host machine, for example:
 +
 [source,cli]
-tar -xvf DataSense-offline-bundle-v1.10.0.tar.gz
+tar -xvf DataSense-offline-bundle-v1.13.1.tar.gz
 +
 This extracts the installation file *cc_onprem_installer_<version>.tar.gz*.
 
 . Unzip the installation file on the host machine, for example:
 +
 [source,cli]
-tar -xzf cc_onprem_installer_1.10.0.tar.gz
+tar -xzf cc_onprem_installer_1.13.1.tar.gz
 +
 This extracts the upgrade script *start_darksite_upgrade.sh* and any required third-party software.
 
