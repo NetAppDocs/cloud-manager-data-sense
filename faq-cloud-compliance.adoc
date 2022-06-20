@@ -168,6 +168,13 @@ Cloud Data Sense can scan data from working environments that you've added to th
 
 Data Sense supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
 
+=== Are there any restrictions when deployed in a Government region?
+
+Cloud Data Sense is supported when the Connector is deployed in a Government region (AWS GovCloud, Azure Gov, or Azure DoD). When deployed in this manner, Data Sense has the following restrictions:
+
+* OneDrive accounts, SharePoint accounts, and Google Drive accounts can't be scanned.
+* Microsoft Azure Information Protection (AIP) label functionality can't be integrated.
+
 === What data sources can I scan if I install Data Sense in a site without internet access?
 
 Data Sense can only scan data from data sources that are local to the on-premises site. At this time, Data Sense can scan the following local data sources in a "dark" site:
