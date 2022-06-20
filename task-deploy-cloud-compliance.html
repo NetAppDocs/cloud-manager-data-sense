@@ -763,7 +763,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-19 15:55:02 +0000">04/19/2022</time>
+    <time datetime="2022-06-20 13:54:52 +0000">06/20/2022</time>
     
   
 
@@ -837,6 +837,13 @@
 </li>
 <li>
 <p>When scanning data in Cloud Volumes ONTAP in Azure or in Azure NetApp Files, you use a connector in Azure.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For Azure NetApp Files, it must be deployed in the same region as the volumes you wish to scan.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>When scanning data in Cloud Volumes ONTAP in GCP, you use a Connector in GCP.</p>
@@ -852,17 +859,21 @@
 <div class="paragraph">
 <p>As you can see, there may be some situations where you need to use <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-to-use-multiple-connectors">multiple Connectors</a>.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-manager-data-sense/images/note.svg" alt="Note">
-</td>
-<td class="content">
-If you&#8217;re planning on scanning Azure NetApp Files volumes, you need to make sure you&#8217;re deploying in the same region as the volumes you wish to scan.
-</td>
-</tr>
-</table>
+<div class="sect2">
+<h3 id="government-region-support">Government region support</h3>
+<div class="paragraph">
+<p>Cloud Data Sense is supported when the Connector is deployed in a Government region (AWS GovCloud, Azure Gov, or Azure DoD). When deployed in this manner, Data Sense has the following restrictions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>OneDrive accounts, SharePoint accounts, and Google Drive accounts can&#8217;t be scanned.</p>
+</li>
+<li>
+<p>Microsoft Azure Information Protection (AIP) label functionality can&#8217;t be integrated.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>

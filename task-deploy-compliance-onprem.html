@@ -763,7 +763,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-15 19:22:58 +0000">06/15/2022</time>
+    <time datetime="2022-06-20 13:54:52 +0000">06/20/2022</time>
     
   
 
@@ -840,6 +840,13 @@
 </li>
 <li>
 <p>When scanning data in Cloud Volumes ONTAP in Azure or in Azure NetApp Files, you use a connector in Azure.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For Azure NetApp Files, it must be deployed in the same region as the volumes you wish to scan.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>When scanning data in Cloud Volumes ONTAP in GCP, you use a connector in GCP.</p>
@@ -855,18 +862,6 @@
 <div class="paragraph">
 <p>As you can see, there may be some situations where you need to use <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-to-use-multiple-connectors">multiple Connectors</a>.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-manager-data-sense/images/note.svg" alt="Note">
-</td>
-<td class="content">
-If you&#8217;re planning on scanning Azure NetApp Files volumes, you need to make sure you&#8217;re deploying in the same region as the volumes you wish to scan.
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -881,6 +876,9 @@ If you&#8217;re planning on scanning Azure NetApp Files volumes, you need to mak
 <p>Operating system: Red Hat Enterprise Linux or CentOS version 8.0, 8.1, or 8.4</p>
 <div class="ulist">
 <ul>
+<li>
+<p>Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.14 or greater</p>
+</li>
 <li>
 <p>The OS must be capable of installing the docker engine (for example, disable the <em>firewalld</em> service if needed)</p>
 </li>
