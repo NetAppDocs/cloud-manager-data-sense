@@ -37,7 +37,7 @@ Note that you can add to the list of personal data that is found in your files i
 | IP address | No
 | Password | Yes
 
-.42+| National Identifiers | Australian TFN (Tax File Number) | Yes
+.45+| National Identifiers | Australian TFN (Tax File Number) | Yes
 | Australian Driver’s License Number | Yes
 | Australian Medicare Number | Yes
 | Australian Passport Number | Yes
@@ -62,6 +62,7 @@ Note that you can add to the list of personal data that is found in your files i
 | German Tax Identification Number (Steuerliche Identifikationsnummer) | Yes
 | Greek ID | Yes
 | Hungarian Tax Identification Number | Yes
+| Indiana Driver's License | Yes
 | Irish ID (PPS) | Yes
 | Israeli ID | Yes
 | Italian Tax Identification Number | Yes
@@ -70,6 +71,7 @@ Note that you can add to the list of personal data that is found in your files i
 | Luxembourg ID | Yes
 | Maltese ID | Yes
 | National Health Service (NHS) Number | Yes
+| New York Driver's License | Yes
 | Polish ID (PESEL) | Yes
 | Portuguese Tax Identification Number (NIF) | Yes
 | Romanian ID (CNP) | Yes
@@ -77,6 +79,7 @@ Note that you can add to the list of personal data that is found in your files i
 | South African ID | Yes
 | Spanish Tax Identification Number | Yes
 | Swedish ID | Yes
+| Texas Driver's License | Yes
 | U.K. ID (NINO) | Yes
 | USA Social Security Number (SSN) | Yes
 |===

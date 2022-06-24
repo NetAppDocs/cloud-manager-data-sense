@@ -179,13 +179,15 @@ Note that some of the usual Cloud Sync operations are disabled when it is invoke
 
 You can move source files that Data Sense is scanning to any NFS share. The NFS share doesn't need to be integrated with Data Sense (see link:task-scanning-file-shares.html[Scanning file shares]).
 
+If a file with the same name exists in the destination location, the file will not be moved.
+
 TIP: You can't move files that reside in databases.
 
 .Requirements
 
-You must have the Account Admin or Workspace Admin role to move files.
-
-Moving files requires that the NFS share allows access from the Data Sense instance.
+* You must have the Account Admin or Workspace Admin role to move files.
+* Moving files requires that the NFS share allows access from the Data Sense instance.
+* You can move a maximum of 100,000 files at a time.
 
 .Steps
 
