@@ -5,7 +5,7 @@ keywords: compliance, stop scan, start scan, map scan, classify scan, data sense
 summary: You can manage the data that is being scanned in each of your working environments and data sources. You can make the changes on a "repository" basis; meaning you can make changes for each volume, bucket, share, schema, user, etc. depending on the type of data source you are scanning.
 ---
 
-= Managing the data that is being scanned
+= Changing the scanning settings for your repositories
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -48,7 +48,7 @@ image:screenshot_compliance_config_button.png[A screenshot showing how to click 
 +
 image:screenshot_compliance_repo_scanning.png[A screenshot showing how to select the type of scanning for a bucket.]
 
-Certain types of working environments enable you to change all items in the repository to the same setting globally using a button bar at the top of the page. This is valid for Cloud Volumes ONTAP, on-premises ONTAP, Azure NetApp Files, and Amazon FSx for ONTAP systems.
+Certain types of working environments enable you to change the type of scanning globally for all repositories using a button bar at the top of the page. This is valid for Cloud Volumes ONTAP, on-premises ONTAP, Azure NetApp Files, and Amazon FSx for ONTAP systems.
 
 The example below shows this button bar for an Azure NetApp Files system.
 
