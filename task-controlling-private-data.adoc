@@ -35,7 +35,7 @@ For some types of personal data, Data Sense uses _proximity validation_ to valid
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense* and click the *Compliance* tab.
+. From the Cloud Manager left navigation menu, click *Data Sense* and then click the *Compliance* tab.
 
 . To investigate the details for all personal data, click the icon next to the personal data percentage.
 +
@@ -61,7 +61,7 @@ NOTE: Only English is supported when scanning for sensitive personal data. Suppo
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense* and click the *Compliance* tab.
+. From the Cloud Manager left navigation menu, click *Data Sense* and then click the *Compliance* tab.
 
 . To investigate the details for all sensitive personal data, click the icon next to the sensitive personal data percentage.
 +
@@ -83,7 +83,7 @@ NOTE: English, German, and Spanish are supported for categories. Support for mor
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense* and click the *Compliance* tab.
+. From the Cloud Manager left navigation menu, click *Data Sense* and then click the *Compliance* tab.
 
 . Click the *Investigate Results* icon for one of the top 4 categories directly from the main screen, or click *View All* and then click the icon for any of the categories.
 +
@@ -99,7 +99,7 @@ For example, you might be storing CAD files that include very sensitive informat
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense* and click the *Compliance* tab.
+. From the Cloud Manager left navigation menu, click *Data Sense* and then click the *Compliance* tab.
 
 . Click the *Investigate Results* icon for one of the top 4 file types directly from the main screen, or click *View All* and then click the icon for any of the file types.
 +

@@ -107,7 +107,7 @@ After you purchase a Cloud Data Sense license for your Cloud Manager account, yo
 
 .Steps
 
-. Click *All Services > Digital Wallet > Data Services Licenses*.
+. From the Cloud Manager left navigation menu, click *Digital Wallet* and then select the *Data Services Licenses* tab.
 
 . Click *Add License*.
 

@@ -39,7 +39,7 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense*.
+. From the Cloud Manager left navigation menu, click *Data Sense*.
 
 . Click *Compliance*, and then click the download icon next to *Privacy Risk Assessment* under *Reports*.
 +
@@ -99,7 +99,7 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense*.
+. From the Cloud Manager left navigation menu, click *Data Sense*.
 
 . Click *Compliance*, and then click the download icon next to *PCI DSS Report* under *Reports*.
 +
@@ -137,7 +137,7 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense*.
+. From the Cloud Manager left navigation menu, click *Data Sense*.
 
 . Click *Compliance*, and then click the download icon next to *HIPAA Report* under *Reports*.
 +
@@ -168,7 +168,7 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense*.
+. From the Cloud Manager left navigation menu, click *Data Sense*.
 
 . Click *Governance*, and then click the *Full Data Mapping Overview Report* button from the Governance Dashboard.
 +
@@ -184,7 +184,7 @@ The Data Investigation Report is a download of the contents of the Data Investig
 
 You can save the report to the local machine as a .CSV file (which can include up to 5,000 rows of data), or as a .JSON file that you export to an NFS Share (which can include an unlimited number of rows). If Data Sense is scanning files (unstructured data), directories (folders and file shares), or databases (structured data), there can be up to three report files downloaded.
 
-When exporting to a file share, make sure Data Sense has the correct permissions for export access. 
+When exporting to a file share, make sure Data Sense has the correct permissions for export access.
 
 === Generating the Data Investigation Report
 

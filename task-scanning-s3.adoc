@@ -103,7 +103,7 @@ Enable Cloud Data Sense on Amazon S3 after you verify the prerequisites.
 
 .Steps
 
-. At the top of Cloud Manager, click *Canvas*.
+. From the Cloud Manager left navigation menu, click *Canvas*.
 
 . Select the Amazon S3 working environment.
 +
