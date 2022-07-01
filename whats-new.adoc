@@ -36,7 +36,7 @@ In the past when you created a custom Policy, the results showed the files that 
 
 === Data Sense can move up to 100,000 files at a time now
 
-If you plan to use Data Sense to move files from a scanned data source to an NFS share, the maximum number of files has been increased to 100,000 files.
+If you plan to use Data Sense to move files from a scanned data source to an NFS share, the maximum number of files has been increased to 100,000 files. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[See how to move files using Data Sense].
 
 == 12 June 2022 (version 1.13.1)
 

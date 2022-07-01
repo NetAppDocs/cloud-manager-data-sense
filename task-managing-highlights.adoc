@@ -186,7 +186,7 @@ TIP: You can't move files that reside in databases.
 .Requirements
 
 * You must have the Account Admin or Workspace Admin role to move files.
-* Moving files requires that the NFS share allows access from the Data Sense instance.
+* Moving files requires that the NFS share allows access from the Data Sense instance IP address.
 * You can move a maximum of 100,000 files at a time.
 
 .Steps

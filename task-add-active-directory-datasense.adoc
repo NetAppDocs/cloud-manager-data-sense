@@ -33,7 +33,7 @@ An Active Directory integration with Cloud Data Sense can identify data from wit
 * Cloud Volumes ONTAP
 * Azure NetApp Files
 * FSx for ONTAP
-* Non-NetApp CIFS file shares (not for NFS file shares)
+* Non-NetApp CIFS file shares (not NFS file shares)
 
 There is no support for identifying user and permission information from Database schemas, OneDrive accounts, SharePoint accounts, Google Drive accounts, Amazon S3 accounts, or Object Storage that uses the Simple Storage Service (S3) protocol.
 
@@ -42,6 +42,8 @@ There is no support for identifying user and permission information from Databas
 After you've deployed Data Sense and have activated scanning on your data sources, you can integrate Data Sense with your Active Directory. Active Directory can be accessed using a DNS Server IP address or an LDAP Server IP address.
 
 The Active Directory credentials can be read-only, but providing admin credentials ensures that Data Sense can read any data that requires elevated permissions. The credentials are stored on the Cloud Data Sense instance.
+
+If you want to make sure your files “last accessed times” are unchanged by Data Sense classification scans, we recommend that the user has Write Attributes permission. If possible, we recommend making the Active Directory configured user part of a parent group in the organization which has permissions to all files.
 
 .Requirements
 
@@ -60,7 +62,7 @@ LDAP Server IP address, or multiple IP addresses
 
 * The following ports must be open for outbound communication by the Data Sense instance:
 +
-[cols="15,15,25,25",width=80%,options="header"]
+[cols="20,20,30,30",width=80%,options="header"]
 |===
 
 | Protocol
