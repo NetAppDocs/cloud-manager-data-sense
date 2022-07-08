@@ -16,7 +16,7 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 5 July 2022 (version 1.14.1)
+== 6 July 2022 (version 1.14)
 
 === Now you can view the users and groups who have access to your directories
 
