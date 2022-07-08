@@ -323,7 +323,9 @@ image:screenshot_compliance_highlights_investigate.png[A screenshot of selecting
 
 === Creating custom Policies
 
-You can create your own custom Policies that provide results for searches specific to your organization.
+You can create your own custom Policies that provide results for searches specific to your organization. Results are returned for all files and directories (shares and folders) that match the search criteria.
+
+Note that the actions for deleting data and assigning AIP labels based on the policy results are valid only for files. Directories that match the search criteria can't be deleted automatically or assigned AIP labels.
 
 .Steps
 

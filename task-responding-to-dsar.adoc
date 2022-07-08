@@ -39,7 +39,7 @@ NOTE: English, German, and Spanish are supported when searching for the names of
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense*.
+. From the Cloud Manager left navigation menu, click *Data Sense*.
 
 . Click *Data Subjects*.
 

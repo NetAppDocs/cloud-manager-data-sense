@@ -62,6 +62,8 @@ sidebar:
           url: /task-org-private-data.html
         - title: Manage your private data
           url: /task-managing-highlights.html
+        - title: Change the scanning settings
+          url: task-managing-repo-scanning.html
         - title: Generate reports
           url: /task-generating-compliance-reports.html
         - title: Respond to a DSAR

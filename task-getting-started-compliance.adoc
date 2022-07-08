@@ -77,9 +77,9 @@ Upgrades to Data Sense software is automated as long as the instance has interne
 
 == Enabling Cloud Data Sense in your working environments
 
-You can enable Cloud Data Sense on Cloud Volumes ONTAP systems (in AWS, Azure, and GCP) and on on-premises ONTAP clusters.
+You can enable Cloud Data Sense on Cloud Volumes ONTAP systems in any supported cloud provider, and on on-premises ONTAP clusters.
 
-. At the top of Cloud Manager, click *Data Sense* and then select the *Configuration* tab.
+. From the Cloud Manager left navigation menu, click *Data Sense* and then select the *Configuration* tab.
 +
 image:screenshot_cloud_compliance_we_scan_config.png[A screenshot of the Configuration tab immediately after deploying the Cloud Data Sense instance.]
 
