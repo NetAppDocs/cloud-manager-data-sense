@@ -43,21 +43,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html</loc>
       
-      <lastmod>2022-04-20T20:10:42+00:00</lastmod>
+      <lastmod>2022-06-24T20:14:32+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense//search.html</loc>
       
-      <lastmod>2022-06-20T14:07:16+00:00</lastmod>
+      <lastmod>2022-07-08T17:03:57+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html</loc>
       
-      <lastmod>2022-06-02T18:22:02+00:00</lastmod>
+      <lastmod>2022-07-01T12:55:17+00:00</lastmod>
       
     </url>
   
@@ -78,14 +78,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html</loc>
       
-      <lastmod>2022-06-02T18:22:02+00:00</lastmod>
+      <lastmod>2022-06-29T19:33:08+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-cloud-compliance.html</loc>
       
-      <lastmod>2022-06-20T13:54:52+00:00</lastmod>
+      <lastmod>2022-06-29T19:33:08+00:00</lastmod>
       
     </url>
   
@@ -106,7 +106,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html</loc>
       
-      <lastmod>2022-06-13T13:01:44+00:00</lastmod>
+      <lastmod>2022-06-29T19:33:08+00:00</lastmod>
       
     </url>
   
@@ -120,14 +120,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-getting-started-compliance.html</loc>
       
-      <lastmod>2022-03-18T04:30:31+00:00</lastmod>
+      <lastmod>2022-06-29T19:33:08+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-licensing-datasense.html</loc>
       
-      <lastmod>2022-04-14T13:05:43+00:00</lastmod>
+      <lastmod>2022-06-29T19:33:08+00:00</lastmod>
       
     </url>
   
@@ -148,14 +148,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html</loc>
       
-      <lastmod>2022-06-15T19:22:58+00:00</lastmod>
+      <lastmod>2022-07-01T12:55:17+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html</loc>
+      
+      <lastmod>2022-06-26T13:44:39+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html</loc>
       
-      <lastmod>2022-06-20T13:54:52+00:00</lastmod>
+      <lastmod>2022-06-28T15:28:37+00:00</lastmod>
       
     </url>
   
@@ -169,14 +176,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-responding-to-dsar.html</loc>
       
-      <lastmod>2022-03-30T15:47:13+00:00</lastmod>
+      <lastmod>2022-06-29T19:33:08+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-anf.html</loc>
       
-      <lastmod>2022-04-05T12:54:37+00:00</lastmod>
+      <lastmod>2022-06-29T19:33:08+00:00</lastmod>
       
     </url>
   
@@ -197,7 +204,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-fsx.html</loc>
       
-      <lastmod>2022-04-05T12:54:37+00:00</lastmod>
+      <lastmod>2022-06-29T19:33:08+00:00</lastmod>
       
     </url>
   
@@ -225,7 +232,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-s3.html</loc>
       
-      <lastmod>2022-04-05T12:54:37+00:00</lastmod>
+      <lastmod>2022-06-29T19:33:08+00:00</lastmod>
       
     </url>
   
@@ -246,7 +253,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/task-uninstall-data-sense.html</loc>
       
-      <lastmod>2022-06-02T18:22:02+00:00</lastmod>
+      <lastmod>2022-06-29T19:33:08+00:00</lastmod>
       
     </url>
   
@@ -260,7 +267,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/cloud-manager-data-sense/whats-new.html</loc>
       
-      <lastmod>2022-06-15T19:22:58+00:00</lastmod>
+      <lastmod>2022-07-08T16:51:17+00:00</lastmod>
       
     </url>
   
