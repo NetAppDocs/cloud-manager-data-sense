@@ -1,0 +1,71 @@
+---
+sidebar: sidebar
+permalink: task-managing-repo-scanning.html
+keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan
+summary: You can manage the data that is being scanned in each of your working environments and data sources. You can make the changes on a "repository" basis; meaning you can make changes for each volume, bucket, share, schema, user, etc. depending on the type of data source you are scanning.
+---
+
+= Changing the scanning settings for your repositories
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can manage the data that is being scanned in each of your working environments and data sources. You can make the changes on a "repository" basis; meaning you can make changes for each volume, bucket, share, schema, user, etc. depending on the type of data source you are scanning.
+
+Some of the things you can change are whether a repository is scanned or not, and whether Data Sense is performing a link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[mapping scan or a mapping & classification scan]. You can also pause and resume scanning, for example, if you need to stop scanning a volume for a certain period of time.
+
+== Viewing the repositories that are being scanned
+
+You can view the individual repositories that Data Sense is scanning for each working environment and data source.
+
+.Steps
+
+. From the Configuration tab, click the *Configuration* button for the working environment.
++
+image:screenshot_compliance_config_button.png[A screenshot showing how to click the Configuration button for a working environment.]
+
+. In the Scan Configuration page you can view the scan settings for all repositories.
++
+image:screenshot_compliance_repo_scan_settings.png[]
+
+
+== Changing the type of scanning for a repository
+
+You can start or stop mapping-only scans, or mapping and classification scans, in a working environment at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa.
+
+TIP: Databases can't be set to mapping-only scans. Database scanning can be Off or On; which is equivalent to Map & Classify.
+
+.Steps
+
+. From the Configuration tab, click the *Configuration* button for the working environment.
++
+image:screenshot_compliance_config_button.png[A screenshot showing how to click the Configuration button for a working environment.]
+
+. In the Scan Configuration page you can change any of the repositories (buckets in this example) to perform *Map* or *Map & Classify* scans, or select *Off* to stop scanning for a particular bucket.
++
+image:screenshot_compliance_repo_scanning.png[A screenshot showing how to select the type of scanning for a bucket.]
+
+Certain types of working environments enable you to change the type of scanning globally for all repositories using a button bar at the top of the page. This is valid for Cloud Volumes ONTAP, on-premises ONTAP, Azure NetApp Files, and Amazon FSx for ONTAP systems.
+
+The example below shows this button bar for an Azure NetApp Files system.
+
+image:screenshot_compliance_repo_scan_all.png[A screenshot showing how to configure the same scan setting for all volumes in a working environment.]
+
+== Pausing and resuming scanning for a repository
+
+You can "pause" scanning on a repository if you want to temporarily stop scanning certain content. This is not the same as turning scanning "off". When scanning is turned off, all the indexing and information about that volume is removed from the system. Pausing scanning means that Data Sense won't perform any future scanning for any changes or additions to the repository, but that all the current results will still be displayed in the system.
+
+You can "resume" scanning at any time.
+
+.Steps
+
+. From the Configuration tab, click the *Configuration* button for the working environment.
++
+image:screenshot_compliance_config_button.png[A screenshot showing how to click the Configuration button for a working environment.]
+
+. In the Scan Configuration page, click the Pause button to pause scanning for a volume, or press the Resume button to resume scanning for a volume that had been previously paused.
++
+image:screenshot_compliance_repo_pause_resume.png[A screenshot showing how to pause and resume scanning on a volume.]

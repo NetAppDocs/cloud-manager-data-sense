@@ -182,7 +182,7 @@ Follow these steps to deploy an instance of Cloud Data Sense in the cloud.
 
 .Steps
 
-. In Cloud Manager, click *Data Sense*.
+. From the Cloud Manager left navigation menu, click *Data Sense*.
 
 . Click *Activate Data Sense*.
 +

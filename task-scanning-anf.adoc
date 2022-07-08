@@ -74,7 +74,7 @@ Upgrades to Data Sense software is automated as long as the instance has interne
 
 You can enable Cloud Data Sense on your Azure NetApp Files volumes.
 
-. At the top of Cloud Manager, click *Data Sense* and then select the *Configuration* tab.
+. From the Cloud Manager left navigation menu, click *Data Sense* and then select the *Configuration* tab.
 +
 image:screenshot_cloud_compliance_anf_scan_config.png[A screenshot of the Configuration tab immediately after deploying the Cloud Data Sense instance.]
 

@@ -21,7 +21,7 @@ The steps that you need to use depend on whether you deployed Data Sense in the 
 
 You can uninstall and delete the Cloud Data Sense instance from the cloud provider if you no longer want to use Data Sense.
 
-. At the top of the Data Sense page, click the image:screenshot_gallery_options.gif[More button] button and then click *Uninstall Data Sense*.
+. At the top of the Data Sense page, click image:screenshot_gallery_options.gif[More button] and then click *Uninstall Data Sense*.
 +
 image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstall Data Sense software.]
 
@@ -33,7 +33,7 @@ Note that you can go to your cloud provider's console and delete the Cloud Data 
 
 You can uninstall Data Sense from a host if you no longer want to use Data Sense, or if you had an issue that requires reinstallation.
 
-. At the top of the Data Sense page, click the image:screenshot_gallery_options.gif[More button] button and then click *Uninstall Data Sense*.
+. At the top of the Data Sense page, click image:screenshot_gallery_options.gif[More button] and then click *Uninstall Data Sense*.
 +
 image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstall Data Sense software.]
 

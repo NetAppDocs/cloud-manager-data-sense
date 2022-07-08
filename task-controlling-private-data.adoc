@@ -35,7 +35,7 @@ For some types of personal data, Data Sense uses _proximity validation_ to valid
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense* and click the *Compliance* tab.
+. From the Cloud Manager left navigation menu, click *Data Sense* and then click the *Compliance* tab.
 
 . To investigate the details for all personal data, click the icon next to the personal data percentage.
 +
@@ -61,7 +61,7 @@ NOTE: Only English is supported when scanning for sensitive personal data. Suppo
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense* and click the *Compliance* tab.
+. From the Cloud Manager left navigation menu, click *Data Sense* and then click the *Compliance* tab.
 
 . To investigate the details for all sensitive personal data, click the icon next to the sensitive personal data percentage.
 +
@@ -83,7 +83,7 @@ NOTE: English, German, and Spanish are supported for categories. Support for mor
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense* and click the *Compliance* tab.
+. From the Cloud Manager left navigation menu, click *Data Sense* and then click the *Compliance* tab.
 
 . Click the *Investigate Results* icon for one of the top 4 categories directly from the main screen, or click *View All* and then click the icon for any of the categories.
 +
@@ -99,7 +99,7 @@ For example, you might be storing CAD files that include very sensitive informat
 
 .Steps
 
-. At the top of Cloud Manager, click *Data Sense* and click the *Compliance* tab.
+. From the Cloud Manager left navigation menu, click *Data Sense* and then click the *Compliance* tab.
 
 . Click the *Investigate Results* icon for one of the top 4 file types directly from the main screen, or click *View All* and then click the icon for any of the file types.
 +
@@ -129,11 +129,9 @@ When viewing the details for a single file there are a few actions you can take 
 
 * If you have integrated AIP labels with Cloud Data Sense, you can assign a label to this file, or change to a different label if one already exists. See link:task-org-private-data.html#assigning-aip-labels-manually[Assigning AIP labels manually] for details.
 
-== Viewing permissions for files
-// == Viewing permissions for files and directories
+== Viewing permissions for files and directories
 
-To view a list of all users or groups who have access to a file, and the types of permissions they have, click *View all Permissions*. This button is available only for data in CIFS shares, SharePoint, and OneDrive.
-//  or to a directory
+To view a list of all users or groups who have access to a file or to a directory, and the types of permissions they have, click *View all Permissions*. This button is available only for data in CIFS shares, SharePoint, and OneDrive.
 
 Note that if you see SIDs (Security IDentifiers) instead of user and group names, you should integrate your Active Directory into Data Sense. link:task-add-active-directory-datasense.html[See how to do this].
 
@@ -142,8 +140,7 @@ image:screenshot_compliance_permissions.png[A screenshot showing detailed file p
 
 You can click image:button_down_caret.png[down-caret] for any group to see the list of users who are part of the group.
 
-Additionally, you can click the name of a user or a group and the Investigation page is displayed with the name of that user or group populated in the “User / Group Permissions” filter so you can see all the files that the user or group has access to.
-// and directories
+Additionally, you can click the name of a user or a group and the Investigation page is displayed with the name of that user or group populated in the “User / Group Permissions” filter so you can see all the files and directories that the user or group has access to.
 
 == Checking for duplicate files in your storage systems
 
