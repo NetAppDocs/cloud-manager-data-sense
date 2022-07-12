@@ -137,6 +137,7 @@ NOTE: For FSx for ONTAP, Cloud Data Sense can scan volumes only in the same regi
 .. For each working environment, click *Edit CIFS Credentials* and enter the user name and password that Data Sense needs to access CIFS volumes on the system.
 +
 The credentials can be read-only, but providing admin credentials ensures that Data Sense can read any data that requires elevated permissions. The credentials are stored on the Cloud Data Sense instance.
+include::_include/cifs-permissions.adoc[]
 +
 After you enter the credentials, you should see a message that all CIFS volumes were authenticated successfully.
 
