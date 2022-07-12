@@ -1,0 +1,2 @@
++
+If you want to make sure your files “last accessed times” are unchanged by Data Sense classification scans, we recommend that the user has Write Attributes permission. If possible, we recommend making the Active Directory configured user part of a parent group in the organization which has permissions to all files.
