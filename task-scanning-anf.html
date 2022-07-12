@@ -258,11 +258,13 @@
           <div id="react-search" 
           data-search-html="/us-en/cloud-manager-data-sense/search.html"
           data-type="widget" 
-          data-placeholder="Search Documentation" 
-          data-no-results-found="No results were found for {query}" 
-          data-did-you-mean="Search for {suggestion}." 
-          data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?" 
-          data-results-found="{hitCount} results found"  
+          data-placeholder="Search Documentation"
+          data-no-results-found="No results were found for {query}"
+          data-did-you-mean="Search for {suggestion}."
+          data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?"
+          data-results-found="{hitCount} results found"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -747,7 +749,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-29 19:33:08 +0000">06/29/2022</time>
+    <time datetime="2022-07-12 19:22:00 +0000">07/12/2022</time>
     
   
 
@@ -958,6 +960,9 @@ For Azure NetApp Files, Cloud Data Sense can only scan volumes that are in the s
 <p>For each working environment, click <strong>Edit CIFS Credentials</strong> and enter the user name and password that Data Sense needs to access CIFS volumes on the system.</p>
 <div class="paragraph">
 <p>The credentials can be read-only, but providing admin credentials ensures that Data Sense can read any data that requires elevated permissions. The credentials are stored on the Cloud Data Sense instance.</p>
+</div>
+<div class="paragraph">
+<p>If you want to make sure your files “last accessed times” are unchanged by Data Sense classification scans, we recommend that the user has Write Attributes permission. If possible, we recommend making the Active Directory configured user part of a parent group in the organization which has permissions to all files.</p>
 </div>
 <div class="paragraph">
 <p>After you enter the credentials, you should see a message that all CIFS volumes were authenticated successfully.</p>
