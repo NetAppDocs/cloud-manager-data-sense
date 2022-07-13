@@ -69,3 +69,7 @@ image:screenshot_compliance_config_button.png[A screenshot showing how to click 
 . In the Scan Configuration page, click the Pause button to pause scanning for a volume, or press the Resume button to resume scanning for a volume that had been previously paused.
 +
 image:screenshot_compliance_repo_pause_resume.png[A screenshot showing how to pause and resume scanning on a volume.]
++
+Note that some data sources provide the Pause and Resume functionality in a menu, as shown below for SharePoint sites.
++
+image:screenshot_compliance_repo_pause_resume2.png[A screenshot showing how to pause and resume scanning on a SharePoint site.]
